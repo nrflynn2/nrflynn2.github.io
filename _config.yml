@@ -1,1 +1,16 @@
+# Site Settings
+title: Noah Flynn
+email: noahrflynn@gmail.com
+description: My personal website
+baseurl: /
+url: https://noahrflynn.com
+github_username: nrflynn2
+
+# Build Settings
+markdown: kramdown
 theme: jekyll-theme-minimal
+gems:
+    - jekyll-feed
+exclude:
+    - Gemfile
+    - Gemfile.lock
