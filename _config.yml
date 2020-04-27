@@ -9,8 +9,3 @@ github_username: nrflynn2
 # Build Settings
 markdown: kramdown
 theme: jekyll-theme-minimal
-gems:
-    - jekyll-feed
-exclude:
-    - Gemfile
-    - Gemfile.lock
