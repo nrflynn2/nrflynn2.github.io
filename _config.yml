@@ -5,4 +5,4 @@ description: PhD Student
 
 "Build Settings"
 permalink: /:categories/:year/:month/:day/:title:output_ext
-theme: jekyll-theme-minimal
+theme: jekyll-theme-tactile
