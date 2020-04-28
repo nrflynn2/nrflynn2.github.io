@@ -4,4 +4,5 @@ description: PhD Student
 #avatar: 
 
 "Build Settings"
+permalink: /:categories/:year/:month/:day/:title:output_ext
 theme: jekyll-theme-minimal
