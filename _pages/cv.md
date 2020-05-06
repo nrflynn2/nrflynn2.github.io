@@ -1,0 +1,38 @@
+---
+layout: archive
+title: "CV"
+permalink: /cv/
+author_profile: true
+redirect_from:
+  - /resume
+---
+
+{% include base_path %}
+
+Education
+======
+* B.S. in Bioengineering, University of Illions at Urbana-Champaign, 2017
+
+Work experience
+======
+* Lorem ipsum
+  
+Skills
+======
+* Lorum ipsum
+
+Publications
+======
+  <ul>{% for post in site.publications %}
+    {% include archive-single-cv.html %}
+  {% endfor %}</ul>
+  
+Teaching
+======
+  <ul>{% for post in site.teaching %}
+    {% include archive-single-cv.html %}
+  {% endfor %}</ul>
+  
+Service and leadership
+======
+* Lorem ipsum
