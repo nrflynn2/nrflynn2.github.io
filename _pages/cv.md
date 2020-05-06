@@ -11,7 +11,7 @@ redirect_from:
 
 Education
 ======
-* B.S. in Bioengineering, University of Illions at Urbana-Champaign, 2017
+* B.S. in Bioengineering, University of Illinois at Urbana-Champaign, 2017
 
 Work experience
 ======
