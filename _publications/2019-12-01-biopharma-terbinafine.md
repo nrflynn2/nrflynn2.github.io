@@ -1,7 +1,7 @@
 ---
 title: "Comprehensive kinetic and modeling analyses revealed CYP2C9 and 3A4 determine terbinafine metabolic clearance and bioactivation"
 collection: publications
-permalink: /publication/2019-12-01-biopharma-terbinafine.md
+permalink: /publication/2019-12-01-biopharma-terbinafine
 excerpt: ''
 date: 2019-12-01
 venue: 'Biochemical Pharmacology'

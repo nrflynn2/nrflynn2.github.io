@@ -1,7 +1,7 @@
 ---
 title: "Dual mechanisms suppress meloxicam bioactivation relative to sudoxicam"
 collection: publications
-permalink: /publication/2019-05-11-sudoxicam-meloxicam.md
+permalink: /publication/2019-05-11-sudoxicam-meloxicam
 excerpt: ''
 date: 2020-05-11
 venue: 'Toxicology'

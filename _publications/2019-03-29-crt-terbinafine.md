@@ -1,7 +1,7 @@
 ---
 title: "CYP2C19 and 3A4 Dominate Metabolic Clearance and Bioactivation of Terbinafine Based on Computational and Experimental Approaches"
 collection: publications
-permalink: /publication/2019-03-29-crt-terbinafine.md
+permalink: /publication/2019-03-29-crt-terbinafine
 excerpt: ''
 date: 2019-03-29
 venue: 'Chemical Research in Toxicology'
