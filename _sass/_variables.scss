@@ -58,13 +58,13 @@ $background-color           : #f3f3f3;
 $code-background-color      : mix(#000, $background-color, 15%);
 $code-background-color-dark : mix(#000, $background-color, 20%);
 $text-color                 : #343434;
-$border-color               : #e9dcbe;
+$border-color               : #e9dcbe !default;
 
 $primary-color              : #343434;
 $success-color              : #62c462;
 $warning-color              : #f89406;
 $danger-color               : #ee5f5b;
-$info-color                 : #52adc8;
+$info-color                 : #343434;
 
 /* brands */
 $behance-color              : #1769FF;
