@@ -9,24 +9,4 @@ redirect_from:
 
 {% include base_path %}
 
-Education
-======
-* B.S. in Bioengineering, University of Illinois at Urbana-Champaign, 2017
-
-Work experience
-======
-* Lorem ipsum
-  
-Skills
-======
-* Lorum ipsum
-
-Publications
-======
-  <ul>{% for post in site.publications %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Lorem ipsum
+<embed src="https://nrflynn2.github.io/files/noahflynn_cv.pdf" type="application/pdf" width="600px" height="500px" />
