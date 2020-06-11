@@ -14,6 +14,8 @@ In particular, my work involves modeling drug metabolism networks to guide devel
 As a part of my research, I also serve as a core maintainer of [XenoSite](https://swami.wustl.edu/xenosite/).
 XenoSite is a prediction web service for small molecule biochemistry that hosts an online collection of metabolism and reactivity mathematical models that systematically summarize the data from thousands of papers into a condensed and useable computational tool that predicts adduction and potential toxicity of molecules.
 
+Recently, I just launched the [XenoNet Web Server](https://swami.wustl.edu/xenonet/). More information to follow soon!
+
 {::comment}
 I am an engineer by training and received my B.S. in the [Bioengineering](https://bioengineering.illinois.edu/) program at the University of Illinois at Urbana-Champaign.
 Prior to switching to a heavier emphasis on computer science-related study, I spent time as a nomad across several scientific domains.
