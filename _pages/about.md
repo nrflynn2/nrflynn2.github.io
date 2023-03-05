@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-Hello! I'm Noah, a research scientist within Amazon working on non-English language expansion for Alexa. I recently defended my [thesis](https://www.proquest.com/openview/59a7e3ff01e444dd0b5199f26d96c10a/1?pq-origsite=gscholar&cbl=18750&diss=y) and earned my PhD in Computational Biology at [Washington University School of Medicine in St. Louis](https://medicine.wustl.edu/).
+Hello!!! I'm Noah, a research scientist within Amazon working on non-English language expansion for Alexa. I recently defended my [thesis](https://www.proquest.com/openview/59a7e3ff01e444dd0b5199f26d96c10a/1?pq-origsite=gscholar&cbl=18750&diss=y) and earned my PhD in Computational Biology at [Washington University School of Medicine in St. Louis](https://medicine.wustl.edu/).
 I focused on applications of machine learning to problems in drug discovery and toxicology and my work was supervised by Dr. Joshua Swamidass in the [Department of Pathology & Immunology](https://pathology.wustl.edu/).
 In particular, my work involved modeling drug metabolism networks to guide development in early stage prediction of drug toxicity, formation of reactive chemical species, and likelihood of adverse drug reactions.
 As part of my research, I also serve as a core maintainer of [XenoSite](https://swami.wustl.edu/xenosite/) and I launched the [XenoNet Web Server](https://swami.wustl.edu/xenonet/).
