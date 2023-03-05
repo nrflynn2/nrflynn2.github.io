@@ -1,0 +1,9 @@
+papers:
+
+  - title: "Bioactivation of Isoxazole-Containing Bromodomain and Extra-Terminal Domain (BET) Inhibitors"
+    authors: "<b>Noah Flynn</b>"
+    venue: "TesT"
+    paper_pdf: "/files/publications/2021_bromo/paper.pdf"
+    supp_pdf: "/files/publications/2021_bromo/supp.pdf"
+    selected: y
+
