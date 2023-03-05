@@ -6,23 +6,17 @@ experiences:
   subtitle: "Alexa AI"
   category: "work"
 
-- place: "WUSTL"
-  time: "Aug 2017 - Jun 2021"
-  title: "Ph.D. Student"
-  subtitle: "Computational Biology <br/> Department of Pathology & Immunology"
-  category: "school"
-
 - place: "Merck (MSD)"
   time: "May 2019 - Aug 2019"
   title: "Machine Learning Intern"
   subtitle: "Modeling & Informatics"
   category: "work"
 
-- place: "AbbVie"
-  time: "Nov 2015 - May 2017"
-  title: "Software Engineer, Intern"
-  subtitle: "Platform Informatics & Knowledge Management"
-  category: "work"
+- place: "WUSTL"
+  time: "Aug 2017 - Jun 2021"
+  title: "Ph.D. Student"
+  subtitle: "Computational Biology <br/> Department of Pathology & Immunology"
+  category: "school"
 
 - place: "National Center for Supercomputing Applications"
   time: "May 2016 - May 2017"
@@ -34,6 +28,12 @@ experiences:
   title: "Director"
   subtitle: "Engineering Open House"
   category: "school"
+
+- place: "AbbVie"
+  time: "Nov 2015 - May 2017"
+  title: "Software Engineer, Intern"
+  subtitle: "Platform Informatics & Knowledge Management"
+  category: "work"
 
 - place: "Seitz Materials Research Lab"
   time: "Dec 2014 - Aug 2016"
