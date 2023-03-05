@@ -1,14 +1,55 @@
 experiences:
 
 - place: "Amazon"
-  time: "2021 - now"
+  time: "Jun 2021 - now"
   title: "Research Scientist II"
-  subtitle: "MS&E"
+  subtitle: "Alexa AI"
   category: "work"
 
 - place: "WUSTL"
-  time: "2017 - 2021"
+  time: "Aug 2017 - Jun 2021"
   title: "Ph.D. Student"
-  subtitle: "School of Medicine"
+  subtitle: "Computational Biology <br/> Department of Pathology & Immunology"
+  category: "school"
+
+- place: "Merck (MSD)"
+  time: "May 2019 - Aug 2019"
+  title: "Machine Learning Intern"
+  subtitle: "Modeling & Informatics"
+  category: "work"
+
+- place: "AbbVie"
+  time: "Nov 2015 - May 2017"
+  title: "Software Engineer, Intern"
+  subtitle: "Platform Informatics & Knowledge Management"
+  category: "work"
+
+- place: "National Center for Supercomputing Applications"
+  time: "May 2016 - May 2017"
+  title: "Computational Research Fellow"
+  category: "work"
+
+- place: "UIUC College of Engineering"
+  time: "Apr 2016 - Jul 2017"
+  title: "Director"
+  subtitle: "Engineering Open House"
+  category: "school"
+
+- place: "Seitz Materials Research Lab"
+  time: "Dec 2014 - Aug 2016"
+  title: "Research Assistant"
+  subtitle: "John Rogers Group"
+  category: "work"
+
+- place: "Institute for Genomic Biology"
+  time: "Feb 2014 - Sep 2015"
+  title: "Research Assistant"
+  subtitle: "Biosystems Design Group (iGEM)"
+  category: "work"
+
+- place: "University of Illinois at Urbana-Champaign"
+  time: "2013 - 2017"
+  title: "B.Sc. Student"
+  subtitle: "Bioengineering <br/> Computer Science (Minor)"
   category: "school"
 
