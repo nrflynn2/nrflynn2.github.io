@@ -16,6 +16,7 @@ papers:
   - title: "Cal-net: Jointly learning classification and calibration on imbalanced binary classification tasks"
     authors: "Arghya Datta, <b>Noah R Flynn</b>, S Joshua Swamidass"
     venue: "IJCNN (2021)"
+    paper_pdf: "https://ieeexplore.ieee.org/document/9534411"
     selected: y
 
   - title: "Bioactivation of Isoxazole-Containing Bromodomain and Extra-Terminal Domain (BET) Inhibitors"
@@ -47,37 +48,37 @@ papers:
   - title: "Meloxicam methyl group determines enzyme specificity for thiazole bioactivation compared to sudoxicam"
     authors: "Dustyn A Barnette, Mary A Schleiff, Arghya Datta, <b>Noah Flynn</b>, S Joshua Swamidass, Grover P Miller"
     venue: "Toxicology Letters (2020)"
+    paper_pdf: "https://www.sciencedirect.com/science/article/pii/S0378427420304781?via\%3Dihub"
     selected: n
 
   - title: "The Metabolic Forest: Predicting the Diverse Structures of Drug Metabolites"
     authors: "Tyler B Hughes, Na Le Dang, Ayush Kumar, <b>Noah R Flynn</b>, S Joshua Swamidass"
     venue: "Journal of Chemical Information and Modeling (2020)"
-    paper_pdf:
-    supp_pdf:
+    paper_pdf: "https://pubs.acs.org/doi/10.1021/acs.jcim.0c00360"
     selected: n
 
   - title: "XenoNet: Inference and Likelihood of Intermediate Metabolite Formation"
     authors: "<b>Noah R Flynn</b>, Na Le Dang, Michael D Ward, S Joshua Swamidass"
     venue: "Journal of Chemical Information and Modeling (2020)"
-    paper_pdf:
+    paper_pdf: "https://pubs.acs.org/doi/abs/10.1021/acs.jcim.0c00361"
     supp_pdf: "files/publications/xenonet_2020/supp.pdf"
     selected: y
 
   - title: "Dual mechanisms suppress meloxicam bioactivation relative to sudoxicam"
     authors: "Dustyn A Barnette, Mary A Schleiff, Laura R Osborn, <b>Noah Flynn</b>, Matthew Matlock, S Joshua Swamidass, Grover P Miller"
     venue: "Toxicology (2020)"
-    paper_pdf:
+    paper_pdf: "https://www.sciencedirect.com/science/article/pii/S0300483X20301177"
     selected: n
 
   - title: "Comprehensive kinetic and modeling analyses revealed CYP2C9 and 3A4 determine terbinafine metabolic clearance and bioactivation"
     authors: "Dustyn A Barnette, Mary A Davis, <b>Noah Flynn</b>, Anirudh S Pidugu, S Joshua Swamidass, Grover P Miller"
     venue: "Biochemical Pharmacology (2019)"
-    paper_pdf:
+    paper_pdf: "https://www.sciencedirect.com/science/article/pii/S0006295219303600?via\%3Dihub"
     selected: n
 
   - title: "CYP2C19 and 3A4 Dominate Metabolic Clearance and Bioactivation of Terbinafine Based on Computational and Experimental Approaches"
     authors: "Mary A Davis, Dustyn A Barnette, <b>Noah R Flynn</b>, Anirudh S Pidugu, S Joshua Swamidass, Gunnar Boysen, Grover P Miller"
     venue: "Chemical Research in Toxicology (2019)"
-    paper_pdf:
+    paper_pdf: "https://pubs.acs.org/doi/10.1021/acs.chemrestox.9b00006"
     supp_pdf: "files/publications/tbf_davis_2019/supp.pdf"
     selected: n
