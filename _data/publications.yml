@@ -48,7 +48,7 @@ papers:
   - title: "Meloxicam methyl group determines enzyme specificity for thiazole bioactivation compared to sudoxicam"
     authors: "Dustyn A Barnette, Mary A Schleiff, Arghya Datta, <b>Noah Flynn</b>, S Joshua Swamidass, Grover P Miller"
     venue: "Toxicology Letters (2020)"
-    paper_pdf: "https://www.sciencedirect.com/science/article/pii/S0378427420304781?via\%3Dihub"
+    paper_pdf: "https://www.sciencedirect.com/science/article/pii/S0378427420304781"
     selected: n
 
   - title: "The Metabolic Forest: Predicting the Diverse Structures of Drug Metabolites"
@@ -73,7 +73,7 @@ papers:
   - title: "Comprehensive kinetic and modeling analyses revealed CYP2C9 and 3A4 determine terbinafine metabolic clearance and bioactivation"
     authors: "Dustyn A Barnette, Mary A Davis, <b>Noah Flynn</b>, Anirudh S Pidugu, S Joshua Swamidass, Grover P Miller"
     venue: "Biochemical Pharmacology (2019)"
-    paper_pdf: "https://www.sciencedirect.com/science/article/pii/S0006295219303600?via\%3Dihub"
+    paper_pdf: "https://www.sciencedirect.com/science/article/pii/S0006295219303600"
     selected: n
 
   - title: "CYP2C19 and 3A4 Dominate Metabolic Clearance and Bioactivation of Terbinafine Based on Computational and Experimental Approaches"
