@@ -1,5 +1,11 @@
 papers:
 
+  - title: "Editorial: Advancements in Computational Studies of Drug Toxicity"
+    authors: "<b>Noah R Flynn</b>, Grover P Miller, S Joshua Swamidass"
+    venue: "Frontiers in Pharmacology (2023)"
+    paper_pdf: "https://www.frontiersin.org/articles/10.3389/fphar.2023.1230409/full"
+    selected: n
+
   - title: "Message Passing Neural Networks Improve Prediction of Metabolite Authenticity"
     authors: "<b>Noah R Flynn</b>, S Joshua Swamidass"
     venue: "Journal of Chemical Information and Modeling (2023)"
