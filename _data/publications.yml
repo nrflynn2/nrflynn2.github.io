@@ -10,7 +10,8 @@ papers:
     authors: "<b>Noah R Flynn</b>, S Joshua Swamidass"
     venue: "Journal of Chemical Information and Modeling (2023)"
     paper_pdf: "https://pubs.acs.org/doi/abs/10.1021/acs.jcim.2c01383"
-    supp_pdf: "files/publications/metscore_2023/supp.pdf"
+    supp_pdf: "files/publications/xenoscore_2023/supp.pdf"
+    teaser_imge: "files/publications/xenoscore_2023/teaser.jpeg"
     selected: y
 
   - title: "Discovery of Novel Reductive Elimination Pathway for 10-Hydroxywarfarin"
