@@ -30,7 +30,7 @@ papers:
     selected: y
 
   - title: "Bioactivation of Isoxazole-Containing Bromodomain and Extra-Terminal Domain (BET) Inhibitors"
-    authors: "<b>Noah Flynn</b>, et al."
+    authors: "<b>Noah Flynn</b>, Michael D. Ward, Mary A. Schleiff, et al."
     venue: "Metabolites (2021)"
     paper_pdf: "/files/publications/2021_bromo/paper.pdf"
     supp_pdf: "/files/publications/2021_bromo/supp.pdf"
@@ -52,7 +52,7 @@ papers:
     selected: y
 
   - title: "Significance of Multiple Bioactivation Pathways for Meclofenamate as Revealed through Modeling and Reaction Kinetics"
-    authors: "Mary A Schleiff, <b>Noah R Flynn</b>, et al."
+    authors: "Mary A Schleiff, <b>Noah R Flynn</b>, Sasin Payakachat, et al."
     venue: "Drug Metabolism and Disposition (2021)"
     paper_pdf: "files/publications/meclofenamate_2021/paper.pdf"
     supp_pdf: "files/publications/meclofenamate_2021/supp.pdf"
@@ -74,7 +74,7 @@ papers:
     selected: n
 
   - title: "XenoNet: Inference and Likelihood of Intermediate Metabolite Formation"
-    authors: "<b>Noah R Flynn</b>, et al."
+    authors: "<b>Noah R Flynn</b>, Na Le Dang, Michael D Ward, S Joshua Swamidass"
     venue: "J. of Chem. Inf. Model. (2020)"
     paper_pdf: "files/publications/xenonet_2020/paper.pdf"
     supp_pdf: "files/publications/xenonet_2020/supp.pdf"
