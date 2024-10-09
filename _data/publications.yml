@@ -7,12 +7,6 @@ papers:
     teaser_image: "files/publications/seacrowd_2024/teaser.png"
     selected: n
 
-  - title: "Editorial: Advancements in Computational Studies of Drug Toxicity"
-    authors: "<b>Noah R Flynn</b>, Grover P Miller, S Joshua Swamidass"
-    venue: "Frontiers in Pharmacology (2023)"
-    paper_pdf: "https://www.frontiersin.org/articles/10.3389/fphar.2023.1230409/full"
-    selected: n
-
   - title: "Message Passing Neural Networks Improve Prediction of Metabolite Authenticity"
     authors: "<b>Noah R Flynn</b>, S Joshua Swamidass"
     venue: "Journal of Chemical Information and Modeling (2023)"
@@ -25,12 +19,14 @@ papers:
     authors: "Dakota L Pouncey, Dustyn A Barnette, Riley W Sinnott, Sarah J Phillips, <b>Noah R Flynn</b>, Howard P Hendrickson, S Joshua Swamidass, Grover Paul Miller"
     venue: "Frontiers in Pharmacology (2022)"
     paper_pdf: "files/publications/hydroxywarfarin_2022/paper.pdf"
+    teaser_image: "files/publications/hydroxywarfarin_2022/teaser.png"
     selected: n
 
   - title: "Cal-net: Jointly learning classification and calibration on imbalanced binary classification tasks"
     authors: "Arghya Datta, <b>Noah R Flynn</b>, S Joshua Swamidass"
     venue: "IJCNN (2021)"
-    paper_pdf: "https://ieeexplore.ieee.org/document/9534411"
+    paper_pdf: "files/publications/calnet_2021/paper.pdf"
+    teaser_image: "files/publications/calnet_2021/teaser.png"
     selected: y
 
   - title: "Bioactivation of Isoxazole-Containing Bromodomain and Extra-Terminal Domain (BET) Inhibitors"
@@ -38,18 +34,21 @@ papers:
     venue: "Metabolites (2021)"
     paper_pdf: "/files/publications/2021_bromo/paper.pdf"
     supp_pdf: "/files/publications/2021_bromo/supp.pdf"
+    teaser_image: "/files/publications/2021_bromo/teaser.png"
     selected: y
 
   - title: "Machine Learning on Liver-Injuring Drug Interactions with NSAIDs from Hospitalization Data"
     authors: "Arghya Datta<sup>‡</sup>, <b>Noah Flynn<sup>‡</sup></b>, Dustyn A Barnette, Keith F Woeltje, Grover P Miller, S Joshua Swamidass"
     venue: "PLOS Computational Biology (2021)"
     paper_pdf: "files/publications/ehr_nsaid_2021/paper.pdf"
+    teaser_image: "files/publications/ehr_nsaid_2021/teaser.png"
     selected: y
 
   - title: "Modeling the Bioactivation and Subsequent Reactivity of Drugs"
     authors: "Tyler B Hughes<sup>‡</sup>, <b>Noah Flynn<sup>‡</sup></b>, Na Le Dang, S Joshua Swamidass"
     venue: "Chemical Research in Toxicology (2021)"
     paper_pdf: "files/publications/bioact_2021/paper.pdf"
+    teaser_image: "files/publications/bioact_2021/teaser.jpeg"
     selected: y
 
   - title: "Significance of Multiple Bioactivation Pathways for Meclofenamate as Revealed through Modeling and Reaction Kinetics"
@@ -57,42 +56,49 @@ papers:
     venue: "Drug Metabolism and Disposition (2021)"
     paper_pdf: "files/publications/meclofenamate_2021/paper.pdf"
     supp_pdf: "files/publications/meclofenamate_2021/supp.pdf"
+    teaser_image: "files/publications/meclofenamate_2021/teaser.jpg"
     selected: n
 
   - title: "Meloxicam methyl group determines enzyme specificity for thiazole bioactivation compared to sudoxicam"
     authors: "Dustyn A Barnette, Mary A Schleiff, Arghya Datta, <b>Noah Flynn</b>, S Joshua Swamidass, Grover P Miller"
     venue: "Toxicology Letters (2020)"
-    paper_pdf: "https://www.sciencedirect.com/science/article/pii/S0378427420304781"
+    paper_pdf: "files/publications/meloxicam_2021/paper.pdf"
+    teaser_image: "files/publications/meloxicam_2021/teaser.png"
     selected: n
 
   - title: "The Metabolic Forest: Predicting the Diverse Structures of Drug Metabolites"
     authors: "Tyler B Hughes, Na Le Dang, Ayush Kumar, <b>Noah R Flynn</b>, S Joshua Swamidass"
     venue: "Journal of Chemical Information and Modeling (2020)"
-    paper_pdf: "https://pubs.acs.org/doi/10.1021/acs.jcim.0c00360"
+    paper_pdf: "files/publications/metfor_2020/paper.pdf"
+    teaser_image: "files/publications/metfor_2020/teaser.jpeg"
     selected: n
 
   - title: "XenoNet: Inference and Likelihood of Intermediate Metabolite Formation"
     authors: "<b>Noah R Flynn</b>, Na Le Dang, Michael D Ward, S Joshua Swamidass"
     venue: "Journal of Chemical Information and Modeling (2020)"
-    paper_pdf: "https://pubs.acs.org/doi/abs/10.1021/acs.jcim.0c00361"
+    paper_pdf: "files/publications/xenonet_2020/paper.pdf"
     supp_pdf: "files/publications/xenonet_2020/supp.pdf"
+    teaser_image: "files/publications/xenonet_2020/teaser.png"
     selected: y
 
   - title: "Dual mechanisms suppress meloxicam bioactivation relative to sudoxicam"
     authors: "Dustyn A Barnette, Mary A Schleiff, Laura R Osborn, <b>Noah Flynn</b>, Matthew Matlock, S Joshua Swamidass, Grover P Miller"
     venue: "Toxicology (2020)"
-    paper_pdf: "https://www.sciencedirect.com/science/article/pii/S0300483X20301177"
+    paper_pdf: "files/publications/meloxicam_2020/paper.pdf"
+    teaser_image: "files/publications/meloxicam_2020/teaser.png"
     selected: n
 
   - title: "Comprehensive kinetic and modeling analyses revealed CYP2C9 and 3A4 determine terbinafine metabolic clearance and bioactivation"
     authors: "Dustyn A Barnette, Mary A Davis, <b>Noah Flynn</b>, Anirudh S Pidugu, S Joshua Swamidass, Grover P Miller"
     venue: "Biochemical Pharmacology (2019)"
-    paper_pdf: "https://www.sciencedirect.com/science/article/pii/S0006295219303600"
+    paper_pdf: "files/publications/tbf_barnette_2019/paper.pdf"
+    teaser_image: "files/publications/tbf_barnette_2019/teaser.png"
     selected: n
 
   - title: "CYP2C19 and 3A4 Dominate Metabolic Clearance and Bioactivation of Terbinafine Based on Computational and Experimental Approaches"
     authors: "Mary A Davis, Dustyn A Barnette, <b>Noah R Flynn</b>, Anirudh S Pidugu, S Joshua Swamidass, Gunnar Boysen, Grover P Miller"
     venue: "Chemical Research in Toxicology (2019)"
-    paper_pdf: "https://pubs.acs.org/doi/10.1021/acs.chemrestox.9b00006"
+    paper_pdf: "files/publications/tbf_davis_2019/paper.pdf"
     supp_pdf: "files/publications/tbf_davis_2019/supp.pdf"
+    teaser_image: "files/publications/tbf_davis_2019/teaser.png"
     selected: n
