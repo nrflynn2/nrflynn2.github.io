@@ -1,5 +1,12 @@
 papers:
 
+  - title: "SEACrowd: A Multilingual Multimodal Data Hub and Benchmark Suite for Southeast Asian Languages"
+    authors: "Holy Lovenia, et al. (including <b>Noah R. Flynn</b>)"
+    venue: "EMNLP (2024)"
+    paper_pdf: "files/publications/seacrowd_2024/paper.pdf"
+    teaser_image: "files/publications/seacrowd_2024/teaser.png"
+    selected: n
+
   - title: "Editorial: Advancements in Computational Studies of Drug Toxicity"
     authors: "<b>Noah R Flynn</b>, Grover P Miller, S Joshua Swamidass"
     venue: "Frontiers in Pharmacology (2023)"
@@ -11,7 +18,7 @@ papers:
     venue: "Journal of Chemical Information and Modeling (2023)"
     paper_pdf: "https://pubs.acs.org/doi/abs/10.1021/acs.jcim.2c01383"
     supp_pdf: "files/publications/xenoscore_2023/supp.pdf"
-    teaser_imge: "files/publications/xenoscore_2023/teaser.jpeg"
+    teaser_image: "files/publications/xenoscore_2023/teaser.jpeg"
     selected: y
 
   - title: "Discovery of Novel Reductive Elimination Pathway for 10-Hydroxywarfarin"
