@@ -74,7 +74,7 @@ papers:
     selected: n
 
   - title: "XenoNet: Inference and Likelihood of Intermediate Metabolite Formation"
-    authors: "<b>Noah R Flynn</b>, Na Le Dang, Michael D Ward, S Joshua Swamidass"
+    authors: "<b>Noah R Flynn</b>, et al."
     venue: "J. of Chem. Inf. Model. (2020)"
     paper_pdf: "files/publications/xenonet_2020/paper.pdf"
     supp_pdf: "files/publications/xenonet_2020/supp.pdf"
@@ -89,14 +89,14 @@ papers:
     selected: n
 
   - title: "Comprehensive kinetic and modeling analyses revealed CYP2C9 and 3A4 determine terbinafine metabolic clearance and bioactivation"
-    authors: "Dustyn A Barnette, Mary A Davis, <b>Noah Flynn</b>, Anirudh S Pidugu, S Joshua Swamidass, Grover P Miller"
-    venue: "Biochemical Pharmacology (2019)"
+    authors: "Dustyn A Barnette, Mary A Davis, <b>Noah Flynn</b>, et al."
+    venue: "Biochem. Pharmacol. (2019)"
     paper_pdf: "files/publications/tbf_barnette_2019/paper.pdf"
     teaser_image: "files/publications/tbf_barnette_2019/teaser.png"
     selected: n
 
   - title: "CYP2C19 and 3A4 Dominate Metabolic Clearance and Bioactivation of Terbinafine Based on Computational and Experimental Approaches"
-    authors: "Mary A Davis, Dustyn A Barnette, <b>Noah R Flynn</b>, Anirudh S Pidugu, S Joshua Swamidass, Gunnar Boysen, Grover P Miller"
+    authors: "Mary A Davis, Dustyn A Barnette, <b>Noah R Flynn</b>, et al."
     venue: "Chemical Research in Toxicology (2019)"
     paper_pdf: "files/publications/tbf_davis_2019/paper.pdf"
     supp_pdf: "files/publications/tbf_davis_2019/supp.pdf"
