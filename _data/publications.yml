@@ -30,7 +30,7 @@ papers:
     selected: y
 
   - title: "Bioactivation of Isoxazole-Containing Bromodomain and Extra-Terminal Domain (BET) Inhibitors"
-    authors: "<b>Noah Flynn</b>, Michael D. Ward, Mary A. Schleiff, et al."
+    authors: "<b>Noah Flynn</b>, et al."
     venue: "Metabolites (2021)"
     paper_pdf: "/files/publications/2021_bromo/paper.pdf"
     supp_pdf: "/files/publications/2021_bromo/supp.pdf"
@@ -52,7 +52,7 @@ papers:
     selected: y
 
   - title: "Significance of Multiple Bioactivation Pathways for Meclofenamate as Revealed through Modeling and Reaction Kinetics"
-    authors: "Mary Alexandra Schleiff, <b>Noah R Flynn</b>, Sasin Payakachat, et al."
+    authors: "Mary A Schleiff, <b>Noah R Flynn</b>, et al."
     venue: "Drug Metabolism and Disposition (2021)"
     paper_pdf: "files/publications/meclofenamate_2021/paper.pdf"
     supp_pdf: "files/publications/meclofenamate_2021/supp.pdf"
@@ -60,7 +60,7 @@ papers:
     selected: n
 
   - title: "Meloxicam methyl group determines enzyme specificity for thiazole bioactivation compared to sudoxicam"
-    authors: "Dustyn A Barnette, Mary A Schleiff, Arghya Datta, <b>Noah Flynn</b>, S Joshua Swamidass, Grover P Miller"
+    authors: "Dustyn A Barnette, et al. (including <b>Noah Flynn</b>)"
     venue: "Toxicology Letters (2020)"
     paper_pdf: "files/publications/meloxicam_2021/paper.pdf"
     teaser_image: "files/publications/meloxicam_2021/teaser.png"
@@ -82,7 +82,7 @@ papers:
     selected: y
 
   - title: "Dual mechanisms suppress meloxicam bioactivation relative to sudoxicam"
-    authors: "Dustyn A Barnette, Mary A Schleiff, Laura R Osborn, <b>Noah Flynn</b>, Matthew Matlock, S Joshua Swamidass, Grover P Miller"
+    authors: "Dustyn A Barnette, et al. (including <b>Noah Flynn</b>)"
     venue: "Toxicology (2020)"
     paper_pdf: "files/publications/meloxicam_2020/paper.pdf"
     teaser_image: "files/publications/meloxicam_2020/teaser.png"
