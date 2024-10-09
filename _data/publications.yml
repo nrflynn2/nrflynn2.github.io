@@ -30,7 +30,7 @@ papers:
     selected: y
 
   - title: "Bioactivation of Isoxazole-Containing Bromodomain and Extra-Terminal Domain (BET) Inhibitors"
-    authors: "<b>Noah Flynn</b>, Michael D. Ward, Mary A. Schleiff, Corentine M.C. Laurin, Rohit Farmer, Stuart J. Conway, Gunnar Boysen, S. J. Swamidass, Grover P. Miller"
+    authors: "<b>Noah Flynn</b>, Michael D. Ward, Mary A. Schleiff, et al."
     venue: "Metabolites (2021)"
     paper_pdf: "/files/publications/2021_bromo/paper.pdf"
     supp_pdf: "/files/publications/2021_bromo/supp.pdf"
@@ -38,7 +38,7 @@ papers:
     selected: y
 
   - title: "Machine Learning on Liver-Injuring Drug Interactions with NSAIDs from Hospitalization Data"
-    authors: "Arghya Datta<sup>‡</sup>, <b>Noah Flynn<sup>‡</sup></b>, Dustyn A Barnette, Keith F Woeltje, Grover P Miller, S Joshua Swamidass"
+    authors: "Arghya Datta<sup>‡</sup>, <b>Noah Flynn<sup>‡</sup></b>, Dustyn A Barnette, et al."
     venue: "PLOS Computational Biology (2021)"
     paper_pdf: "files/publications/ehr_nsaid_2021/paper.pdf"
     teaser_image: "files/publications/ehr_nsaid_2021/teaser.png"
@@ -52,7 +52,7 @@ papers:
     selected: y
 
   - title: "Significance of Multiple Bioactivation Pathways for Meclofenamate as Revealed through Modeling and Reaction Kinetics"
-    authors: "Mary Alexandra Schleiff, <b>Noah R Flynn</b>, Sasin Payakachat, Benjamin Mark Schleiff, Anna O Pinson, Dennis W Province, S Joshua Swamidass, Gunnar Boysen, Grover P Miller"
+    authors: "Mary Alexandra Schleiff, <b>Noah R Flynn</b>, Sasin Payakachat, et al."
     venue: "Drug Metabolism and Disposition (2021)"
     paper_pdf: "files/publications/meclofenamate_2021/paper.pdf"
     supp_pdf: "files/publications/meclofenamate_2021/supp.pdf"
@@ -75,7 +75,7 @@ papers:
 
   - title: "XenoNet: Inference and Likelihood of Intermediate Metabolite Formation"
     authors: "<b>Noah R Flynn</b>, Na Le Dang, Michael D Ward, S Joshua Swamidass"
-    venue: "Journal of Chemical Information and Modeling (2020)"
+    venue: "J. of Chem. Inf. Model. (2020)"
     paper_pdf: "files/publications/xenonet_2020/paper.pdf"
     supp_pdf: "files/publications/xenonet_2020/supp.pdf"
     teaser_image: "files/publications/xenonet_2020/teaser.png"
