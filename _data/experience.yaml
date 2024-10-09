@@ -4,12 +4,18 @@ experiences:
   time: "Jun 2024 - now"
   title: "Adjunct Faculty"
   subtitle: "Molecular Science & Software Engineering"
+  category: "school"
+
+- place: "Amazon"
+  time: "Jun 2024 - now"
+  title: "Applied Scientist II"
+  subtitle: "AWS AI Labs"
   category: "work"
 
 - place: "Amazon"
-  time: "Jun 2021 - now"
+  time: "Jun 2021 - Jun 2024"
   title: "Research Scientist II"
-  subtitle: "Alexa AI"
+  subtitle: "Alexa AI & AGI"
   category: "work"
 
 - place: "Merck (MSD)"

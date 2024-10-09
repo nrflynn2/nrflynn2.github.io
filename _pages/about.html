@@ -31,7 +31,7 @@ redirect_from:
 <div class="docs-section" id="bio">
   <h4>Bio</h4>
   <p>
-  Hello! I'm Noah, a research scientist at Amazon within the Artificial General Intelligence (AGI) organization.
+  Hello! I'm Noah, a research scientist at Amazon within AWS AI Labs. Previously, I was a member of Amazon's Artificial General Intelligence (AGI) organization.
   I am also adjunct faculty within UC Berkeley's Master of Molecular Science and Software Engineering program, where I am the course designer and instructor for "Software Engineering Fundamentals for Molecular Sciences."
   My focus is on applications of large language models in dialogue systems, multilingual natural language understanding, and graph machine learning for natural language processing.
   </p>
@@ -80,7 +80,7 @@ redirect_from:
       {% for paper in site.data.publications.papers %}
         <div>
             <div class="figure">
-                <img style="float:left;margin-bottom:20px;margin-right:30px;vertical-align:middle;" src="{{ paper.teaser_image | prepend: site.baseurl }}" width="360"/>
+                <img style="float:left;margin-bottom:20px;margin-right:30px;vertical-align:middle;" src="{{ paper.teaser_image | prepend: site.baseurl }}" width="220"/>
             </div>
             <div class="paper">
               <p class="title"><b>{{ paper.title }}</b></p>
@@ -123,40 +123,45 @@ redirect_from:
     <div class="tab-pane" id="papers-selected">
       {% assign selected_papers = site.data.publications.papers | where: "selected", "y" %}
       {% for paper in selected_papers %}
-        <div class="paper">
-          <p class="title"><b>{{ paper.title }}</b></p>
-          <p>{{ paper.authors }}</p>
-          <p><i>{{ paper.venue }}</i></p>
-           <div class="paper-buttons">
-            {% if paper.paper_pdf %}
-              <a class="button" href="{{ paper.paper_pdf | prepend: site.baseurl }}" target="_blank">Paper</a>
-            {% endif %}
+        <div>
+            <div class="figure">
+                <img style="float:left;margin-bottom:20px;margin-right:30px;vertical-align:middle;" src="{{ paper.teaser_image | prepend: site.baseurl }}" width="220"/>
+            </div>
+            <div class="paper">
+              <p class="title"><b>{{ paper.title }}</b></p>
+              <p>{{ paper.authors }}</p>
+              <p><i>{{ paper.venue }}</i></p>
+               <div class="paper-buttons">
+                {% if paper.paper_pdf %}
+                  <a class="button" href="{{ paper.paper_pdf | prepend: site.baseurl }}" target="_blank">Paper</a>
+                {% endif %}
 
-            {% if paper.supp_pdf %}
-              <a class="button" href="{{ paper.supp_pdf | prepend: site.baseurl }}" target="_blank">Supporting Information</a>
-            {% endif %}
+                {% if paper.supp_pdf %}
+                  <a class="button" href="{{ paper.supp_pdf | prepend: site.baseurl }}" target="_blank">Supporting Information</a>
+                {% endif %}
 
-            {% if paper.slides %}
-              <a class="button" href="{{ paper.slides | prepend: site.baseurl }}" target="_blank">Slides</a>
-            {% endif %}
+                {% if paper.slides %}
+                  <a class="button" href="{{ paper.slides | prepend: site.baseurl }}" target="_blank">Slides</a>
+                {% endif %}
 
-            {% if paper.poster %}
-              <a class="button" href="{{ paper.poster | prepend: site.baseurl }}" target="_blank">Poster</a>
-            {% endif %}
+                {% if paper.poster %}
+                  <a class="button" href="{{ paper.poster | prepend: site.baseurl }}" target="_blank">Poster</a>
+                {% endif %}
 
-            {% if paper.video %}
-              <a class="button" href="{{ paper.video }}" target="_blank">Video</a>
-            {% endif %}
+                {% if paper.video %}
+                  <a class="button" href="{{ paper.video }}" target="_blank">Video</a>
+                {% endif %}
 
-            {% if paper.code %}
-              <a class="button" href="{{ paper.code }}" target="_blank">Code</a>
-            {% endif %}
+                {% if paper.code %}
+                  <a class="button" href="{{ paper.code }}" target="_blank">Code</a>
+                {% endif %}
 
-            {% if paper.data %}
-              <a class="button" href="{{ paper.data }}" target="_blank">Data</a>
-            {% endif %}
+                {% if paper.data %}
+                  <a class="button" href="{{ paper.data }}" target="_blank">Data</a>
+                {% endif %}
 
-          </div>
+              </div>
+            </div>
         </div>
       {% endfor %}
     </div>
