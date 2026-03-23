@@ -1,0 +1,136 @@
+---
+layout: page
+title: Book
+permalink: /book/
+nav: true
+nav_order: 2
+description: Machine Learning for Drug Discovery — Hands-on deep learning for pharmaceutical research.
+---
+
+<div class="row align-items-start mb-5">
+  <div class="col-12 col-md-4 mb-4 mb-md-0 text-center">
+    <img
+      src="https://images.manning.com/360/480/resize/book/9/cf266f9-c0f1-4a05-a5ae-b3922a400b0d/Flynn-HI-MEAP.png"
+      alt="Machine Learning for Drug Discovery book cover"
+      class="img-fluid rounded z-depth-1"
+      style="max-width: 280px;"
+    >
+  </div>
+  <div class="col-12 col-md-8">
+    <h2 class="mt-0">Machine Learning for Drug Discovery</h2>
+    <p class="lead text-muted">Hands-on deep learning for pharmaceutical research — from molecular fingerprints to AlphaFold.</p>
+
+    <p>This book teaches machine learning and deep learning through real case studies from drug discovery. Each chapter takes a published research problem — screening antimalarial compounds, predicting cancer drug targets, generating novel molecules — and walks you through reproducing and extending the methodology from scratch in PyTorch.</p>
+
+    <p>No chemistry background required. If you know Python and basic ML, this book meets you where you are and builds up the domain knowledge as you go. If you're a pharmaceutical scientist learning ML, each chapter grounds abstract concepts in problems you already care about.</p>
+
+    <p>Written during my PhD, refined while teaching at UC Berkeley, and built on the same research I do at AWS AI Labs. This is the book I wished I had when I started.</p>
+
+    <div class="mt-4">
+      <a
+        href="https://www.manning.com/books/machine-learning-for-drug-discovery?utm_source=flynn&utm_medium=affiliate&utm_campaign=book_flynn_machine_2_29_24&a_aid=flynn&a_bid=ddb44578&chan=mm_website"
+        class="btn btn-book-primary me-2"
+        target="_blank"
+        rel="noopener"
+      >Get the Book &rarr;</a>
+      <a
+        href="https://github.com/nrflynn2/ml-drug-discovery"
+        class="btn btn-book-secondary"
+        target="_blank"
+        rel="noopener"
+      >View Code &rarr;</a>
+    </div>
+    <p class="mt-2" style="font-size: 0.85rem; color: var(--global-text-color-light);">
+      Use code <strong>au35fly</strong> for 35% off
+    </p>
+  </div>
+</div>
+
+---
+
+## Chapters
+
+**Part 1: Fundamentals of Cheminformatics &amp; Machine Learning**
+
+1. The Drug Discovery Process
+2. Ligand-based Screening: Filtering &amp; Similarity Searching
+3. Ligand-based Screening: Machine Learning
+4. Solubility Deep Dive with Linear Models
+5. Classification: Cytochrome P450 Inhibition
+6. Case Study: Small Molecule Binding to an RNA Target
+7. Unsupervised Learning: Repurposing Drugs, Curating Compounds, &amp; Screening Fragments
+
+**Part 2: Deep Learning for Molecules &amp; Structural Biology**
+
+{:start="8"}
+8. Introduction to Deep Learning
+9. Structure-based Drug Design with Active Learning
+10. Generative Models for De Novo Design
+11. Graph Neural Networks for Drug Target Affinity Prediction
+12. Transformer Architectures for Protein Structure Prediction
+13. Multimodal AI Systems for End-to-End Drug Discovery Pipelines
+
+**Appendices**
+
+- A: Glossary
+- B: Chemical Data Repositories
+- C: Knowledge Distillation: Shrinking Models for Efficient, Hierarchical Molecular Generation
+- D: Technical Deep Dive into Protein Structure Prediction
+
+---
+
+## Testimonials
+
+> "It's a compelling blend of machine learning and drug development insights. A must-read for anyone seeking to harness the power of AI in pharmaceutical innovation."
+>
+> --- **Meghal Gandhi**, Machine Learning Researcher, Charles R. Drew University of Medicine and Science
+
+> "I would recommend this book to my colleagues by emphasizing its practical approach to applying machine learning in drug discovery. I'd highlight how it bridges the gap between technical concepts and real-world applications, making it an essential resource for anyone in healthcare or biotech looking to leverage AI/ML for innovation."
+>
+> --- **Srikanth Daggumalli**, Senior Analytics and AI Specialist Solutions Architect, Amazon Web Services
+
+---
+
+## Cite This Book
+
+{% highlight bibtex %}
+@book{flynn2025mldd,
+  title     = {Machine Learning for Drug Discovery},
+  author    = {Flynn, Noah},
+  isbn      = {9781633437661},
+  year      = {2025},
+  publisher = {Manning Publications}
+}
+{% endhighlight %}
+
+<style>
+.btn-book-primary {
+  background-color: var(--global-amber-color, #d97706);
+  color: #fff !important;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 0.35rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none !important;
+  display: inline-block;
+  transition: opacity 0.15s ease;
+}
+.btn-book-primary:hover { opacity: 0.88; }
+.btn-book-secondary {
+  background-color: transparent;
+  color: var(--global-theme-color) !important;
+  border: 1.5px solid var(--global-theme-color);
+  padding: 0.5rem 1.2rem;
+  border-radius: 0.35rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none !important;
+  display: inline-block;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+.btn-book-secondary:hover {
+  background-color: var(--global-theme-color);
+  color: #fff !important;
+}
+</style>

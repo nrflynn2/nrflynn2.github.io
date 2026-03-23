@@ -5,12 +5,12 @@
 @use "sass:color";
 
 :root {
-  --global-bg-color: #{$white-color};
-  --global-code-bg-color: #{$code-bg-color-light};
-  --global-text-color: #{$black-color};
-  --global-text-color-light: #{$grey-color};
-  --global-theme-color: #{$purple-color};
-  --global-hover-color: #{$purple-color};
+  --global-bg-color: #ffffff;
+  --global-code-bg-color: #f3f4f6;
+  --global-text-color: #1a1a2e;
+  --global-text-color-light: #6b7280;
+  --global-theme-color: #0d9488;
+  --global-hover-color: #0d9488;
   --global-hover-text-color: #{$white-color};
   --global-footer-bg-color: #{$grey-color-dark};
   --global-footer-text-color: #{$grey-color-light};
@@ -18,7 +18,8 @@
   --global-distill-app-color: #{$grey-color};
   --global-divider-color: rgba(0, 0, 0, 0.1);
   --global-card-bg-color: #{$white-color};
-  --global-highlight-color: #{$red-color-dark};
+  --global-highlight-color: #0d9488;
+  --global-amber-color: #d97706;
   --global-back-to-top-bg-color: rgba(
     #{color.channel($black-color, "red", $space: rgb)},
     #{color.channel($black-color, "green", $space: rgb)},
@@ -75,19 +76,20 @@
 }
 
 html[data-theme="dark"] {
-  --global-bg-color: #{$grey-color-dark};
-  --global-code-bg-color: #{$code-bg-color-dark};
-  --global-text-color: #{$grey-color-light};
-  --global-text-color-light: #{$grey-color};
-  --global-theme-color: #{$cyan-color};
-  --global-hover-color: #{$cyan-color};
+  --global-bg-color: #1a1a2e;
+  --global-code-bg-color: #2d2d3f;
+  --global-text-color: #e5e7eb;
+  --global-text-color-light: #9ca3af;
+  --global-theme-color: #14b8a6;
+  --global-hover-color: #14b8a6;
   --global-hover-text-color: #{$white-color};
-  --global-footer-bg-color: #{$grey-color-light};
-  --global-footer-text-color: #{$grey-color-dark};
-  --global-footer-link-color: #{$black-color};
-  --global-distill-app-color: #{$grey-color-light};
-  --global-divider-color: #424246;
-  --global-card-bg-color: #{$grey-900};
+  --global-footer-bg-color: #111122;
+  --global-footer-text-color: #9ca3af;
+  --global-footer-link-color: #e5e7eb;
+  --global-distill-app-color: #9ca3af;
+  --global-divider-color: #2d2d3f;
+  --global-card-bg-color: #2d2d3f;
+  --global-amber-color: #f59e0b;
   --global-back-to-top-bg-color: rgba(
     #{color.channel($white-color, "red", $space: rgb)},
     #{color.channel($white-color, "green", $space: rgb)},
@@ -153,5 +155,27 @@ html[data-theme-setting="light"] {
     padding-left: 10px;
     padding-top: 12px;
     display: block;
+  }
+}
+
+// -----------------------------------------------------------------------
+// Profile image: slightly smaller circular crop
+// -----------------------------------------------------------------------
+@media (min-width: 576px) {
+  .profile {
+    width: 22%;
+  }
+}
+
+// Navbar social icons: compact sizing
+.navbar-brand.social {
+  a {
+    font-size: 1.05rem;
+    padding: 0 0.3rem;
+    color: var(--global-text-color-light);
+
+    &:hover {
+      color: var(--global-theme-color);
+    }
   }
 }
