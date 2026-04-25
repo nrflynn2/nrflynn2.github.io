@@ -1,0 +1,18 @@
+{% assign row_href = include.href %}
+{% if row_href contains '://' %}
+  {% assign row_url = row_href %}
+{% else %}
+  {% assign row_url = row_href | relative_url %}
+{% endif %}
+
+<a class="work-row" href="{{ row_url }}">
+  <span class="work-row-year">{{ include.year }}</span>
+  <span class="work-row-main">
+    <span class="work-row-title">{{ include.title }}</span>
+    {% if include.description %}
+      <span class="work-row-description">{{ include.description }}</span>
+    {% endif %}
+  </span>
+  <span class="work-row-meta">{{ include.venue }}</span>
+  <span class="work-row-type">{{ include.type }}</span>
+</a>

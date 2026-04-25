@@ -71,33 +71,35 @@
   color: var(--global-text-color-light);
 }
 .btn-book-primary {
-  background-color: var(--global-amber-color);
+  background-color: var(--global-hover-color);
   color: #fff !important;
-  border: none;
+  border: 1px solid var(--global-hover-color);
   padding: 0.45rem 1.1rem;
-  border-radius: 0.35rem;
-  font-weight: 600;
+  border-radius: 999px;
+  font-weight: 500;
   font-size: 0.9rem;
   text-decoration: none !important;
-  transition: opacity 0.15s ease;
+  transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease;
 }
 .btn-book-primary:hover {
-  opacity: 0.88;
+  background-color: var(--global-theme-color);
+  border-color: var(--global-theme-color);
+  color: #fff !important;
 }
 .btn-book-secondary {
   background-color: transparent;
-  color: var(--global-theme-color) !important;
-  border: 1.5px solid var(--global-theme-color);
+  color: var(--global-text-color) !important;
+  border: 1px solid var(--global-divider-color);
   padding: 0.45rem 1.1rem;
-  border-radius: 0.35rem;
-  font-weight: 600;
+  border-radius: 999px;
+  font-weight: 500;
   font-size: 0.9rem;
   text-decoration: none !important;
-  transition: background-color 0.15s ease, color 0.15s ease;
+  transition: border-color 160ms ease, color 160ms ease;
 }
 .btn-book-secondary:hover {
-  background-color: var(--global-theme-color);
-  color: #fff !important;
+  border-color: var(--global-theme-color);
+  color: var(--global-hover-color) !important;
 }
 @media (max-width: 575px) {
   .book-feature-cover {

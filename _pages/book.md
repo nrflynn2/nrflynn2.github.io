@@ -106,32 +106,36 @@ og_image: https://noahrflynn.com/assets/img/og/book.png
 
 <style>
 .btn-book-primary {
-  background-color: var(--global-amber-color, #d97706);
+  background-color: var(--global-hover-color);
   color: #fff !important;
-  border: none;
+  border: 1px solid var(--global-hover-color);
   padding: 0.5rem 1.2rem;
-  border-radius: 0.35rem;
-  font-weight: 600;
+  border-radius: 999px;
+  font-weight: 500;
   font-size: 0.95rem;
   text-decoration: none !important;
   display: inline-block;
-  transition: opacity 0.15s ease;
+  transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease;
 }
-.btn-book-primary:hover { opacity: 0.88; }
+.btn-book-primary:hover {
+  background-color: var(--global-theme-color);
+  border-color: var(--global-theme-color);
+  color: #fff !important;
+}
 .btn-book-secondary {
   background-color: transparent;
-  color: var(--global-theme-color) !important;
-  border: 1.5px solid var(--global-theme-color);
+  color: var(--global-text-color) !important;
+  border: 1px solid var(--global-divider-color);
   padding: 0.5rem 1.2rem;
-  border-radius: 0.35rem;
-  font-weight: 600;
+  border-radius: 999px;
+  font-weight: 500;
   font-size: 0.95rem;
   text-decoration: none !important;
   display: inline-block;
-  transition: background-color 0.15s ease, color 0.15s ease;
+  transition: border-color 160ms ease, color 160ms ease;
 }
 .btn-book-secondary:hover {
-  background-color: var(--global-theme-color);
-  color: #fff !important;
+  border-color: var(--global-theme-color);
+  color: var(--global-hover-color) !important;
 }
 </style>

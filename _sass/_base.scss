@@ -19,6 +19,13 @@ strong {
   color: var(--global-text-color);
 }
 
+.post-title,
+.card-title,
+.title {
+  font-family: "Source Serif 4", Georgia, serif;
+  letter-spacing: 0;
+}
+
 hr {
   border-top: 1px solid var(--global-divider-color);
 }
@@ -46,6 +53,45 @@ table.table a {
 
   &:hover:after :not(.nav-item.dropdown) {
     width: 100%;
+  }
+}
+
+.btn,
+a.btn,
+button.btn,
+.brand-button-primary,
+.brand-button-ghost {
+  border-radius: 999px;
+  font-family: "Source Sans 3", system-ui, -apple-system, sans-serif;
+  font-weight: 500;
+  text-decoration: none !important;
+  transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease, opacity 160ms ease;
+}
+
+.btn-primary,
+.brand-button-primary {
+  background-color: var(--global-hover-color) !important;
+  border-color: var(--global-hover-color) !important;
+  color: #ffffff !important;
+
+  &:hover,
+  &:focus {
+    background-color: var(--global-theme-color) !important;
+    border-color: var(--global-theme-color) !important;
+    color: #ffffff !important;
+  }
+}
+
+.btn-secondary,
+.brand-button-ghost {
+  background-color: transparent !important;
+  border-color: var(--global-divider-color) !important;
+  color: var(--global-text-color) !important;
+
+  &:hover,
+  &:focus {
+    border-color: var(--global-theme-color) !important;
+    color: var(--global-hover-color) !important;
   }
 }
 
@@ -751,7 +797,8 @@ footer.sticky-bottom {
       .links {
         a.btn {
           color: var(--global-text-color);
-          border: 1px solid var(--global-text-color);
+          border: 1px solid var(--global-divider-color);
+          border-radius: 999px;
           padding-left: 1rem;
           padding-right: 1rem;
           padding-top: 0.25rem;
@@ -761,6 +808,7 @@ footer.sticky-bottom {
           &:hover {
             color: var(--global-theme-color);
             border-color: var(--global-theme-color);
+            text-decoration: none;
           }
         }
         a.award.btn {

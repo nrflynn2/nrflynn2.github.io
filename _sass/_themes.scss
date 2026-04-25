@@ -5,22 +5,22 @@
 @use "sass:color";
 
 :root {
-  --global-bg-color: #ffffff;
-  --global-code-bg-color: #f3f4f6;
-  --global-text-color: #1a1a2e;
-  --global-text-color-light: #6b7280;
-  --global-theme-color: #0d9488;
-  --global-hover-color: #0d9488;
+  --global-bg-color: #f4efe4;
+  --global-code-bg-color: #fbf8f1;
+  --global-text-color: #1f3a52;
+  --global-text-color-light: #5b7388;
+  --global-theme-color: #3a7088;
+  --global-hover-color: #1f3a52;
   --global-hover-text-color: #{$white-color};
   --global-footer-bg-color: #{$grey-color-dark};
   --global-footer-text-color: #{$grey-color-light};
   --global-footer-link-color: #{$white-color};
   --global-distill-app-color: #{$grey-color};
-  --global-divider-color: rgba(0, 0, 0, 0.1);
-  --global-card-bg-color: #{$white-color};
-  --global-highlight-color: #0d9488;
+  --global-divider-color: #e0d9c9;
+  --global-card-bg-color: #fbf8f1;
+  --global-highlight-color: #3a7088;
   --global-amber-color: #d97706;
-  --global-theme-color-deep: #0a645f;
+  --global-theme-color-deep: #1f3a52;
   --global-back-to-top-bg-color: rgba(
     #{color.channel($black-color, "red", $space: rgb)},
     #{color.channel($black-color, "green", $space: rgb)},
@@ -77,21 +77,21 @@
 }
 
 html[data-theme="dark"] {
-  --global-bg-color: #1a1a2e;
-  --global-code-bg-color: #2d2d3f;
-  --global-text-color: #e5e7eb;
-  --global-text-color-light: #9ca3af;
-  --global-theme-color: #14b8a6;
-  --global-hover-color: #14b8a6;
+  --global-bg-color: #132638;
+  --global-code-bg-color: #1c3348;
+  --global-text-color: #f6f0e6;
+  --global-text-color-light: #b7c5cf;
+  --global-theme-color: #9bd0cf;
+  --global-hover-color: #3a7088;
   --global-hover-text-color: #{$white-color};
   --global-footer-bg-color: #111122;
   --global-footer-text-color: #9ca3af;
   --global-footer-link-color: #e5e7eb;
   --global-distill-app-color: #9ca3af;
-  --global-divider-color: #2d2d3f;
-  --global-card-bg-color: #2d2d3f;
+  --global-divider-color: #2d465a;
+  --global-card-bg-color: #1c3348;
   --global-amber-color: #f59e0b;
-  --global-theme-color-deep: #0a645f;
+  --global-theme-color-deep: #9bd0cf;
   --global-back-to-top-bg-color: rgba(
     #{color.channel($white-color, "red", $space: rgb)},
     #{color.channel($white-color, "green", $space: rgb)},
