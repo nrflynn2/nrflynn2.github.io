@@ -17,5 +17,3 @@ latest_posts: true # includes latest blog posts
 ---
 
 I build AI systems at Amazon AWS AI Labs and wrote the textbook on machine learning for drug discovery. My day job is multi-agent frameworks and foundation models; my side of the desk is teaching, writing, and figuring out how ML can accelerate the way we find new medicines. I have a PhD in computational biology from Washington University in St. Louis (graph neural networks for drug metabolism), and I teach graduate ML and cheminformatics courses at UC Berkeley. This site is where I write about all of it.
-
-{% include book-feature.html %}

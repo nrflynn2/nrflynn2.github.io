@@ -24,7 +24,13 @@ pagination:
 {% if blog_name_size > 0 or blog_description_size > 0 %}
 
   <div class="header-bar">
-    <h1>{{ site.blog_name }}</h1>
+    <h1>
+      <img
+        src="{{ 'assets/img/brand/03_wordmark_transparent.png' | relative_url }}"
+        alt="{{ site.blog_name }}"
+        class="infoark-wordmark"
+      >
+    </h1>
     <h2>{{ site.blog_description }}</h2>
   </div>
   {% endif %}

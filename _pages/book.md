@@ -5,6 +5,7 @@ permalink: /book/
 nav: true
 nav_order: 2
 description: Machine Learning for Drug Discovery — Hands-on deep learning for pharmaceutical research.
+og_image: https://noahrflynn.com/assets/img/og/book.png
 ---
 
 <div class="row align-items-start mb-5">
