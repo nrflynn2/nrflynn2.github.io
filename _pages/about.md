@@ -21,9 +21,16 @@ selected_papers: true
       </div>
     </div>
     <aside class="home-hero-aside" aria-label="Social links">
+      <img
+        class="home-hero-photo"
+        src="{{ '/0062Flynn_Noah-Retouched.png' | relative_url }}"
+        alt="Noah Flynn"
+      >
       <div class="contact-icons">{% include social.liquid %}</div>
     </aside>
   </section>
+
+  {% include book-band.html %}
 
   <section class="home-section" aria-labelledby="now-heading">
     <div class="home-section-header">
@@ -34,12 +41,15 @@ selected_papers: true
     </div>
     <div class="now-grid">
       <div class="now-item">
+        <span class="now-item-label">Research</span>
         <p>Starting as a Senior Research Scientist at Google, working on agentic frameworks that generalize across deep research, coding, and data science.</p>
       </div>
       <div class="now-item">
+        <span class="now-item-label">Writing</span>
         <p>Finishing Machine Learning for Drug Discovery with Manning — a hands-on tour of the ML that powers modern pharma, including a deep AlphaFold case study.</p>
       </div>
       <div class="now-item">
+        <span class="now-item-label">Teaching</span>
         <p>Teaching graduate ML + cheminformatics at UC Berkeley as an adjunct.</p>
       </div>
     </div>
@@ -72,6 +82,4 @@ selected_papers: true
     </div>
     {% include selected_papers.liquid %}
   </section>
-
-  {% include book-band.html %}
 </main>

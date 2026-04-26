@@ -26,7 +26,7 @@ pagination:
   <div class="header-bar">
     <h1>
       <img
-        src="{{ 'assets/img/brand/03_wordmark_transparent.png' | relative_url }}"
+        src="{{ '/Gemini_Generated_Image_elyqktelyqktelyq.png' | relative_url }}"
         alt="{{ site.blog_name }}"
         class="infoark-wordmark"
       >
