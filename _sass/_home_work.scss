@@ -155,11 +155,11 @@ html[data-theme="dark"] body.home-work-brand {
 .home-hero-photo {
   display: block;
   width: min(100%, 280px);
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
-  object-position: 56% 42%;
+  object-position: 54% 30%;
   border: 1px solid var(--global-divider-color);
-  border-radius: 8px;
+  border-radius: 50%;
   box-shadow: 0 18px 50px rgba(31, 58, 82, 0.14);
 }
 
