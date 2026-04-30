@@ -2,8 +2,6 @@
  * Themes
  ******************************************************************************/
 
-@use "sass:color";
-
 :root {
   --global-bg-color: #f4efe4;
   --global-code-bg-color: #fbf8f1;
@@ -22,9 +20,9 @@
   --global-amber-color: #d97706;
   --global-theme-color-deep: #1f3a52;
   --global-back-to-top-bg-color: rgba(
-    #{color.channel($black-color, "red", $space: rgb)},
-    #{color.channel($black-color, "green", $space: rgb)},
-    #{color.channel($black-color, "blue", $space: rgb)},
+    #{red($black-color)},
+    #{green($black-color)},
+    #{blue($black-color)},
     0.4
   );
   --global-back-to-top-text-color: #{$white-color};
@@ -93,9 +91,9 @@ html[data-theme="dark"] {
   --global-amber-color: #f59e0b;
   --global-theme-color-deep: #9bd0cf;
   --global-back-to-top-bg-color: rgba(
-    #{color.channel($white-color, "red", $space: rgb)},
-    #{color.channel($white-color, "green", $space: rgb)},
-    #{color.channel($white-color, "blue", $space: rgb)},
+    #{red($white-color)},
+    #{green($white-color)},
+    #{blue($white-color)},
     0.5
   );
   --global-back-to-top-text-color: #{$black-color};

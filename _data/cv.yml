@@ -1,13 +1,20 @@
 - title: Experience
   type: time_table
   contents:
-    - title: Applied Scientist II
-      institution: Amazon AWS Agentic AI, Seattle, WA
-      year: Sep 2024 – Present
+    - title: Senior Research Scientist
+      institution: Google Cloud AI, Gemini Enterprise, Seattle, WA
+      year: Apr 2026 – Present
       description:
-        - Multi-agent frameworks and agent evaluation for deep research agents.
-        - Cost-aware reasoning and tool-use optimization for foundation models.
-        - Mentoring 5 applied scientists on agent systems and evaluation methodology.
+        - Agentic AI systems for Gemini Enterprise research, coding, and data science workflows.
+        - Evaluation, adaptation, and reliability methods for production AI assistants.
+
+    - title: Applied Scientist II
+      institution: Amazon AWS AI Labs, Agentic AI, Seattle, WA
+      year: Sep 2024 – Apr 2026
+      description:
+        - Built multi-agent frameworks and agent evaluation methods for deep research agents.
+        - Developed cost-aware reasoning and tool-use optimization methods for foundation models.
+        - Mentored 5 applied scientists on agent systems and evaluation methodology.
 
     - title: Adjunct Faculty
       institution: UC Berkeley, Berkeley, CA
@@ -16,7 +23,7 @@
         - Graduate courses in ML and cheminformatics (CHEM 274B).
         - Molecular Science & Software Engineering.
 
-    - title: Research Scientist II
+    - title: Applied Scientist II
       institution: Amazon Alexa & AGI, Seattle, WA
       year: Jun 2021 – Sep 2024
       description:
@@ -36,6 +43,11 @@
       description:
         - Graph neural networks for drug metabolism prediction.
         - Developed XenoSite and XenoNet web services for metabolite prediction.
+      linkitems:
+        - linkname: XenoSite
+          link: https://swami.wustl.edu/xenosite/
+        - linkname: XenoNet
+          link: https://swami.wustl.edu/xenonet
 
     - title: Computational Research Fellow
       institution: NCSA, University of Illinois at Urbana-Champaign
@@ -70,9 +82,15 @@
 - title: Talks
   type: time_table
   contents:
+    - title: Keynote Panel on Applied AI and Developer Ecosystems
+      institution: DevFest WashU, St. Louis, MO
+      year: Apr 2026
+      description:
+        - Panel discussion on practical AI systems, developer tools, and translational AI work.
+
     - title: Designing Medicines from Scratch — PyTorch Workflows for De Novo Drug Discovery
       institution: PyTorch Conference, San Francisco, CA
-      year: Oct 2024
+      year: Oct 2025
       description:
         - Invited talk on generative deep learning approaches for molecular design.
 
@@ -110,12 +128,12 @@
     - title: Proficient
       items:
         - Docker, Git, HuggingFace
+        - Google Cloud, AWS (Bedrock, EC2, Kendra, S3)
         - JavaScript (D3, React)
         - Python (Flask, NumPy, Pandas, Scikit-Learn, PyCUDA)
         - PyTorch, RDKit, SQL, vLLM
     - title: Have Used
       items:
-        - AWS (Bedrock, EC2, Kendra, S3)
         - C++ (CUDA), Java, JAX, MATLAB
         - Megatron-LM, Neo4j, R, Spark, TensorFlow
 

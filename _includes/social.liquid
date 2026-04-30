@@ -49,6 +49,9 @@
 {% if site.x_username %}
   <a href="https://twitter.com/{{ site.x_username }}" title="X"><i class="fa-brands fa-x-twitter"></i></a>
 {% endif %}
+{% if site.substack_url %}
+  <a href="{{ site.substack_url }}" title="Substack"><i class="fa-solid fa-newspaper"></i></a>
+{% endif %}
 {% if site.mastodon_username %}
   <a rel="me" href="https://{{ site.mastodon_username  }}" title="Mastodon"><i class="fa-brands fa-mastodon"></i></a>
 {% endif %}

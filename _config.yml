@@ -7,10 +7,10 @@ first_name: Noah
 last_name: Flynn
 email: noahrflynn@gmail.com
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Applied Scientist at AWS AI Labs. Author of Machine Learning for Drug Discovery.
+  Senior Research Scientist at Google Cloud AI, author of Machine Learning for Drug Discovery, and UC Berkeley adjunct faculty.
 footer_text: >
   Noah Flynn &mdash; Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
-keywords: machine learning, drug discovery, computational biology, AI, deep learning # add your own keywords or leave empty
+keywords: machine learning, drug discovery, computational biology, agentic AI, foundation models, deep learning # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: favicon.ico # InfoArk ark icon in /assets/img/
 
@@ -108,9 +108,10 @@ work_url: # work page URL
 x_username: NoahF39228 # your X handle
 youtube_id: # your youtube channel id
 zotero_username: # your zotero username
+substack_url: https://substack.com/@noaflynn
 
 contact_note: >
-  Best way to reach me is email.
+  Email is best for collaborations, speaking invitations, and teaching questions.
 
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification
@@ -131,7 +132,7 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # -----------------------------------------------------------------------------
 
 blog_name: InfoArk # blog_name will be displayed in your blog page
-blog_description: "Noah Flynn's refuge in the information flood — ML, drug discovery, and teaching"
+blog_description: "Noah Flynn's notes on agentic AI, drug discovery, and teaching"
 permalink: /blog/:year/:title/
 lsi: false # produce an index for related posts
 
@@ -159,7 +160,7 @@ giscus:
   lang: en
 
 # Disqus comments (DEPRECATED)
-disqus_shortname: al-folio # put your disqus shortname
+disqus_shortname: # put your disqus shortname
 # https://help.disqus.com/en/articles/1717111-what-s-a-shortname
 
 # External sources.
@@ -229,15 +230,84 @@ exclude:
   - FAQ.md
   - Gemfile
   - Gemfile.lock
+  - CLAUDE.md
+  - CONTENT_GAPS.md
+  - HOME_WORK_STYLE_CONTEXT.md
   - INSTALL.md
   - LICENSE
+  - PRELAUNCH_ROADMAP.md
+  - VISUAL_IDENTITY_WORK.md
+  - WEBSITE_IMPLEMENTATION_SPEC.md
+  - CV_NoahFlynn_20260210.pdf
+  - Gemini_Generated_Image_elyqktelyqktelyq.png
+  - copy_teasers.sh
+  - assets/jupyter/
+  - assets/audio/
+  - assets/bibliography/2018-12-22-distill.bib
+  - assets/html/
+  - assets/img/1.jpg
+  - assets/img/2.jpg
+  - assets/img/3.jpg
+  - assets/img/4.jpg
+  - assets/img/5.jpg
+  - assets/img/6.jpg
+  - assets/img/7.jpg
+  - assets/img/8.jpg
+  - assets/img/9.jpg
+  - assets/img/10.jpg
+  - assets/img/11.jpg
+  - assets/img/12.jpg
+  - assets/img/prof_pic.jpg
+  - assets/img/prof_pic_color.png
+  - assets/img/template_error.png
+  - assets/json/table_data.json
+  - assets/pdf/example_pdf.pdf
+  - assets/plotly/
+  - assets/video/
+  - images/
+  - infoark-assets/
   - lighthouse_results/
   - package.json
   - package-lock.json
   - _pages/about_einstein.md
+  - _pages/dropdown.md
+  - _pages/profiles.md
+  - _pages/repositories.md
+  - _projects/
+  - _posts/2015-03-15-formatting-and-links.md
+  - _posts/2015-05-15-images.md
+  - _posts/2015-07-15-code.md
+  - _posts/2015-10-20-disqus-comments.md
+  - _posts/2015-10-20-math.md
+  - _posts/2018-12-22-distill.md
+  - _posts/2020-09-28-twitter.md
+  - _posts/2021-07-04-diagrams.md
+  - _posts/2022-02-01-redirect.md
+  - _posts/2022-12-10-giscus-comments.md
+  - _posts/2023-03-20-table-of-contents.md
+  - _posts/2023-03-21-tables.md
+  - _posts/2023-04-24-videos.md
+  - _posts/2023-04-25-audios.md
+  - _posts/2023-04-25-sidebar-table-of-contents.md
+  - _posts/2023-05-12-custom-blockquotes.md
+  - _posts/2023-07-04-jupyter-notebook.md
+  - _posts/2023-07-12-post-bibliography.md
+  - _posts/2023-12-12-tikzjax.md
+  - _posts/2024-01-26-chartjs.md
+  - _posts/2024-01-26-echarts.md
+  - _posts/2024-01-26-geojson-map.md
+  - _posts/2024-01-27-advanced-images.md
+  - _posts/2024-01-27-code-diff.md
+  - _posts/2024-01-27-vega-lite.md
+  - _posts/2024-04-15-pseudocode.md
+  - _posts/2024-04-28-post-citation.md
+  - _posts/2024-04-29-typograms.md
+  - _posts/2024-05-01-tabs.md
   - purgecss.config.js
   - README.md
   - readme_preview/
+  - requirements.txt
+  - scripts/
   - vendor
 keep_files:
   - CNAME
@@ -296,8 +366,8 @@ jekyll-archives:
     tag: "/blog/tag/:name/"
     category: "/blog/category/:name/"
 
-display_tags: ["formatting", "images", "links", "math", "code", "blockquotes"] # these tags will be displayed on the front page of your blog
-display_categories: ["external-services"] # these categories will be displayed on the front page of your blog
+display_tags: ["machine learning", "drug discovery", "agents", "teaching", "writing"] # these tags will be displayed on the front page of your blog
+display_categories: ["launch"] # these categories will be displayed on the front page of your blog
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar
@@ -388,7 +458,7 @@ external_links:
 # MAKE SURE imagemagick is installed and on your PATH before enabling imagemagick. In a terminal, run:
 #   convert -version
 imagemagick:
-  enabled: true # enables responsive images for your site (recommended, see https://github.com/alshedivat/al-folio/issues/537)
+  enabled: false # enable only when ImageMagick's convert binary is available in the build environment
   widths:
     - 480
     - 800

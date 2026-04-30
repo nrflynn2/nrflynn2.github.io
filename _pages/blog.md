@@ -4,6 +4,7 @@ permalink: /blog/
 title: Blog
 nav: true
 nav_order: 1
+description: Canonical posts from Noah Flynn on agentic AI, drug discovery, teaching, and practical machine learning.
 pagination:
   enabled: true
   collection: posts

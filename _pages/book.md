@@ -4,14 +4,14 @@ title: Book
 permalink: /book/
 nav: true
 nav_order: 2
-description: Machine Learning for Drug Discovery — Hands-on deep learning for pharmaceutical research.
+description: Machine Learning for Drug Discovery is a practical Manning book on using PyTorch, cheminformatics, and modern ML to solve real pharmaceutical research problems.
 og_image: https://noahrflynn.com/assets/img/og/book.png
 ---
 
 <div class="row align-items-start mb-5">
   <div class="col-12 col-md-4 mb-4 mb-md-0 text-center">
     <img
-      src="https://images.manning.com/360/480/resize/book/9/cf266f9-c0f1-4a05-a5ae-b3922a400b0d/Flynn-HI-MEAP.png"
+      src="{{ '/assets/img/book_cover_manning.png' | relative_url }}"
       alt="Machine Learning for Drug Discovery book cover"
       class="img-fluid rounded z-depth-1"
       style="max-width: 280px;"
@@ -19,13 +19,15 @@ og_image: https://noahrflynn.com/assets/img/og/book.png
   </div>
   <div class="col-12 col-md-8">
     <h2 class="mt-0">Machine Learning for Drug Discovery</h2>
-    <p class="lead text-muted">Hands-on deep learning for pharmaceutical research — from molecular fingerprints to AlphaFold.</p>
+    <p class="lead text-muted">Hands-on deep learning for pharmaceutical research, from molecular fingerprints to AlphaFold.</p>
 
-    <p>This book teaches machine learning and deep learning through real case studies from drug discovery. Each chapter takes a published research problem — screening antimalarial compounds, predicting cancer drug targets, generating novel molecules — and walks you through reproducing and extending the methodology from scratch in PyTorch.</p>
+    <p><strong>Status:</strong> all chapters are available in Manning MEAP, the manuscript is 100% complete, and the full release is estimated for Summer 2026.</p>
 
-    <p>No chemistry background required. If you know Python and basic ML, this book meets you where you are and builds up the domain knowledge as you go. If you're a pharmaceutical scientist learning ML, each chapter grounds abstract concepts in problems you already care about.</p>
+    <p>This book teaches machine learning and deep learning through real drug discovery case studies. Each chapter starts with a concrete pharmaceutical problem--screening antimalarial compounds, predicting cancer drug targets, generating new molecules--then walks through the code and modeling decisions needed to reproduce and extend the work in PyTorch.</p>
 
-    <p>Written during my PhD, refined while teaching at UC Berkeley, and built on the same research I do at AWS AI Labs. This is the book I wished I had when I started.</p>
+    <p>No chemistry background is required. If you know Python and basic ML, the book builds the molecular science as you go. If you are a chemist, biologist, or pharmacologist learning ML, the modeling concepts stay anchored in problems you already care about.</p>
+
+    <p>Written during my PhD, sharpened while teaching at UC Berkeley, and informed by production AI work at Amazon scale and Google Cloud AI. It is the practical bridge I wanted when I started.</p>
 
     <div class="mt-4">
       <a
@@ -81,6 +83,8 @@ og_image: https://noahrflynn.com/assets/img/og/book.png
 ---
 
 ## Testimonials
+
+Early reader notes:
 
 > "It's a compelling blend of machine learning and drug development insights. A must-read for anyone seeking to harness the power of AI in pharmaceutical innovation."
 >

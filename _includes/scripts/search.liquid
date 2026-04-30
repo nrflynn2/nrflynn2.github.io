@@ -280,6 +280,16 @@
             },
           },
         {%- endif -%}
+        {%- if site.substack_url -%}
+          {
+            id: 'socials-substack',
+            title: 'Substack',
+            section: 'Socials',
+            handler: () => {
+              window.open("{{ site.substack_url }}", "_blank");
+            },
+          },
+        {%- endif -%}
         {%- if site.mastodon_username -%}
           {
             id: 'socials-mastodon',
