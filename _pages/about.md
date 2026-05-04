@@ -10,7 +10,7 @@ description: Noah Flynn builds production AI systems, agentic research workflows
 <main class="home-redesign">
   <section class="home-hero">
     <div class="home-hero-copy">
-      {% include eyebrow.html text="Senior Research Scientist · Google Cloud AI · Gemini Enterprise" %}
+      <p class="eyebrow home-hero-eyebrow">Senior Research Scientist · Google Cloud AI · Gemini Enterprise</p>
       <h1 class="home-hero-title">AI Systems for <span class="home-hero-highlight">Agents, Science, and Medicine.</span></h1>
     </div>
     <aside class="home-hero-aside" aria-label="Portrait">
@@ -34,6 +34,23 @@ description: Noah Flynn builds production AI systems, agentic research workflows
     </div>
   </section>
 
+  {% include book-band.html %}
+
+  <section class="home-section" aria-labelledby="latest-posts-heading">
+    <div class="home-section-header">
+      <div>
+        {% include eyebrow.html text="Blog" %}
+        <h2 id="latest-posts-heading">Latest Posts</h2>
+      </div>
+      <div class="home-section-links">
+        <a class="home-section-link" href="{{ '/blog/' | relative_url }}">All posts &rarr;</a>
+        <a class="home-section-link" href="{{ '/feed.xml' | relative_url }}">RSS &rarr;</a>
+        <a class="home-section-link" href="{{ site.substack_url }}" target="_blank" rel="noopener">Substack &rarr;</a>
+      </div>
+    </div>
+    {% include latest_posts.liquid %}
+  </section>
+
   <section class="home-bio" aria-labelledby="bio-heading">
     <div class="home-bio-header">
       {% include eyebrow.html text="About" %}
@@ -52,50 +69,26 @@ description: Noah Flynn builds production AI systems, agentic research workflows
       <p>
         I teach graduate machine learning and cheminformatics at UC Berkeley, and wrote <a href="{{ '/book/' | relative_url }}">Machine Learning for Drug Discovery</a> to make that intersection easier to enter. I am always glad to hear from people building at the boundary of agentic AI, computational drug discovery, and scientific software.
       </p>
-      <div class="home-bio-links">
-        <a class="home-section-link" href="mailto:{{ site.email }}">Email &rarr;</a>
-        <a class="home-section-link" href="{{ '/cv/' | relative_url }}">CV &rarr;</a>
-        <a class="home-section-link" href="{{ '/publications/' | relative_url }}">Publications &rarr;</a>
+      <div class="home-bio-cta">
+        <p>Working on a research collaboration, invited talk, or teaching project around AI systems or computational drug discovery?</p>
+        <a class="brand-button-primary" href="https://www.linkedin.com/in/{{ site.linkedin_username }}" target="_blank" rel="noopener">Reach Out &rarr;</a>
       </div>
     </div>
-  </section>
-
-  {% include book-band.html %}
-
-  <section class="home-section" aria-labelledby="latest-posts-heading">
-    <div class="home-section-header">
-      <div>
-        {% include eyebrow.html text="Blog" %}
-        <h2 id="latest-posts-heading">Latest Posts</h2>
-      </div>
-      <div class="home-section-links">
-        <a class="home-section-link" href="{{ '/blog/' | relative_url }}">All posts &rarr;</a>
-        <a class="home-section-link" href="{{ '/feed.xml' | relative_url }}">RSS &rarr;</a>
-        <a class="home-section-link" href="{{ site.substack_url }}" target="_blank" rel="noopener">Substack &rarr;</a>
-      </div>
-    </div>
-    {% include latest_posts.liquid %}
-  </section>
-
-  <section class="home-section" aria-labelledby="now-heading">
-    <div class="home-section-header">
-      <div>
-        {% include eyebrow.html text="Now" %}
-        <h2 id="now-heading">Current Focus</h2>
-      </div>
-    </div>
-    <div class="now-grid">
-      <div class="now-item">
-        <span class="now-item-label">Research</span>
-        <p>Starting as a Senior Research Scientist on Google Cloud AI's Gemini Enterprise team, building agentic systems for deep research, coding, and data science workflows.</p>
-      </div>
-      <div class="now-item">
-        <span class="now-item-label">Writing</span>
-        <p><em>Machine Learning for Drug Discovery</em> is 100% complete with Manning and nearing full release: real case studies, PyTorch code, and practical molecular science.</p>
-      </div>
-      <div class="now-item">
-        <span class="now-item-label">Teaching</span>
-        <p>Teaching graduate molecular science and software engineering at UC Berkeley, from RDKit and PyTorch to graph neural networks and generative design.</p>
+    <div class="home-bio-focus" aria-labelledby="current-focus-heading">
+      <h3 class="home-bio-subheading" id="current-focus-heading">Current Focus</h3>
+      <div class="now-grid">
+        <div class="now-item">
+          <span class="now-item-label">Research</span>
+          <p>Starting as a Senior Research Scientist on Google Cloud AI's Gemini Enterprise team, building agentic systems for deep research, coding, and data science workflows.</p>
+        </div>
+        <div class="now-item">
+          <span class="now-item-label">Writing</span>
+          <p><em>Machine Learning for Drug Discovery</em> is 100% complete with Manning and nearing full release: real case studies, PyTorch code, and practical molecular science.</p>
+        </div>
+        <div class="now-item">
+          <span class="now-item-label">Teaching</span>
+          <p>Teaching graduate molecular science and software engineering at UC Berkeley, from RDKit and PyTorch to graph neural networks and generative design.</p>
+        </div>
       </div>
     </div>
   </section>
