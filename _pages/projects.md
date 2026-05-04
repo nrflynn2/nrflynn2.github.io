@@ -3,7 +3,6 @@ layout: default
 title: Work
 permalink: /work/
 description: Selected research, writing, models, talks, and teaching.
-nav: true
 nav_order: 3
 home_work_brand: true
 ---

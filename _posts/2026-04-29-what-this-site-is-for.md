@@ -21,4 +21,4 @@ I want the writing here to be useful to people who build things: researchers, st
 
 This site is also the canonical archive. I may syndicate posts to [Substack]({{ site.substack_url }}), LinkedIn, or X, but the version here is the one I will keep current. You can follow via [RSS]({{ '/feed.xml' | relative_url }}) if you prefer the old, sturdy internet.
 
-For now, the best starting points are the [book]({{ '/book/' | relative_url }}), the [selected work index]({{ '/work/' | relative_url }}), the [talks page]({{ '/talks/' | relative_url }}), and the [publications list]({{ '/publications/' | relative_url }}).
+For now, the best starting points are the [book]({{ '/book/' | relative_url }}), the [talks page]({{ '/talks/' | relative_url }}), and the [publications list]({{ '/publications/' | relative_url }}).

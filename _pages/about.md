@@ -79,7 +79,6 @@ description: Noah Flynn builds production AI systems, agentic research workflows
         {% include eyebrow.html text="Selected Work" %}
         <h2 id="selected-work-heading">Research, teaching, and tools</h2>
       </div>
-      <a class="home-section-link" href="{{ '/work/' | relative_url }}">All work &rarr;</a>
     </div>
     <div class="work-list">
       {% include work-row.html year="2026" title="Machine Learning for Drug Discovery" venue="Manning" type="Book" href="/book/" %}
