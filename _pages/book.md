@@ -100,6 +100,14 @@ Early reader notes:
 
 ---
 
+## About the Author
+
+Noah Flynn is a Senior Research Scientist at Google Cloud AI, where he works on Gemini Enterprise. Previously, he was an Applied Scientist at AWS Agentic AI and a Research Scientist on Amazon's Alexa and AGI team, where he contributed to the Amazon Nova model family. He holds a PhD in Computational Biology from Washington University in St. Louis, where his doctoral research focused on modeling drug metabolism and toxicity using graph neural networks.
+
+He has also worked at AbbVie and Merck on applications ranging from gene regulatory network analysis to generative models for compound library design. Noah is an Adjunct Instructor at the University of California, Berkeley, where he teaches graduate courses in machine learning and cheminformatics, and has published over a dozen peer-reviewed papers at the intersection of deep learning and small-molecule drug discovery.
+
+---
+
 ## Cite This Book
 
 {% highlight bibtex %}

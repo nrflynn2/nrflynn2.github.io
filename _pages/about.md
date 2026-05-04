@@ -34,6 +34,32 @@ description: Noah Flynn builds production AI systems, agentic research workflows
     </div>
   </section>
 
+  <section class="home-bio" aria-labelledby="bio-heading">
+    <div class="home-bio-header">
+      {% include eyebrow.html text="About" %}
+      <h2 id="bio-heading">Noah Flynn</h2>
+    </div>
+    <div class="home-bio-copy">
+      <p>
+        I am a Senior Research Scientist at Google Cloud AI, where I work on Gemini Enterprise. My current work focuses on agentic AI systems for deep research, coding, and data science workflows: the practical pieces of getting models to reason over long context, use tools, and produce work people can trust.
+      </p>
+      <p>
+        Before Google, I was an Applied Scientist at AWS Agentic AI and a Research Scientist on Amazon's Alexa and AGI team, where I contributed to the Amazon Nova model family. Across those roles, I worked on foundation model adaptation, tool use, evaluation, multilingual data selection, and production release cycles.
+      </p>
+      <p>
+        My scientific background is in deep learning for drug discovery. I earned my PhD in Computational Biology at Washington University in St. Louis, with research on graph neural networks for drug metabolism and toxicity, and I have worked at AbbVie and Merck on gene regulatory network analysis and generative compound design.
+      </p>
+      <p>
+        I teach graduate machine learning and cheminformatics at UC Berkeley, and wrote <a href="{{ '/book/' | relative_url }}">Machine Learning for Drug Discovery</a> to make that intersection easier to enter. I am always glad to hear from people building at the boundary of agentic AI, computational drug discovery, and scientific software.
+      </p>
+      <div class="home-bio-links">
+        <a class="home-section-link" href="mailto:{{ site.email }}">Email &rarr;</a>
+        <a class="home-section-link" href="{{ '/cv/' | relative_url }}">CV &rarr;</a>
+        <a class="home-section-link" href="{{ '/publications/' | relative_url }}">Publications &rarr;</a>
+      </div>
+    </div>
+  </section>
+
   {% include book-band.html %}
 
   <section class="home-section" aria-labelledby="latest-posts-heading">
