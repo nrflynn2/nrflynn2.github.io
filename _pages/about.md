@@ -11,7 +11,7 @@ description: Noah Flynn builds production AI systems, agentic research workflows
   <section class="home-hero">
     <div>
       {% include eyebrow.html text="Senior Research Scientist · Google Cloud AI" %}
-      <h1 class="home-hero-title">AI systems for <span class="home-hero-highlight">agents, science, and drug discovery.</span></h1>
+      <h1 class="home-hero-title">AI Systems for <span class="home-hero-highlight">Agents, Science, and Medicine.</span></h1>
       <p class="home-hero-lead">
         I build production AI systems and research agents, write practical machine learning for
         pharmaceutical science, and teach molecular software engineering at UC Berkeley. This site is
