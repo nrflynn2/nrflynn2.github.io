@@ -10,7 +10,7 @@ description: Noah Flynn builds production AI systems, agentic research workflows
 <main class="home-redesign">
   <section class="home-hero">
     <div class="home-hero-copy">
-      {% include eyebrow.html text="Senior Research Scientist · Google Cloud AI" %}
+      {% include eyebrow.html text="Senior Research Scientist · Google Cloud AI · Gemini Enterprise" %}
       <h1 class="home-hero-title">AI Systems for <span class="home-hero-highlight">Agents, Science, and Medicine.</span></h1>
     </div>
     <aside class="home-hero-aside" aria-label="Portrait">
@@ -40,7 +40,7 @@ description: Noah Flynn builds production AI systems, agentic research workflows
     <div class="home-section-header">
       <div>
         {% include eyebrow.html text="Blog" %}
-        <h2 id="latest-posts-heading">Latest posts</h2>
+        <h2 id="latest-posts-heading">Latest Posts</h2>
       </div>
       <div class="home-section-links">
         <a class="home-section-link" href="{{ '/blog/' | relative_url }}">All posts &rarr;</a>
@@ -55,7 +55,7 @@ description: Noah Flynn builds production AI systems, agentic research workflows
     <div class="home-section-header">
       <div>
         {% include eyebrow.html text="Now" %}
-        <h2 id="now-heading">Current focus</h2>
+        <h2 id="now-heading">Current Focus</h2>
       </div>
     </div>
     <div class="now-grid">
@@ -78,7 +78,7 @@ description: Noah Flynn builds production AI systems, agentic research workflows
     <div class="home-section-header">
       <div>
         {% include eyebrow.html text="Selected Work" %}
-        <h2 id="selected-work-heading">Research, teaching, and tools</h2>
+        <h2 id="selected-work-heading">Research, Teaching, and Tools</h2>
       </div>
     </div>
     <div class="work-list">
@@ -95,7 +95,7 @@ description: Noah Flynn builds production AI systems, agentic research workflows
     <div class="home-section-header">
       <div>
         {% include eyebrow.html text="Selected Publications" %}
-        <h2 id="selected-publications-heading">Recent publication highlights</h2>
+        <h2 id="selected-publications-heading">Recent Publication Highlights</h2>
       </div>
       <a class="home-section-link" href="{{ '/publications/' | relative_url }}">All publications &rarr;</a>
     </div>

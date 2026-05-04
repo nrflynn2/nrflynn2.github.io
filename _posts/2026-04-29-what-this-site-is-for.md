@@ -1,6 +1,6 @@
 ---
 layout: post
-title: what this site is for
+title: What This Site Is For
 date: 2026-04-29 09:00:00-0800
 description: A short note on InfoArk, the book, teaching, and the kinds of technical writing I plan to publish here.
 tags:

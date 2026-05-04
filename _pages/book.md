@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Book
+heading: Machine Learning for Drug Discovery
 permalink: /book/
 nav: true
 nav_order: 2
@@ -18,7 +19,6 @@ og_image: https://noahrflynn.com/assets/img/og/book.png
     >
   </div>
   <div class="col-12 col-md-8">
-    <h2 class="mt-0">Machine Learning for Drug Discovery</h2>
     <p class="lead text-muted">Hands-on deep learning for pharmaceutical research, from molecular fingerprints to AlphaFold.</p>
 
     <p><strong>Status:</strong> all chapters are available in Manning MEAP, the manuscript is 100% complete, and the full release is estimated for Summer 2026.</p>
@@ -44,7 +44,7 @@ og_image: https://noahrflynn.com/assets/img/og/book.png
       >View Code &rarr;</a>
     </div>
     <p class="mt-2" style="font-size: 0.85rem; color: var(--global-text-color-light);">
-      Use code <strong>au35fly</strong> for 35% off
+      Use code <strong class="book-discount-code">au35fly</strong> for 35% off
     </p>
   </div>
 </div>
@@ -73,12 +73,16 @@ og_image: https://noahrflynn.com/assets/img/og/book.png
 12. Transformer Architectures for Protein Structure Prediction
 13. Multimodal AI Systems for End-to-End Drug Discovery Pipelines
 
-**Appendices**
+**Appendixes**
 
-- A: Glossary
-- B: Chemical Data Repositories
-- C: Knowledge Distillation: Shrinking Models for Efficient, Hierarchical Molecular Generation
-- D: Technical Deep Dive into Protein Structure Prediction
+- A. Glossary
+- B. Chemical Data Repositories
+- C. Knowledge Distillation: Shrinking Models for Efficient, Hierarchical Molecular Generation
+- D. Technical Deep Dive into Protein Structure Prediction
+- E. Extended Technical Material
+- F. Chapter References
+- G. Chapter Exercises
+- H. Target Discovery &amp; Disease Modeling
 
 ---
 
@@ -141,5 +145,8 @@ Early reader notes:
 .btn-book-secondary:hover {
   border-color: var(--global-theme-color);
   color: var(--global-hover-color) !important;
+}
+.book-discount-code {
+  color: var(--global-theme-color);
 }
 </style>
