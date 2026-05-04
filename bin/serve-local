@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+cd "$(dirname "${BASH_SOURCE[0]}")/.."
+
+# Avoid Conda/rbenv/global gem settings; this site bundle was built for Ruby 2.7.
+unset GEM_HOME
+unset GEM_PATH
+unset BUNDLE_GEMFILE
+unset BUNDLE_IGNORE_CONFIG
+
+export BUNDLE_PATH="vendor/bundle"
+export BUNDLE_WITHOUT="${BUNDLE_WITHOUT:-mini_racer}"
+
+exec /home/noahrf/.gem/ruby/2.7.0/bin/bundle exec jekyll serve --livereload "$@"
