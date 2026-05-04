@@ -9,9 +9,18 @@ description: Noah Flynn builds production AI systems, agentic research workflows
 
 <main class="home-redesign">
   <section class="home-hero">
-    <div>
+    <div class="home-hero-copy">
       {% include eyebrow.html text="Senior Research Scientist · Google Cloud AI" %}
       <h1 class="home-hero-title">AI Systems for <span class="home-hero-highlight">Agents, Science, and Medicine.</span></h1>
+    </div>
+    <aside class="home-hero-aside" aria-label="Portrait">
+      <img
+        class="home-hero-photo"
+        src="{{ '/0062Flynn_Noah-Retouched.png' | relative_url }}"
+        alt="Noah Flynn"
+      >
+    </aside>
+    <div class="home-hero-bottom">
       <p class="home-hero-lead">
         I build production AI systems and research agents, write practical machine learning for
         pharmaceutical science, and teach molecular software engineering at UC Berkeley. This site is
@@ -23,14 +32,6 @@ description: Noah Flynn builds production AI systems, agentic research workflows
         <a class="brand-button-ghost" href="{{ '/cv/' | relative_url }}">CV &rarr;</a>
       </div>
     </div>
-    <aside class="home-hero-aside" aria-label="Social links">
-      <img
-        class="home-hero-photo"
-        src="{{ '/0062Flynn_Noah-Retouched.png' | relative_url }}"
-        alt="Noah Flynn"
-      >
-      <div class="contact-icons">{% include social.liquid %}</div>
-    </aside>
   </section>
 
   {% include book-band.html %}

@@ -96,17 +96,29 @@ html[data-theme="dark"] body.home-work-brand {
 .home-hero {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 280px;
-  gap: 3rem;
+  grid-template-areas:
+    "copy aside"
+    "bottom bottom";
+  column-gap: 3rem;
+  row-gap: 1.6rem;
   align-items: center;
-  padding: 4.5rem 0 3rem;
+  padding: 0.5rem 0 3rem;
   border-bottom: 1px solid var(--global-divider-color);
+}
+
+.home-hero-copy {
+  grid-area: copy;
+}
+
+.home-hero .eyebrow {
+  font-size: 0.8125rem;
 }
 
 .home-hero-title {
   max-width: 780px;
   margin: 0;
   color: var(--global-text-color);
-  font-size: unquote("clamp(3rem, 7.3vw, 5.9rem)");
+  font-size: unquote("clamp(2.85rem, 6.9vw, 5.55rem)");
   line-height: 0.95;
 
   .home-hero-highlight {
@@ -114,9 +126,13 @@ html[data-theme="dark"] body.home-work-brand {
   }
 }
 
+.home-hero-bottom {
+  grid-area: bottom;
+}
+
 .home-hero-lead {
-  max-width: 680px;
-  margin: 1.5rem 0 0;
+  max-width: none;
+  margin: 0;
   color: var(--global-text-color-light);
   font-size: 1.25rem;
 }
@@ -130,26 +146,9 @@ html[data-theme="dark"] body.home-work-brand {
 }
 
 .home-hero-aside {
+  grid-area: aside;
   display: grid;
   justify-items: end;
-  gap: 1rem;
-}
-
-.home-hero-aside .contact-icons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  gap: 0.75rem;
-  font-size: 1.2rem;
-
-  a {
-    color: var(--global-text-color-light);
-
-    &:hover {
-      color: var(--global-theme-color);
-      text-decoration: none;
-    }
-  }
 }
 
 .home-hero-photo {
@@ -379,16 +378,16 @@ html[data-theme="dark"] body.home-work-brand {
   }
 
   .home-hero {
+    grid-template-areas:
+      "copy"
+      "aside"
+      "bottom";
     gap: 2rem;
-    padding-top: 3rem;
+    padding-top: 2.5rem;
   }
 
   .home-hero-aside {
     justify-items: start;
-  }
-
-  .home-hero-aside .contact-icons {
-    justify-content: flex-start;
   }
 
   .home-hero-photo {
@@ -417,7 +416,7 @@ html[data-theme="dark"] body.home-work-brand {
 
 @media (max-width: 575.98px) {
   .home-hero-title {
-    font-size: 3rem;
+    font-size: 2.75rem;
   }
 
   .home-hero-lead {
