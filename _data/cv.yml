@@ -2,47 +2,51 @@
   type: time_table
   contents:
     - title: Senior Research Scientist
-      institution: Google Cloud AI, Gemini Enterprise, Seattle, WA
+      institution: Google Cloud AI, Gemini Enterprise, Santa Clara, CA
       year: Apr 2026 – Present
       description:
-        - Agentic AI systems for Gemini Enterprise research, coding, and data science workflows.
-        - Evaluation, adaptation, and reliability methods for production AI assistants.
+        - Building agentic AI systems for Gemini Enterprise research, coding, and data science workflows.
+        - Developing evaluation, adaptation, and reliability methods for production AI assistants that reason over long context and use tools.
 
     - title: Applied Scientist II
-      institution: Amazon AWS AI Labs, Agentic AI, Seattle, WA
+      institution: Amazon AWS AI Labs, Agentic AI, Santa Clara, CA
       year: Sep 2024 – Apr 2026
       description:
-        - Built multi-agent frameworks and agent evaluation methods for deep research agents.
-        - Developed cost-aware reasoning and tool-use optimization methods for foundation models.
-        - Mentored 5 applied scientists on agent systems and evaluation methodology.
+        - Built customizable multi-agent primitives that shortened internal agent-development cycles for deep research, data science, database analysis, code transformation, and security-analysis workflows.
+        - Co-developed agent-as-a-judge evaluation methods for personalized assessment of deep research agents with internal AWS teams and enterprise customers.
+        - Engineered cost-aware reasoning and tool-use optimization for agents working with licensed, premium data sources.
+        - Mentored 5 applied scientists on agent systems, evaluation methodology, dynamic context optimization, and parameter-efficient reinforcement learning.
 
     - title: Adjunct Faculty
       institution: UC Berkeley, Berkeley, CA
       year: Jun 2024 – Present
       description:
-        - Graduate courses in ML and cheminformatics (CHEM 274B).
-        - Molecular Science & Software Engineering.
+        - Teach CHEM 274B, a graduate course on software engineering, machine learning, and cheminformatics for molecular science.
+        - Mentor UC Berkeley MSSE capstone teams on applied machine learning and scientific software projects.
 
-    - title: Applied Scientist II
-      institution: Amazon Alexa & AGI, Seattle, WA
+    - title: Research Scientist II
+      institution: Amazon Alexa & AGI, Santa Clara, CA
       year: Jun 2021 – Sep 2024
       description:
-        - Multilingual NLU and continual learning for large-scale production systems.
-        - Contributed to the Amazon Nova family of foundation models.
-        - 20 production releases serving 100M+ monthly active users.
+        - Accelerated Alexa's expansion into 3 international markets by developing dynamic data selection methods that reduced multilingual NLU data requirements by 95%.
+        - Shipped and maintained 20 production releases of conversational AI models serving 100M+ monthly active users across 6 international markets.
+        - Contributed tool-use capabilities and API invocation strategies to the Amazon Nova foundation model family and Alexa+.
+        - Built calibration methods that improved robustness to uncertainty from upstream ASR transcription artifacts.
 
     - title: Machine Learning Intern
       institution: Merck, Kenilworth, NJ
       year: May 2019 – Aug 2019
       description:
-        - Generative models for de novo drug design.
+        - Built generative models for de novo drug design integrated with docking pipelines.
+        - Explored reinforcement learning for targeted optimization of binding affinity and therapeutic property profiles.
 
     - title: PhD Candidate
       institution: Washington University in St. Louis, St. Louis, MO
       year: Aug 2017 – Jun 2021
       description:
-        - Graph neural networks for drug metabolism prediction.
-        - Developed XenoSite and XenoNet web services for metabolite prediction.
+        - Modeled drug metabolism and bioactivation networks with deep learning methods, including graph neural networks, to guide early-stage drug development.
+        - Developed and maintained XenoSite and XenoNet prediction web services for small molecule biochemistry.
+        - Developed signal detection methods for retrospective electronic health record analysis of drug-drug interactions and drug-induced liver injury.
       linkitems:
         - linkname: XenoSite
           link: https://swami.wustl.edu/xenosite/
@@ -52,16 +56,14 @@
     - title: Computational Research Fellow
       institution: NCSA, University of Illinois at Urbana-Champaign
       year: May 2016 – May 2017
+      description:
+        - Characterized proteomic and transcriptomic networks with graph-theoretic methods for engineered biological systems.
 
     - title: Software Engineer Intern
       institution: AbbVie, North Chicago, IL
       year: Nov 2015 – May 2017
       description:
-        - Bioinformatics visualization tools.
-
-    - title: Director
-      institution: UIUC Engineering Open House
-      year: Apr 2016 – Jul 2017
+        - Developed a bioinformatics visualization suite for drug-target interactions, protein-protein interactions, and regulatory networks.
 
 - title: Education
   type: time_table
@@ -79,74 +81,11 @@
       description:
         - GPA 3.70/4.00
 
-- title: Talks
-  type: time_table
+- title: More From This Site
+  type: list
   contents:
-    - title: Keynote Panel on Applied AI and Developer Ecosystems
-      institution: DevFest WashU, St. Louis, MO
-      year: Apr 2026
-      description:
-        - Panel discussion on practical AI systems, developer tools, and translational AI work.
-
-    - title: Designing Medicines from Scratch — PyTorch Workflows for De Novo Drug Discovery
-      institution: PyTorch Conference, San Francisco, CA
-      year: Oct 2025
-      description:
-        - Invited talk on generative deep learning approaches for molecular design.
-
-    - title: Case Study in Kinase Inhibitors for Anti-Cancer Therapies
-      institution: NeurIPS Education Track
-      year: Sep 2025
-      description:
-        - Paper presentation on ML-guided kinase inhibitor discovery for anti-cancer therapies.
-
-- title: Honors and Awards
-  type: time_table
-  contents:
-    - year: 2025
-      items:
-        - Technical Advisor, Berkeley SkyDeck Accelerator
-    - year: 2022
-      items:
-        - 1st Place + $20K pre-seed funding, Boston University New Venture Competition
-    - year: 2017
-      items:
-        - Director, Engineering Open House educational non-profit
-    - year: 2016
-      items:
-        - Most Valuable Intern, Research Park, UIUC
-    - year: 2015
-      items:
-        - Silver Medal, iGEM Competition, Biological Computing Division
-    - year: 2014
-      items:
-        - Levi, Ray, and Shoup Computer Science Award
-
-- title: Skills
-  type: nested_list
-  contents:
-    - title: Proficient
-      items:
-        - Docker, Git, HuggingFace
-        - Google Cloud, AWS (Bedrock, EC2, Kendra, S3)
-        - JavaScript (D3, React)
-        - Python (Flask, NumPy, Pandas, Scikit-Learn, PyCUDA)
-        - PyTorch, RDKit, SQL, vLLM
-    - title: Have Used
-      items:
-        - C++ (CUDA), Java, JAX, MATLAB
-        - Megatron-LM, Neo4j, R, Spark, TensorFlow
-
-- title: Service
-  type: nested_list
-  contents:
-    - title: Reviewing
-      items:
-        - ACS, AAAI, AISTATS, Frontiers, ICLR, NeurIPS, PSB, Springer Nature
-        - Manning Publications (10+ technical books)
-    - title: Course Development
-      items:
-        - Algorithms for Computational Biology
-        - Bioinstrumentation
-        - Intro to Computer Science
-        - Intro to Software Engineering
+    - The PDF icon above opens the full CV PDF when a traditional version with detailed skills, service, and publication listings is useful.
+    - <a href="/publications/">Publications</a> collects peer-reviewed papers, preprints, technical reports, and the book citation.
+    - <a href="/talks/">Talks</a> collects selected conference talks, panels, and teaching-oriented presentations.
+    - <a href="/teaching/">Teaching</a> collects UC Berkeley course work, capstone mentoring, and earlier teaching experience.
+    - <a href="/hobbies/">Hobbies</a> adds a more personal view of travel, skiing, scuba diving, learning, and community work.
