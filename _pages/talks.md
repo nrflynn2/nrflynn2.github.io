@@ -8,7 +8,7 @@ description: Selected talks, panels, and teaching-oriented presentations.
 og_image: https://noahrflynn.com/assets/img/og/default.png
 ---
 
-## Speaking
+## Speaking Philosophy
 
 Most of my talks are live-notebook, real-dataset, build-something-by-the-end-of-the-session kinds of talks. I like audiences that want to understand how applied ML systems actually get built, not just what they do in the abstract.
 

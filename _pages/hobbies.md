@@ -58,7 +58,7 @@ home_work_brand: true
     <div class="work-section-header">
       <div>
         {% include eyebrow.html text="Community" %}
-        <h2 id="community-heading">Builder Energy Beyond the Day Job</h2>
+        <h2 id="community-heading">Select Projects I've Enjoyed Beyond my Day Job</h2>
       </div>
     </div>
     <p>
