@@ -12,9 +12,7 @@ home_work_brand: true
   <header class="work-page-header">
     <h1>Hobbies & Community</h1>
     <p>
-      A small page for the parts of life that do not fit neatly into papers, products, or a CV:
-      getting outside, going somewhere new, staying curious, and building communities where technical
-      ideas feel a little more human.
+      What I do when I'm not working on research or teaching.
     </p>
   </header>
 
@@ -29,15 +27,15 @@ home_work_brand: true
     <div class="now-grid">
       <div class="now-item">
         <span class="now-item-label">Skiing</span>
-        <p>Lake Tahoe is my favorite winter reset: a place to trade screens for snow, movement, and a different kind of focus.</p>
+        <p>Lake Tahoe most weekends in winter. It's the best way I've found to actually stop thinking about work for a few hours.</p>
       </div>
       <div class="now-item">
         <span class="now-item-label">Scuba</span>
-        <p>I like traveling to new places to scuba dive. It is hard to beat learning a place by seeing what is happening under the surface.</p>
+        <p>I try to dive somewhere new whenever I travel. You learn a lot about a place by seeing what's going on underwater.</p>
       </div>
       <div class="now-item">
         <span class="now-item-label">Learning</span>
-        <p>I like being a beginner. New subjects, tools, and skills have a way of improving the work you thought was unrelated.</p>
+        <p>I like being a beginner. Picking up a new subject or skill tends to make everything else click a little differently.</p>
       </div>
       {% comment %}
       <div class="now-item">
@@ -64,9 +62,7 @@ home_work_brand: true
       </div>
     </div>
     <p>
-      These are not hobbies in the narrow sense, but they belong on a personal page because they show
-      what I tend to care about outside my formal role: helping technical ideas become teachable,
-      fundable, public, and useful.
+      I spend a lot of time outside my day job helping people take technical work and make it teachable or fundable.
     </p>
 
     <div class="work-list">
@@ -83,7 +79,7 @@ home_work_brand: true
         <span class="work-row-year">2022</span>
         <span>
           <span class="work-row-title">Boston University New Venture Competition</span>
-          <span class="work-row-description">Translated PhD research into a B2B commercialization proposal that won 1st place and $20K in pre-seed funding.</span>
+          <span class="work-row-description">Turned my PhD research into a B2B commercialization proposal. Won 1st place and $20K in pre-seed funding.</span>
         </span>
         <span class="work-row-meta">Boston, MA</span>
         <span class="work-row-type">Venture</span>
@@ -92,7 +88,7 @@ home_work_brand: true
         <span class="work-row-year">2016-2017</span>
         <span>
           <span class="work-row-title">Director, UIUC Engineering Open House</span>
-          <span class="work-row-description">Led an educational nonprofit and public engineering showcase built around hands-on demonstrations, student teams, and community outreach.</span>
+          <span class="work-row-description">Ran an educational nonprofit and public engineering showcase — hands-on demos, student teams, community outreach.</span>
         </span>
         <span class="work-row-meta">Champaign, IL</span>
         <span class="work-row-type">Community</span>

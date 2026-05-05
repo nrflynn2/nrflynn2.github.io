@@ -11,9 +11,9 @@ description: UC Berkeley CHEM 274B teaching, course materials, and molecular mac
 
 **Adjunct Faculty** &mdash; graduate-level course on software engineering, machine learning, and cheminformatics for molecular science.
 
-The course helps molecular scientists build reliable software and helps ML-oriented students understand the chemistry behind the data. Students use RDKit, PyTorch, and scientific Python while working through case studies from drug discovery and materials science.
+The course sits at the intersection of two gaps: molecular scientists who need to write better software, and ML students who need to understand the chemistry behind their data. We work in RDKit, PyTorch, and scientific Python, with case studies drawn from drug discovery and materials science.
 
-- **Course repository:** [github.com/nrflynn2/swe-molecular-sciences](https://github.com/nrflynn2/swe-molecular-sciences) (tracks selected public materials, not the full course)
+- **Course repository:** [github.com/nrflynn2/swe-molecular-sciences](https://github.com/nrflynn2/swe-molecular-sciences) (selected public materials, not the full course)
 - **Topics:** Python for scientists, RDKit and cheminformatics, molecular ML, graph neural networks, generative models for drug design
 
 | Term | Role | Focus |
@@ -25,7 +25,7 @@ The course helps molecular scientists build reliable software and helps ML-orien
 
 ## Earlier Teaching Experience
 
-These roles shaped how I teach now: practical assignments, clear technical scaffolding, and enough room for students to discover their own taste in scientific computing.
+I started as a TA and course developer in undergrad, and that's where most of my instincts about teaching come from — give people working code, real data, and a question worth answering.
 
 | Year | Role | Course or Program | Institution |
 |------|------|-------------------|-------------|
@@ -36,7 +36,7 @@ These roles shaped how I teach now: practical assignments, clear technical scaff
 
 ## Course Development
 
-Across teaching and service roles I have helped develop or support coursework in algorithms for computational biology, bioinstrumentation, introductory computer science, and software engineering. I tend to design material around working code, real data, and concrete scientific questions: the kind of assignments where students leave with tools they can keep using.
+I've contributed to coursework in computational biology, bioinstrumentation, introductory CS, and software engineering. I tend to build assignments around concrete scientific questions — the kind where students walk away with code they'll actually use again.
 
 ---
 

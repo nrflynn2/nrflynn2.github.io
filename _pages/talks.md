@@ -10,7 +10,7 @@ og_image: https://noahrflynn.com/assets/img/og/default.png
 
 ## Speaking
 
-I enjoy talks that make applied ML concrete: live notebooks, real datasets, domain constraints, and enough modeling detail for practitioners to adapt the work after the session ends. The strongest fit is usually a room that wants to understand how modern AI systems are actually built, evaluated, and connected to scientific or product workflows.
+Most of my talks are live-notebook, real-dataset, build-something-by-the-end-of-the-session kinds of talks. I like audiences that want to understand how applied ML systems actually get built, not just what they do in the abstract.
 
 ## Selected Talks
 
@@ -22,11 +22,11 @@ I enjoy talks that make applied ML concrete: live notebooks, real datasets, doma
 
 ## Good Fits
 
-- Agentic AI systems for deep research, coding, and data science workflows
-- Evaluation methods for AI agents, tool use, long-context reasoning, and production reliability
-- Machine learning for drug discovery, cheminformatics, and molecular design
-- Teaching-oriented workshops that move from domain problem to working PyTorch/RDKit code
+- Agentic AI systems — deep research, coding, and data science workflows
+- Evaluation for AI agents, tool use, long-context reasoning, and production reliability
+- ML for drug discovery, cheminformatics, and molecular design
+- Hands-on workshops that go from a domain problem to working PyTorch/RDKit code
 
 ## Invite Me
 
-If you are organizing a seminar, conference session, panel, workshop, or internal technical event, I can be a useful speaker when the audience needs both implementation detail and a clear bridge to the science or product context. [Email is best](mailto:{{ site.email }}?subject=Speaking%20Invitation), and LinkedIn works well for quick context.
+I'm happy to speak at seminars, conferences, panels, workshops, or internal technical events. [Email is best](mailto:{{ site.email }}?subject=Speaking%20Invitation), and LinkedIn works well for quick context.
