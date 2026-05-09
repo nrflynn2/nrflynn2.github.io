@@ -178,6 +178,50 @@ blockquote {
   }
 }
 
+.series-nav {
+  border-left: 4px solid var(--global-theme-color);
+  margin: 1rem 0 2rem;
+  padding: 0.75rem 0 0.75rem 1rem;
+
+  .series-nav__title {
+    color: var(--global-text-color-light);
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 0.35rem;
+    text-transform: uppercase;
+  }
+
+  ol {
+    margin-bottom: 0;
+    padding-left: 1.2rem;
+  }
+
+  li {
+    margin: 0.2rem 0;
+  }
+
+  .series-nav__current {
+    color: var(--global-text-color);
+    font-weight: 600;
+  }
+}
+
+.post-content {
+  picture {
+    display: block;
+    margin: 1.5rem auto;
+    max-width: 100%;
+  }
+
+  img {
+    display: block;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+  }
+}
+
 // Checklist
 
 ul.task-list {

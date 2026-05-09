@@ -61,6 +61,13 @@ layout: default
     </p>
   </header>
 
+  {% if page.series %}
+    {% assign series_posts = site.posts | where: "series", page.series | sort: "series_order" %}
+    {% if series_posts.size > 1 %}
+      {% include series-nav.liquid posts=series_posts %}
+    {% endif %}
+  {% endif %}
+
   <article class="post-content">
     {% if page.toc and page.toc.beginning %}
       <div id="table-of-contents">

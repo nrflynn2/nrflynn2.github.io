@@ -1,4 +1,9 @@
 {
+  "scripts": {
+    "prepare:target-discovery": "ruby bin/prepare-target-discovery-series",
+    "optimize:target-discovery": "ruby bin/optimize-target-discovery-images",
+    "check:target-discovery": "ruby bin/check-target-discovery-series"
+  },
   "devDependencies": {
     "@shopify/prettier-plugin-liquid": "1.4.0",
     "prettier": "3.1.1"
