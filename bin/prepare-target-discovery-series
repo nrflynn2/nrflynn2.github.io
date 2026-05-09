@@ -1,0 +1,230 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require "fileutils"
+require "cgi"
+
+ROOT = File.expand_path("..", __dir__)
+SOURCE_DIR = File.join(ROOT, "_source_material/target-discovery/drafts")
+ORIGINAL_FIGURE_DIR = File.join(ROOT, "_source_material/target-discovery/figures-original")
+ASSET_DIR = File.join(ROOT, "assets/img/blog/target-discovery")
+ASSET_URL = "/assets/img/blog/target-discovery"
+ABSOLUTE_ASSET_URL = "https://noahrflynn.com#{ASSET_URL}"
+
+POSTS = [
+  {
+    source: "P0_target_discovery_pillar_polished.md",
+    output: "_posts/2026-05-08-drug-target-discovery-phase-ii-failures.md",
+    date: "2026-05-08 09:00:00-0700",
+    order: 0,
+    thumbnail: "APPH_FLYNN_UN01.png",
+    tags: ["machine learning", "drug discovery", "target discovery", "AI drug discovery"]
+  },
+  {
+    source: "C1_evidence_frameworks_polished.md",
+    output: "_posts/2026-05-08-target-disease-association-evidence.md",
+    date: "2026-05-08 09:10:00-0700",
+    order: 1,
+    thumbnail: "APPH_FLYNN_UN04.png",
+    tags: ["machine learning", "drug discovery", "target discovery", "genomics"]
+  },
+  {
+    source: "C2_druggability_modality_polished.md",
+    output: "_posts/2026-05-08-druggability-assessment-alphafold-3.md",
+    date: "2026-05-08 09:20:00-0700",
+    order: 2,
+    thumbnail: "APPH_FLYNN_UN09.png",
+    tags: ["machine learning", "drug discovery", "target discovery", "protein structure"]
+  },
+  {
+    source: "C3_tissue_specificity_polished.md",
+    output: "_posts/2026-05-15-tissue-specificity-drug-target-safety.md",
+    date: "2026-05-15 09:00:00-0700",
+    order: 3,
+    thumbnail: "APPH_FLYNN_UN13.png",
+    tags: ["machine learning", "drug discovery", "target discovery", "safety"]
+  },
+  {
+    source: "C4_therapeutic_area_economics_polished.md",
+    output: "_posts/2026-05-22-likelihood-of-approval-therapeutic-area.md",
+    date: "2026-05-22 09:00:00-0700",
+    order: 4,
+    thumbnail: "APPH_FLYNN_UN16.png",
+    tags: ["machine learning", "drug discovery", "target discovery", "clinical trials"]
+  }
+].freeze
+
+FIGURE_ALTS = {
+  "APPH_FLYNN_UN02.png" => "Phase-transition and likelihood-of-approval chart for clinical drug development.",
+  "APPH_FLYNN_UN08.png" => "Genetic-evidence confidence and target-disease clinical-success multiplier."
+}.freeze
+
+def split_front_matter(markdown)
+  match = markdown.match(/\A---\n(.*?)\n---\n/m)
+  raise "Missing YAML front matter" unless match
+
+  [match[1], markdown[match[0].length..]]
+end
+
+def remove_first_h1(body)
+  body.sub(/\A\s*#\s+(.+?)\n+/, "")
+end
+
+def first_h1(markdown)
+  markdown[/^#\s+(.+)$/, 1]
+end
+
+def picture_markup(filename, alt)
+  webp = filename.sub(/\.png\z/, ".webp")
+  escaped_alt = CGI.escapeHTML(alt)
+  <<~HTML.chomp
+    <picture>
+      <source srcset="{{ '#{ASSET_URL}/#{webp}' | relative_url }}" type="image/webp">
+      <img src="{{ '#{ASSET_URL}/#{filename}' | relative_url }}" alt="#{escaped_alt}" loading="lazy">
+    </picture>
+  HTML
+end
+
+def normalize_body(body)
+  body = remove_first_h1(body)
+  body.gsub!("APPH_FLYNN_N14.png", "APPH_FLYNN_UN14.png")
+
+  body.gsub!(/^!\[([^\]]*)\]\(figures\/(APPH_FLYNN_UN\d+\.png)\)$/) do
+    alt = Regexp.last_match(1)
+    filename = Regexp.last_match(2)
+    alt = FIGURE_ALTS.fetch(filename, "Figure for the drug target discovery series.") if alt.empty?
+    picture_markup(filename, alt)
+  end
+
+  body.gsub!(/^<figure:\s*(APPH_FLYNN_UN\d+\.png)>\s*$/) do
+    picture_markup($1, FIGURE_ALTS.fetch($1, "Figure for the drug target discovery series."))
+  end
+
+  body.gsub!(
+    "*Machine Learning for Drug Discovery* (TODO: provide link to book and add cover page figure)",
+    "[*Machine Learning for Drug Discovery*]({{ '/book/' | relative_url }})"
+  )
+
+  body.gsub!(/\n## Further reading\n\n\*\*Further reading\*\*\n/, "\n## Further reading\n\n")
+
+  body.gsub!(/\n## FAQ Schema\n\n```json\n(.*?)\n```\s*\z/m, "")
+
+  body.gsub!(/\s*—\s*/, " - ")
+  body.gsub!(
+    /\[URL placeholder - search "Norstella Citeline clinical development success rates falling 2014.2023"\]/,
+    "[Norstella/Citeline article](https://www.norstella.com/why-clinical-development-success-rates-falling/)"
+  )
+  body.gsub!(
+    "[URL placeholder - verify DOI; the verification report cites PubMed ID 40461817]",
+    "[doi:10.1038/s41591-025-03743-2](https://doi.org/10.1038/s41591-025-03743-2)"
+  )
+  body.gsub!(
+    '[URL placeholder - search "FDA AI drug development draft guidance 2025" on fda.gov]',
+    "[FDA draft guidance](https://www.fda.gov/regulatory-information/search-fda-guidance-documents/considerations-use-artificial-intelligence-support-regulatory-decision-making-drug-and-biological)"
+  )
+  body.gsub!(
+    "[URL placeholder - rand.org/news/press/2025/01/07.html]",
+    "[RAND press release](https://www.rand.org/news/press/2025/01/07.html)"
+  )
+  body.gsub!(
+    '[URL placeholder; search "GTEx Consortium Science 2020 atlas human tissues" for the DOI]',
+    "[doi:10.1126/science.aaz1776](https://doi.org/10.1126/science.aaz1776)"
+  )
+  body.gsub!(
+    '[URL placeholder; search "Uhlén tissue-based map human proteome Science 2015" for the DOI]',
+    "[doi:10.1126/science.1260419](https://doi.org/10.1126/science.1260419)"
+  )
+  body.gsub!(
+    '[URL placeholder; search "Tabula Sapiens Consortium Science 2022 multi-organ single-cell atlas" for the DOI]',
+    "[doi:10.1126/science.abl4896](https://doi.org/10.1126/science.abl4896)"
+  )
+  body
+end
+
+def faq_schema_json(body)
+  match = body.match(/\n## FAQ Schema\n\n```json\n(.*?)\n```\s*\z/m)
+  return nil unless match
+
+  match[1].gsub(/\s*—\s*/, " - ")
+end
+
+def front_matter(original, article, title)
+  {
+    "layout" => "post",
+    "title" => title,
+    "date" => article[:date],
+    "description" => original["description"],
+    "tags" => article[:tags],
+    "categories" => ["target discovery"],
+    "toc" => { "sidebar" => true },
+    "giscus_comments" => false,
+    "thumbnail" => "#{ASSET_URL}/#{article[:thumbnail]}",
+    "og_image" => "#{ABSOLUTE_ASSET_URL}/#{article[:thumbnail]}",
+    "series" => "Drug Target Discovery",
+    "series_order" => article[:order]
+  }
+end
+
+def front_matter_value(yaml_text, key)
+  line = yaml_text.lines.find { |candidate| candidate.start_with?("#{key}:") }
+  return nil unless line
+
+  value = line.sub(/^#{Regexp.escape(key)}:\s*/, "").strip
+  value = value[1...-1] if value.start_with?('"') && value.end_with?('"')
+  value = value[1...-1] if value.start_with?("'") && value.end_with?("'")
+  value
+end
+
+def yaml_scalar(value)
+  value.to_s.inspect
+end
+
+def yaml_array(values)
+  values.map { |value| "  - #{yaml_scalar(value)}" }.join("\n")
+end
+
+def yaml_hash(data)
+  lines = []
+  data.each do |key, value|
+    case value
+    when Array
+      lines << "#{key}:"
+      lines << yaml_array(value)
+    when Hash
+      lines << "#{key}:"
+      value.each { |child_key, child_value| lines << "  #{child_key}: #{child_value}" }
+    when TrueClass, FalseClass, Integer
+      lines << "#{key}: #{value}"
+    when String
+      if value.include?("\n")
+        lines << "#{key}: |"
+        value.each_line { |line| lines << "  #{line.chomp}" }
+      else
+        lines << "#{key}: #{yaml_scalar(value)}"
+      end
+    else
+      lines << "#{key}: #{yaml_scalar(value)}"
+    end
+  end
+  lines.join("\n")
+end
+
+FileUtils.mkdir_p(ASSET_DIR)
+Dir.glob(File.join(ORIGINAL_FIGURE_DIR, "APPH_FLYNN_UN*.png")).each do |path|
+  FileUtils.cp(path, File.join(ASSET_DIR, File.basename(path)))
+end
+
+POSTS.each do |article|
+  source_path = File.join(SOURCE_DIR, article[:source])
+  output_path = File.join(ROOT, article[:output])
+  source = File.read(source_path)
+  original, body = split_front_matter(source)
+  title = first_h1(body) || front_matter_value(original, "title")
+  metadata = front_matter(original, article, title)
+  metadata["description"] = front_matter_value(original, "description")
+  schema_json = faq_schema_json(body)
+  metadata["faq_schema"] = schema_json if schema_json
+  output = "---\n#{yaml_hash(metadata)}\n---\n#{normalize_body(body)}"
+  File.write(output_path, output)
+  puts "prepared #{article[:output]}"
+end

@@ -1,0 +1,72 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require "fileutils"
+require "tmpdir"
+
+ROOT = File.expand_path("..", __dir__)
+ASSET_DIR = File.join(ROOT, "assets/img/blog/target-discovery")
+ORIGINAL_FIGURE_DIR = File.join(ROOT, "_source_material/target-discovery/figures-original")
+MAX_WIDTH = 1800
+
+unless system("ffmpeg", "-version", out: File::NULL, err: File::NULL)
+  warn "ffmpeg is required to optimize target discovery images"
+  exit 1
+end
+
+def optimize_png(path)
+  original_size = File.size(path)
+  temp_path = File.join(Dir.tmpdir, "#{File.basename(path, ".png")}-optimized.png")
+
+  ok = system(
+    "ffmpeg",
+    "-y",
+    "-i", path,
+    "-vf", "scale='min(#{MAX_WIDTH},iw)':-2:flags=lanczos",
+    "-compression_level", "9",
+    temp_path,
+    out: File::NULL,
+    err: File::NULL
+  )
+  raise "ffmpeg failed for #{path}" unless ok
+
+  optimized_size = File.size(temp_path)
+  if optimized_size < original_size
+    FileUtils.mv(temp_path, path)
+    puts "#{File.basename(path)}: #{original_size} -> #{optimized_size} bytes"
+  else
+    FileUtils.rm_f(temp_path)
+    puts "#{File.basename(path)}: kept original #{original_size} bytes"
+  end
+end
+
+def write_webp(source_path, asset_dir)
+  filename = File.basename(source_path, ".png")
+  output_path = File.join(asset_dir, "#{filename}.webp")
+  temp_path = File.join(Dir.tmpdir, "#{filename}.webp")
+
+  ok = system(
+    "ffmpeg",
+    "-y",
+    "-i", source_path,
+    "-vf", "scale='min(#{MAX_WIDTH},iw)':-2:flags=lanczos",
+    "-c:v", "libwebp",
+    "-quality", "88",
+    "-compression_level", "6",
+    temp_path,
+    out: File::NULL,
+    err: File::NULL
+  )
+  raise "ffmpeg failed while writing #{output_path}" unless ok
+
+  FileUtils.mv(temp_path, output_path)
+  puts "#{File.basename(output_path)}: #{File.size(output_path)} bytes"
+end
+
+Dir.glob(File.join(ASSET_DIR, "APPH_FLYNN_UN*.png")).sort.each do |path|
+  optimize_png(path)
+end
+
+Dir.glob(File.join(ORIGINAL_FIGURE_DIR, "APPH_FLYNN_UN*.png")).sort.each do |path|
+  write_webp(path, ASSET_DIR)
+end

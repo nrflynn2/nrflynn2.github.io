@@ -1,0 +1,14 @@
+<nav class="series-nav" aria-label="{{ page.series }} series">
+  <div class="series-nav__title">{{ page.series }} series</div>
+  <ol>
+    {% for series_post in include.posts %}
+      <li>
+        {% if series_post.url == page.url %}
+          <span class="series-nav__current">{{ series_post.title }}</span>
+        {% else %}
+          <a href="{{ series_post.url | relative_url }}">{{ series_post.title }}</a>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ol>
+</nav>

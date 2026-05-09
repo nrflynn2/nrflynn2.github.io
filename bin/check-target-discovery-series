@@ -1,0 +1,75 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+ROOT = File.expand_path("..", __dir__)
+POSTS = Dir.glob(File.join(ROOT, "_posts/*.md")).select do |path|
+  File.read(path).include?('series: "Drug Target Discovery"')
+end
+
+BLOCKERS = [
+  ["em dash", "—"],
+  ["TODO", "TODO"],
+  ["URL placeholder", "URL placeholder"],
+  ["generic placeholder", "placeholder"],
+  ["visible FAQ schema heading", "## FAQ Schema"],
+  ["stale figure placeholder", "<figure:"],
+  ["stale figures directory", "figures/"],
+  ["C3 draft figure path", "C3_figure"]
+].freeze
+
+REQUIRED_FRONT_MATTER = [
+  "layout:",
+  "title:",
+  "date:",
+  "description:",
+  "thumbnail:",
+  "og_image:",
+  "series:",
+  "series_order:"
+].freeze
+
+def line_number(text, needle)
+  offset = text.index(needle)
+  return nil unless offset
+
+  text[0...offset].count("\n") + 1
+end
+
+failures = []
+
+POSTS.each do |path|
+  text = File.read(path)
+  relative = path.delete_prefix("#{ROOT}/")
+
+  REQUIRED_FRONT_MATTER.each do |field|
+    failures << "#{relative}: missing front matter field #{field}" unless text.include?(field)
+  end
+
+  BLOCKERS.each do |label, needle|
+    next unless text.include?(needle)
+
+    failures << "#{relative}:#{line_number(text, needle)} contains #{label}"
+  end
+
+  text.scan(%r{\{\{ '/(assets/img/blog/target-discovery/APPH_FLYNN_UN\d+\.(?:png|webp))' \| relative_url \}\}}) do |match|
+    asset = File.join(ROOT, match.first)
+    failures << "#{relative}: missing image asset #{match.first}" unless File.exist?(asset)
+  end
+end
+
+if POSTS.empty?
+  failures << "No deployed Drug Target Discovery posts found"
+end
+
+root_uploads = Dir.glob(File.join(ROOT, "APPH_FLYNN_UN*.png")) +
+               Dir.glob(File.join(ROOT, "{P0,C1,C2,C3,C4,C5,C6,C7,C8}_*_polished.md"))
+root_uploads.each do |path|
+  failures << "#{File.basename(path)} is still in the repo root; move it under _source_material/target-discovery"
+end
+
+if failures.empty?
+  puts "Target discovery article checks passed for #{POSTS.size} post(s)."
+else
+  warn failures.join("\n")
+  exit 1
+end
