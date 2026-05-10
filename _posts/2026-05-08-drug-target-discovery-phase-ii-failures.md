@@ -83,6 +83,7 @@ This post lays out the series: what target discovery is, why it matters, what ma
 - *Novelty vs repurposing: when to invent a target and when to reuse one*
 - *Synthetic lethality and combination targets: ML methods for finding drug pairs that work together*
 - *Knowledge graphs and case studies in AI-driven target discovery*
+- *Virtual cells for target discovery, perturbation models, and benchmarks*
 
 ## What a drug target is
 
@@ -217,6 +218,7 @@ The rest of this series goes deep on what this pillar surveys:
 - Novelty vs repurposing → *Novelty vs repurposing: when to invent a target and when to reuse one* When to invent a new target and when to reuse one. The Illuminating the Druggable Genome program, which focuses on understudied proteins, and research bias toward well-studied proteins.
 - Synthetic lethality → *Synthetic lethality and combination targets: ML methods for finding drug pairs that work together* CRISPR-based screening, synthetic lethality, where dual perturbation of two genes kills a cell even though either single perturbation does not, and ML methods for drug-synergy prediction, including tools such as MAGeCK, CRISPRi, and Perturb-seq.
 - Knowledge graphs and the rentosertib case study → *Knowledge graphs and case studies in AI-driven target discovery* Biomedical named-entity recognition, relation extraction, knowledge-graph embedding models, and walkthroughs of publicly documented AI-discovered-drug programs.
+- Virtual cells → *Virtual cells for target discovery, perturbation models, and benchmarks* Single-cell atlases, perturbation-response models, Perturb-seq benchmarks, and how simulated interventions can prioritize target-validation experiments.
 
 ## How drug target discovery connects to *Machine Learning for Drug Discovery*
 
