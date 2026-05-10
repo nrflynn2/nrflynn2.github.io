@@ -287,13 +287,6 @@ The claim is narrower than it might sound. PTK2 remains a candidate rather than 
 
 [^drug]: Coming in the next post - how target candidates get screened for tractability and modality fit.
 
-
-## How target–disease evidence fits into ML for drug discovery
-
-Most ML work in drug discovery concentrates on the chemistry side of the pipeline - the molecules, their properties, and their binding partners. Target-disease evidence work sits upstream and uses a different toolkit: graph neural networks over biomedical knowledge graphs, sequence-level variant-effect prediction, NLP over biomedical literature, and variational methods for multi-omics integration. These are largely different model families, datasets, and evaluation paradigms.
-
-The connection to the book is direct. These upstream methods feed into the multimodal pipelines that Chapter 13 describes - systems that integrate evidence from heterogeneous biomedical data sources end to end. Appendix B's survey of chemical data repositories is the natural companion to this post's implicit survey of biomedical data repositories (GWAS Catalog, GEO, ProteomeXchange, STRING, Reactome, Open Targets). Both are about knowing what evidence sources exist and what they can and cannot tell you. For an ML practitioner coming from the molecular-property-prediction side of drug discovery, the target-evidence toolkit is unfamiliar terrain but conceptually adjacent. The question is still: how do we aggregate noisy, heterogeneous evidence into a defensible quantitative claim? The data types and noise models differ from SMILES and fingerprints, but the modeling discipline transfers directly.
-
 ## Open questions in target–disease evidence work
 
 **The benchmarking problem.** Target-discovery ML is unusually hard to benchmark. The ground-truth signal - did this target hold up in Phase III? - takes a decade and nine figures per data point. Surrogate benchmarks exist (does the method rediscover known targets for known diseases when given only pre-discovery literature? does it recover genetic signals already in Open Targets? does it predict held-out drug-target relationships?) but all share the same weakness: the evaluation corpus overlaps with the corpus the ML methods were trained on. Truly unbiased benchmarking for target-discovery ML, where the test set is future-clinical rather than past-published, remains a live methodological problem.
@@ -306,7 +299,7 @@ The connection to the book is direct. These upstream methods feed into the multi
 
 [^synleth]: Coming in a later post - how CRISPR-screen evidence extends from single targets to target pairs.
 
-Evidence frameworks for target-disease linkage separate disciplined target discovery from assertion. Teams that internalize them are less likely to skip steps, and skipped steps are rarely recoverable later. The methodology will remain imperfect because the underlying biology is imperfect. The framework languages (5R, GOT-IT) and the evidence-stack discipline - genomics as anchor, corroborated by transcriptomics and network context, challenged by alternative hypotheses - are what distinguish a defensible target list from one that merely sounds plausible.
+Evidence frameworks for target-disease linkage separate disciplined target discovery from assertion. Teams that internalize them are less likely to skip steps, and skipped steps are rarely recoverable later. The framework languages (5R, GOT-IT) and the evidence-stack discipline - genomics as anchor, corroborated by transcriptomics and network context, challenged by alternative hypotheses - are what distinguish a defensible target list from one that merely sounds plausible.
 
 ---
 

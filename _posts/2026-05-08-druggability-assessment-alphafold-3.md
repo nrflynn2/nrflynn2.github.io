@@ -170,7 +170,7 @@ Compared with the crizotinib workflow described above, the difference is sharp. 
   <img src="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN11.png' | relative_url }}" alt="Six-by-six matrix showing which modalities address which target challenges; no single modality dominates all cells." loading="lazy">
 </picture>
 
-Outside drug-discovery circles, the expansion of the druggable envelope is often framed as a prediction-model story. It is also a modality story. Categories of therapeutic molecule that did not have approved products a decade ago now have market-stage drugs and late-stage candidates, each reaching targets that small molecules cannot.
+Categories of therapeutic molecule that did not have approved products a decade ago now have market-stage drugs and late-stage candidates, each reaching targets that small molecules cannot and expanding the druggable envelope.
 
 ### Targeted protein degradation (PROTACs and molecular glues)
 
@@ -255,14 +255,6 @@ IDG found that Tdark proteins receive less research funding than other categorie
 A 2026 assessment of a novel target should include, at minimum, an AF3-class structure prediction with pocket analysis, a TDL classification, a scan across modality options (small molecule, PROTAC, ASO, ADC, peptide), and an explicit note on whether Rule-of-Five chemistry is even the right design envelope for this target. The question [novelty scoring and the ignorome] → *Novel vs repurposed targets: quantifying novelty and extending drug-repurposing methods* (C5)[^c5] takes up how novelty itself is now quantified across the TDL spectrum.
 
 [^c5]: Coming in a later post - novelty scoring across the TDL spectrum.
-
-## How druggability assessment connects to ML for drug discovery
-
-Three areas of *Machine Learning for Drug Discovery* connect directly to this post.
-
-Chapter 9 (structure-based drug design with active learning) is the methods chapter for the "iterate on a structure-based design until you have a lead" workflow. It captures the workflow that crizotinib's team ran the hard way and that an AF-enabled CDK20 program runs faster. Chapter 11 (graph neural networks, or GNNs, for drug-target affinity) covers the modeling architectures that increasingly sit underneath the generation-and-scoring loops in programs like the HCC/CDK20 workflow described above. Chapter 12 (transformers for protein structure prediction) is the natural entry point for the AF2 → AF3 architectural transition, including the Pairformer (AF3's block for updating pairwise residue relationships) and the diffusion module that distinguishes AF3 from its predecessors. Appendix D (protein structure deep dive) gives readers the backbone knowledge they need for modality-choice discussions that turn on pocket geometry, which in 2026 means most of them.
-
-The book stops short of PROTAC design, ADC linker chemistry, and ASO sequence selection as modeling problems in their own right. That omission is deliberate; the field moved fast after the book went to print. Those topics are natural subjects for a follow-up series, because each is well matched to ML architectures the book already introduces (Ch 3 classification for degrader activity, Ch 7 unsupervised methods for linker exploration, Ch 11 GNNs for ternary-complex modeling).
 
 ## What's next in druggability assessment
 

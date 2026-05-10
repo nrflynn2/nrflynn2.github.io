@@ -134,7 +134,7 @@ The 2014–2023 industry data also points to a second problem. Phase I likelihoo
   <img src="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN03.png' | relative_url }}" alt="Five target-assessment criteria - linkage, safety, commercial, feasibility, data - arranged in a pentagon around a central go/no-go decision." loading="lazy">
 </picture>
 
-There is no single solution or approach for all research areas, institutions and targets for assessing a drug target. Every target hunting strategy is context dependent and influenced by a variety of forces: political, demographic, economic, legal, technical, organizational and ecological. Useful target-assessment work has to satisfy at least five criteria simultaneously.
+There is no single solution or approach as every target hunting strategy is context dependent. Useful target-assessment work has to satisfy at least five criteria simultaneously.
 
 ### Target–disease linkage
 
@@ -156,9 +156,7 @@ Is the target druggable, meaning some therapeutic class can plausibly bind or mo
 
 Is the evidence base solid, or built on a few underpowered studies that never replicated? Manual curation, field-standard evaluation, and in some cases meta-analyses feed into this.
 
-Taken together, we have to consider five inference problems across different data modalities, several of them resistant to a single, primary metric. Target-disease linkage is causal inference on mixed-modality omics plus text, whereas safety is prediction on conservation and expression data and commercial strategy involves market analysis. A "good target" satisfies a multi-objective optimization problem across all five properties.
-
-In practice, these criteria produce *weighted votes* rather than verdicts. Few targets get a clean yes across all five. More often, we see mixed signals and have to decide whether one target candidate's profile beats the other eight candidate targets on our list. Target-discovery ML tries to improve this decision-making process.
+Taken together, a "good target" satisfies a multi-objective optimization problem across all five properties, involving a variety of data modalities. In practice, these criteria produce *weighted votes* rather than verdicts. Few targets get a clean yes across all five. More often, we see mixed signals and have to decide whether one target candidate's profile beats the other eight candidate targets on our list. Target-discovery ML tries to improve this decision-making process.
 
 ## Where ML helps in drug target discovery
 
@@ -198,7 +196,7 @@ Phase I established safety and pharmacokinetics, meaning how the body absorbs, d
 
 Keeping limitations in view, seventy-one patients over 12 weeks is a hypothesis-generating dataset, not a study sized or designed to support approval. No pivotal trial is running as of April 2026; Insilico is in regulatory discussions about a Phase IIb pivotal study, and a separate US Phase IIa (NCT05975983) is enrolling, with eight of the planned 60 patients having completed the 12-week treatment as of mid-2025. Keeping within the subject matter of this article series, TNIK had to be identified as a target before any chemistry could start. That identification came from a workflow combining multi-omics data, literature mining, and knowledge-graph reasoning. The Phase IIa result matters because it is consistent with the target call having been right. Whether the methodology generalizes is a question the next decade of readouts will answer.
 
-A useful counterweight is Recursion's REC-994, a lead pre-merger AI-discovered candidate for cerebral cavernous malformation, which was discontinued in May 2025 after long-term Phase II data failed to confirm earlier efficacy trends. High-profile AI-guided programs can fail in the clinic for the same reason other programs do. Through curating better evidence, we hope to lower the failure rate while remaining prepared for the occassional, inexorable failure.
+A useful counterweight is Recursion's REC-994, a lead pre-merger AI-discovered candidate for cerebral cavernous malformation, which was discontinued in May 2025 after long-term Phase II data failed to confirm earlier efficacy trends. High-profile AI-guided programs can fail in the clinic for the same reason other programs do. Through curating better evidence, we hope to lower the failure rate.
 
 ## Who does drug target discovery
 
@@ -206,7 +204,7 @@ For readers whose mental model of drug discovery centers on Big Pharma, it's mot
 
 The reasons are structural. Big Pharma faces the "better than the Beatles" problem (the bar for new drug approval keeps rising because better drugs already exist), the "low-hanging fruit" problem (the easy targets are mostly drugged), the "cautious regulator" problem (FDA standards ratchet up after each safety scare and rarely relax), and a tendency to industrialize the wrong activities; scaling basic research and brute-force screening has not improved clinical success rates in aggregate. For more information, we discuss these problems and the related Eroom's Law in detail within chapter 1 of "Machine Learning for Drug Discovery."
 
-For a practitioner in 2026, this means target-discovery tooling is disproportionately built inside smaller, often AI-native companies, licensed into Big Pharma programs, or run academically against public data. Big Pharma's target-discovery groups increasingly act as evaluators and integrators rather than primary generators. Of course, this is a first-order picture, and there are plenty of exceptions!
+For a practitioner in 2026, this means target-discovery tooling is disproportionately built inside smaller, often AI-native companies, licensed into Big Pharma programs, or run academically against public data. Big Pharma's target-discovery groups increasingly act as evaluators and integrators rather than primary generators.
 
 ## The rest of the drug target discovery series
 
@@ -219,8 +217,6 @@ The rest of this series goes deep on what this pillar surveys:
 - Novelty vs repurposing → *Novelty vs repurposing: when to invent a target and when to reuse one* When to invent a new target and when to reuse one. The Illuminating the Druggable Genome program, which focuses on understudied proteins, and research bias toward well-studied proteins.
 - Synthetic lethality → *Synthetic lethality and combination targets: ML methods for finding drug pairs that work together* CRISPR-based screening, synthetic lethality, where dual perturbation of two genes kills a cell even though either single perturbation does not, and ML methods for drug-synergy prediction, including tools such as MAGeCK, CRISPRi, and Perturb-seq.
 - Knowledge graphs and the rentosertib case study → *Knowledge graphs and case studies in AI-driven target discovery* Biomedical named-entity recognition, relation extraction, knowledge-graph embedding models, and walkthroughs of publicly documented AI-discovered-drug programs.
-
-Each one takes a component of the decision and follows the evidence in detail.
 
 ## How drug target discovery connects to *Machine Learning for Drug Discovery*
 

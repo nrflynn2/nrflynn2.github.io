@@ -51,6 +51,38 @@ POSTS = [
     order: 4,
     thumbnail: "APPH_FLYNN_UN16.png",
     tags: ["machine learning", "drug discovery", "target discovery", "clinical trials"]
+  },
+  {
+    source: "C5_novelty_vs_repurposing_polished.md",
+    output: "_posts/2026-05-29-drug-target-novelty-repurposing.md",
+    date: "2026-05-29 09:00:00-0700",
+    order: 5,
+    thumbnail: "APPH_FLYNN_UN19.png",
+    tags: ["machine learning", "drug discovery", "target discovery", "drug repurposing"]
+  },
+  {
+    source: "C6_knowledge_graphs_rentosertib_polished.md",
+    output: "_posts/2026-06-05-knowledge-graphs-drug-target-discovery-rentosertib.md",
+    date: "2026-06-05 09:00:00-0700",
+    order: 6,
+    thumbnail: "APPH_FLYNN_UN23.png",
+    tags: ["machine learning", "drug discovery", "target discovery", "knowledge graphs"]
+  },
+  {
+    source: "C7_synthetic_lethality_polished.md",
+    output: "_posts/2026-06-12-synthetic-lethality-drug-discovery-ml.md",
+    date: "2026-06-12 09:00:00-0700",
+    order: 7,
+    thumbnail: "APPH_FLYNN_UN27.png",
+    tags: ["machine learning", "drug discovery", "target discovery", "oncology"]
+  },
+  {
+    source: "C8_virtual_cells_target_discovery_polished.md",
+    output: "_posts/2026-06-19-virtual-cells-target-discovery.md",
+    date: "2026-06-19 09:00:00-0700",
+    order: 8,
+    thumbnail: "/assets/img/og/default.png",
+    tags: ["machine learning", "drug discovery", "target discovery", "single-cell"]
   }
 ].freeze
 
@@ -83,6 +115,19 @@ def picture_markup(filename, alt)
       <img src="{{ '#{ASSET_URL}/#{filename}' | relative_url }}" alt="#{escaped_alt}" loading="lazy">
     </picture>
   HTML
+end
+
+def thumbnail_path(filename)
+  return filename if filename.start_with?("/")
+
+  "#{ASSET_URL}/#{filename}"
+end
+
+def absolute_thumbnail_url(filename)
+  return filename if filename.start_with?("http://", "https://")
+  return "https://noahrflynn.com#{filename}" if filename.start_with?("/")
+
+  "#{ABSOLUTE_ASSET_URL}/#{filename}"
 end
 
 def normalize_body(body)
@@ -138,6 +183,30 @@ def normalize_body(body)
     '[URL placeholder; search "Tabula Sapiens Consortium Science 2022 multi-organ single-cell atlas" for the DOI]',
     "[doi:10.1126/science.abl4896](https://doi.org/10.1126/science.abl4896)"
   )
+  body.gsub!(
+    '[URL placeholder - search "Agarwal novel targets drug discovery approved drugs competition Drug Discovery Today OR Nature Reviews Drug Discovery" to identify the specific paper; the journal is likely *Drug Discovery Today* or *Nature Reviews Drug Discovery* per the draft\'s phase1 inventory.]',
+    "[doi:10.1038/nrd4089](https://doi.org/10.1038/nrd4089)"
+  )
+  body.gsub!(
+    '[URL placeholder - DOI 10.1038/nature03443; search "Bryant 2005 Nature specific killing BRCA2-deficient tumours PARP"]',
+    "[doi:10.1038/nature03443](https://doi.org/10.1038/nature03443)"
+  )
+  body.gsub!(
+    '[URL placeholder - DOI 10.1038/nature03445; search "Farmer 2005 Nature targeting DNA repair defect BRCA"]',
+    "[doi:10.1038/nature03445](https://doi.org/10.1038/nature03445)"
+  )
+  body.gsub!(
+    '[URL placeholder - search "SGO revisions to FDA approvals PARP inhibitors ovarian cancer"]',
+    "[Society of Gynecologic Oncology summary](https://www.sgo.org/resources/revisions-to-fda-approvals-for-parp-inhibitors/)"
+  )
+  body.gsub!(
+    "[URL placeholder - DOI 10.1200/JCO-24-02834]",
+    "[doi:10.1200/JCO-24-02834](https://doi.org/10.1200/JCO-24-02834)"
+  )
+  body.gsub!(
+    '[URL placeholder - search "Chan 2019 Nature WRN helicase synthetic lethal microsatellite unstable"]',
+    "[doi:10.1038/s41586-019-1102-x](https://doi.org/10.1038/s41586-019-1102-x)"
+  )
   body
 end
 
@@ -158,8 +227,8 @@ def front_matter(original, article, title)
     "categories" => ["target discovery"],
     "toc" => { "sidebar" => true },
     "giscus_comments" => false,
-    "thumbnail" => "#{ASSET_URL}/#{article[:thumbnail]}",
-    "og_image" => "#{ABSOLUTE_ASSET_URL}/#{article[:thumbnail]}",
+    "thumbnail" => thumbnail_path(article[:thumbnail]),
+    "og_image" => absolute_thumbnail_url(article[:thumbnail]),
     "series" => "Drug Target Discovery",
     "series_order" => article[:order]
   }
