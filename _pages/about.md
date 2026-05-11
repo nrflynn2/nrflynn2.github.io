@@ -22,9 +22,7 @@ description: Noah Flynn builds production AI systems, agentic research workflows
     </aside>
     <div class="home-hero-bottom">
       <p class="home-hero-lead">
-        I build production AI systems and research agents, write practical machine learning for
-        pharmaceutical science, and teach molecular software engineering at UC Berkeley. This site is
-        the canonical home for my writing, book, talks, and research.
+        I build production AI systems for agents and scientific work, write practical machine learning for drug discovery, and teach molecular software engineering.
       </p>
       <div class="home-hero-actions">
         <a class="brand-button-primary" href="{{ '/blog/' | relative_url }}">Read Blog &rarr;</a>
@@ -82,7 +80,7 @@ description: Noah Flynn builds production AI systems, agentic research workflows
       <div class="now-grid">
         <div class="now-item">
           <span class="now-item-label">Research</span>
-          <p>Starting as a Senior Research Scientist on Google Cloud AI's Gemini Enterprise team, building agentic systems for deep research, coding, and data science workflows.</p>
+          <p>Building agentic systems for Gemini Enterprise research, coding, and data science workflows at Google Cloud AI.</p>
         </div>
         <div class="now-item">
           <span class="now-item-label">Writing</span>

@@ -51,6 +51,30 @@ og_image: https://noahrflynn.com/assets/img/og/book.png
 
 ---
 
+<section class="book-use-cases" aria-labelledby="book-use-cases-heading">
+  <div class="book-use-cases-header">
+    <h2 id="book-use-cases-heading">What You'll Build</h2>
+    <p>
+      Practical drug discovery tasks walk readers through
+      screening compounds, predicting ADMET properties, generating molecules, modeling proteins and drug-target
+      interactions, assembling end-to-end AI systems, and more.
+    </p>
+  </div>
+  <div class="book-use-cases-figure">
+    <picture>
+      <source srcset="{{ '/frontcover_graphic.svg' | relative_url }}" type="image/svg+xml">
+      <img
+        src="{{ '/frontcover_graphic.png' | relative_url }}"
+        alt="What can I do with this book? Roadmap of drug discovery machine learning use cases and the chapters that teach each one."
+        width="721"
+        height="914"
+      >
+    </picture>
+  </div>
+</section>
+
+---
+
 ## Chapters
 
 **Part 1: Fundamentals of Cheminformatics &amp; Machine Learning**
@@ -156,5 +180,46 @@ He has also worked at AbbVie and Merck on applications ranging from gene regulat
 }
 .book-discount-code {
   color: var(--global-theme-color);
+}
+.book-use-cases {
+  margin: 2rem 0 2.5rem;
+}
+.book-use-cases-header {
+  max-width: 760px;
+  margin-bottom: 1.25rem;
+}
+.book-use-cases-header h2 {
+  margin-bottom: 0.5rem;
+}
+.book-use-cases-header p {
+  color: var(--global-text-color-light);
+}
+.book-use-cases-figure {
+  overflow-x: auto;
+  padding: 1rem;
+  background: #ffffff;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 8px;
+  box-shadow: 0 16px 40px rgba(12, 68, 124, 0.08);
+}
+.book-use-cases-figure picture {
+  display: block;
+  min-width: min(721px, 100%);
+}
+.book-use-cases-figure img {
+  display: block;
+  width: 100%;
+  min-width: 620px;
+  height: auto;
+  margin: 0 auto;
+}
+@media (max-width: 767.98px) {
+  .book-use-cases-figure {
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+    border-left: 0;
+    border-right: 0;
+    border-radius: 0;
+  }
 }
 </style>
