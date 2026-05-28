@@ -1,7 +1,7 @@
 ---
 layout: "post"
 title: "Drug target discovery: the front-of-funnel decision behind most Phase II failures"
-date: "2026-05-08 09:00:00-0700"
+date: "2026-05-28 09:00:00-0700"
 description: "Drug target discovery is the least quantified stage of the drug pipeline and a major determinant of Phase II outcomes. Why it matters, and where ML fits."
 tags:
   - "machine learning"
@@ -89,7 +89,7 @@ This post lays out the series: what target discovery is, why it matters, what ma
 
 A drug target is a biomolecule, usually a protein and sometimes a nucleic acid, whose activity we want to modulate to produce a therapeutic effect. "Modulate" covers a range: inhibit an overactive enzyme, block a receptor from binding its ligand, degrade a disease-driving protein, replace a missing transcript. Binding the target has to produce the therapeutic effect. A molecule that binds to the target without changing disease outcomes is hitting a decoy.
 
-Nearly half of oral drugs on the market target enzymes, with kinases as the single most productive sub-family. About a third target cell-surface receptors, especially G-protein-coupled receptors. Ion channels, transporters, and nuclear hormone receptors round out the major protein classes. Nucleic acids form a smaller but fast-growing non-protein class. If you've read chapter 1 of *Machine Learning for Drug Discovery*, we derive a ~10⁵ protein "biological search space" covering on the order of 100,000 potential human protein targets once splice variants and post-translational modifications, that is, alternative versions of a protein and chemical changes added after it is made, are counted. A drug-like molecule has to find, bind, and modulate the right one.
+Nearly half of oral drugs on the market target enzymes, with kinases as the single most productive sub-family. About a third target cell-surface receptors, especially G-protein-coupled receptors. Ion channels, transporters, and nuclear hormone receptors round out the major protein classes. Nucleic acids form a smaller but fast-growing non-protein class. If you've read chapter 1 of *Build AI Drug Discovery Pipelines*, we derive a ~10⁵ protein "biological search space" covering on the order of 100,000 potential human protein targets once splice variants and post-translational modifications, that is, alternative versions of a protein and chemical changes added after it is made, are counted. A drug-like molecule has to find, bind, and modulate the right one.
 
 Target discovery, the front-of-funnel activity this series focuses on, is the work of deciding *which* of those proteins to go after for a given disease. It splits into two phases that casual usage often folds together:
 - **Target identification**: generating candidate target-disease links. "Here are ten proteins that seem to be involved in pancreatic fibrosis; let's prioritize the top three."
@@ -203,7 +203,7 @@ A useful counterweight is Recursion's REC-994, a lead pre-merger AI-discovered c
 
 For readers whose mental model of drug discovery centers on Big Pharma, it's motivating to keep in mind that, in the United States, nearly 60% of newly approved drugs were discovered in universities or biotechnology companies, not by Big Pharma's own R&D. Small, often academic-adjacent biotechs take the early-stage innovation risk. Big Pharma licenses, acquires, or partners to bring the late-stage program through approval and marketing.
 
-The reasons are structural. Big Pharma faces the "better than the Beatles" problem (the bar for new drug approval keeps rising because better drugs already exist), the "low-hanging fruit" problem (the easy targets are mostly drugged), the "cautious regulator" problem (FDA standards ratchet up after each safety scare and rarely relax), and a tendency to industrialize the wrong activities; scaling basic research and brute-force screening has not improved clinical success rates in aggregate. For more information, we discuss these problems and the related Eroom's Law in detail within chapter 1 of "Machine Learning for Drug Discovery."
+The reasons are structural. Big Pharma faces the "better than the Beatles" problem (the bar for new drug approval keeps rising because better drugs already exist), the "low-hanging fruit" problem (the easy targets are mostly drugged), the "cautious regulator" problem (FDA standards ratchet up after each safety scare and rarely relax), and a tendency to industrialize the wrong activities; scaling basic research and brute-force screening has not improved clinical success rates in aggregate. For more information, we discuss these problems and the related Eroom's Law in detail within chapter 1 of "Build AI Drug Discovery Pipelines."
 
 For a practitioner in 2026, this means target-discovery tooling is disproportionately built inside smaller, often AI-native companies, licensed into Big Pharma programs, or run academically against public data. Big Pharma's target-discovery groups increasingly act as evaluators and integrators rather than primary generators.
 
@@ -220,9 +220,9 @@ The rest of this series goes deep on what this pillar surveys:
 - Knowledge graphs and the rentosertib case study → *Knowledge graphs and case studies in AI-driven target discovery* Biomedical named-entity recognition, relation extraction, knowledge-graph embedding models, and walkthroughs of publicly documented AI-discovered-drug programs.
 - Virtual cells → *Virtual cells for target discovery, perturbation models, and benchmarks* Single-cell atlases, perturbation-response models, Perturb-seq benchmarks, and how simulated interventions can prioritize target-validation experiments.
 
-## How drug target discovery connects to *Machine Learning for Drug Discovery*
+## How drug target discovery connects to *Build AI Drug Discovery Pipelines*
 
-[*Machine Learning for Drug Discovery*]({{ '/book/' | relative_url }}) concentrates on methods that begin after a target has been chosen. Molecular property prediction, virtual screening, generative chemistry, protein structure prediction, drug repurposing, and multimodal pipelines are chapter-length topics because they are well-defined ML problems with benchmarks and data.
+[*Build AI Drug Discovery Pipelines*]({{ '/book/' | relative_url }}) concentrates on methods that begin after a target has been chosen. Molecular property prediction, virtual screening, generative chemistry, protein structure prediction, drug repurposing, and multimodal pipelines are chapter-length topics because they are well-defined ML problems with benchmarks and data.
 
 If you came here from the book and have already built a property predictor, screened a virtual library, or trained a generative model for lead compounds, this series asks a prior question: *how did anyone decide that was the right target in the first place?* As you read through this series, you might notice that the methods change with the problem. For example, the work may involve graph learning over biomedical knowledge graphs, natural-language processing over biomedical literature, or exploiting multi-omics integration with multimodal models. However, at their core, these methods are more like variants of the methods we discuss in the book, rather than new or alien concepts.
 

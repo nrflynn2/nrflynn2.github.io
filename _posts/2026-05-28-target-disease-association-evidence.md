@@ -1,7 +1,7 @@
 ---
 layout: "post"
 title: "How to tell a drug target matters: evidence frameworks for target–disease linkage"
-date: "2026-05-08 09:10:00-0700"
+date: "2026-05-28 09:10:00-0700"
 description: "Target-disease association evidence is what Phase II efficacy hinges on. A practitioner's guide to 5R, GOT-IT, the omics stack, and knowledge graphs."
 tags:
   - "machine learning"

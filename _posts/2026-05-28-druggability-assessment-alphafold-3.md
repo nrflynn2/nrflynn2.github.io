@@ -1,7 +1,7 @@
 ---
 layout: "post"
 title: "Druggability, ligandability, and modality choice in the AlphaFold 3 era"
-date: "2026-05-08 09:20:00-0700"
+date: "2026-05-28 09:20:00-0700"
 description: "Druggability assessment used to ask \"does this protein have a pocket?\" In 2026 it asks \"which of six modalities fits this target best?\" A field guide."
 tags:
   - "machine learning"

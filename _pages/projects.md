@@ -20,7 +20,7 @@ home_work_brand: true
 
   <section class="work-section" aria-label="Selected work list">
     <div class="work-list">
-      {% include work-row.html year="2026" title="Machine Learning for Drug Discovery" venue="Manning" type="Book" href="/book/" %}
+      {% include work-row.html year="2026" title="Build AI Drug Discovery Pipelines" venue="Manning" type="Book" href="/book/" %}
       {% include work-row.html year="2026" title="GenCircuit-RL" venue="Research" type="Paper" href="/publications/#flynn2026gencircuit" %}
       {% include work-row.html year="2026" title="DREAM" venue="Preprint" type="Paper" href="/publications/#li2026dreambench" %}
       {% include work-row.html year="2026" title="COMPASS" venue="TMLR / arXiv" type="Paper" href="/publications/#flynn2025compass" %}

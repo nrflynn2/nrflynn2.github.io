@@ -65,7 +65,7 @@ description: Noah Flynn builds production AI systems, agentic research workflows
         My scientific background is in deep learning for drug discovery. I earned my PhD in Computational Biology at Washington University in St. Louis, with research on graph neural networks for drug metabolism and toxicity, and I have worked at AbbVie and Merck on gene regulatory network analysis and generative compound design.
       </p>
       <p>
-        I teach graduate machine learning and cheminformatics at UC Berkeley, and wrote <a href="{{ '/book/' | relative_url }}">Machine Learning for Drug Discovery</a> to make that intersection easier to enter. I am always glad to hear from people building at the boundary of agentic AI, computational drug discovery, and scientific software.
+        I teach graduate machine learning and cheminformatics at UC Berkeley, and wrote <a href="{{ '/book/' | relative_url }}">Build AI Drug Discovery Pipelines</a> to make that intersection easier to enter. I am always glad to hear from people building at the boundary of agentic AI, computational drug discovery, and scientific software.
       </p>
       <p>
         Away from work, I like skiing around Lake Tahoe, traveling to new places to scuba dive, and finding excuses to be a beginner again. I keep a little more of that side of life on the <a href="{{ '/hobbies/' | relative_url }}">Hobbies</a> page.
@@ -84,7 +84,7 @@ description: Noah Flynn builds production AI systems, agentic research workflows
         </div>
         <div class="now-item">
           <span class="now-item-label">Writing</span>
-          <p><em>Machine Learning for Drug Discovery</em> is 100% complete with Manning and nearing full release: real case studies, PyTorch code, and practical molecular science.</p>
+          <p><em>Build AI Drug Discovery Pipelines</em> is 100% complete with Manning and nearing full release: real case studies, PyTorch code, and practical molecular science.</p>
         </div>
         <div class="now-item">
           <span class="now-item-label">Teaching</span>
@@ -102,7 +102,7 @@ description: Noah Flynn builds production AI systems, agentic research workflows
       </div>
     </div>
     <div class="work-list">
-      {% include work-row.html year="2026" title="Machine Learning for Drug Discovery" venue="Manning" type="Book" href="/book/" %}
+      {% include work-row.html year="2026" title="Build AI Drug Discovery Pipelines" venue="Manning" type="Book" href="/book/" %}
       {% include work-row.html year="2026" title="DREAM" venue="Preprint" type="Paper" href="/publications/#li2026dreambench" %}
       {% include work-row.html year="2026" title="COMPASS" venue="TMLR / arXiv" type="Paper" href="/publications/#flynn2025compass" %}
       {% include work-row.html year="2025" title="Designing Medicines from Scratch" venue="PyTorch Conference" type="Talk" href="/talks/" %}

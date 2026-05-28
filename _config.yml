@@ -10,7 +10,7 @@ author:
   name: Noah Flynn
   email: noahrflynn@gmail.com
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Senior Research Scientist at Google Cloud AI, author of Machine Learning for Drug Discovery, and UC Berkeley adjunct faculty.
+  Senior Research Scientist at Google Cloud AI, author of Build AI Drug Discovery Pipelines, and UC Berkeley adjunct faculty.
 footer_text: >
   Noah Flynn &mdash; Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
 keywords: machine learning, drug discovery, computational biology, agentic AI, foundation models, deep learning # add your own keywords or leave empty

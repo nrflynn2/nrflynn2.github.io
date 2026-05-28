@@ -1,19 +1,19 @@
 ---
 layout: page
 title: Book
-heading: Machine Learning for Drug Discovery
+heading: Build AI Drug Discovery Pipelines
 permalink: /book/
 nav: true
 nav_order: 2
-description: Machine Learning for Drug Discovery is a practical Manning book on using PyTorch, cheminformatics, and modern ML to solve real pharmaceutical research problems.
+description: Build AI Drug Discovery Pipelines is a practical Manning book on using PyTorch, cheminformatics, and modern ML to solve real pharmaceutical research problems.
 og_image: https://noahrflynn.com/assets/img/og/book.png
 ---
 
 <div class="row align-items-start mb-5">
   <div class="col-12 col-md-4 mb-4 mb-md-0 text-center">
     <img
-      src="{{ '/assets/img/book_cover_manning.png' | relative_url }}"
-      alt="Machine Learning for Drug Discovery book cover"
+      src="{{ '/assets/img/book_cover.jpg' | relative_url }}"
+      alt="Build AI Drug Discovery Pipelines book cover"
       class="img-fluid rounded z-depth-1"
       style="max-width: 280px;"
     >
@@ -31,7 +31,7 @@ og_image: https://noahrflynn.com/assets/img/og/book.png
 
     <div class="mt-4">
       <a
-        href="https://www.manning.com/books/machine-learning-for-drug-discovery?utm_source=flynn&utm_medium=affiliate&utm_campaign=book_flynn_machine_2_29_24&a_aid=flynn&a_bid=ddb44578&chan=mm_website"
+        href="https://www.manning.com/books/build-ai-drug-discovery-pipelines?utm_source=flynn&utm_medium=affiliate&utm_campaign=book_flynn_machine_2_29_24&a_aid=flynn&a_bid=ddb44578&chan=mm_website"
         class="btn btn-book-primary me-2"
         target="_blank"
         rel="noopener"
@@ -43,9 +43,15 @@ og_image: https://noahrflynn.com/assets/img/og/book.png
         rel="noopener"
       >View Code &rarr;</a>
     </div>
+    <!-- SALE: revert to evergreen 35% code au35fly after 2026-06-12 -->
+    <p class="mt-2" style="font-size: 0.85rem; color: var(--global-text-color-light);">
+      Renamed and <strong class="book-discount-code">50% off</strong> through June 12, 2026 <a href="https://www.manning.com/books/build-ai-drug-discovery-pipelines?utm_source=flynn&utm_medium=affiliate&utm_campaign=book_flynn_machine_2_29_24&a_aid=flynn&a_bid=ddb44578&chan=mm_website" target="_blank" rel="noopener">at Manning</a>.
+    </p>
+    <!--
     <p class="mt-2" style="font-size: 0.85rem; color: var(--global-text-color-light);">
       Use code <strong class="book-discount-code">au35fly</strong> for 35% off
     </p>
+    -->
   </div>
 </div>
 
@@ -136,7 +142,7 @@ He has also worked at AbbVie and Merck on applications ranging from gene regulat
 
 {% highlight bibtex %}
 @book{flynn2025mldd,
-  title     = {Machine Learning for Drug Discovery},
+  title     = {Build AI Drug Discovery Pipelines},
   author    = {Flynn, Noah},
   isbn      = {9781633437661},
   year      = {2025},

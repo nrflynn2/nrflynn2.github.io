@@ -15,7 +15,7 @@ giscus_comments: false
 
 This site is my home base for work that sits between research, production AI systems, drug discovery, and teaching.
 
-The near-term plan is simple: publish notes that make complicated systems easier to reason about. Some posts will unpack ideas from *Machine Learning for Drug Discovery*. Others will come from teaching graduate cheminformatics and machine learning at UC Berkeley, or from the practical messiness of building agentic systems that have to work outside a benchmark.
+The near-term plan is simple: publish notes that make complicated systems easier to reason about. Some posts will unpack ideas from *Build AI Drug Discovery Pipelines*. Others will come from teaching graduate cheminformatics and machine learning at UC Berkeley, or from the practical messiness of building agentic systems that have to work outside a benchmark.
 
 I want the writing here to be useful to people who build things: researchers, students, applied scientists, and drug discovery folks trying to make sense of modern ML without losing the thread of the underlying science.
 
