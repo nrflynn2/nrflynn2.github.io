@@ -315,3 +315,4 @@ That is also why this catalog lives here rather than only in print. Spotted some
 ---
 
 *Adapted from Appendix B of [Build AI Drug Discovery Pipelines](/book/); the book puts these datasets to work in applied PyTorch case studies, from molecular fingerprints to AlphaFold.*
+
