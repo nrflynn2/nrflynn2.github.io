@@ -103,8 +103,8 @@ There is also a methods story underneath the clinical one. Synthetic-lethality t
 
 <!-- FIGURE 1 - The synthetic-lethality concept (2×2 conceptual figure, Portage editorial style) -->
 <picture>
-  <source srcset="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN27.webp' | relative_url }}" type="image/webp">
-  <img src="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN27.png' | relative_url }}" alt="Four-panel figure of synthetic lethality: healthy cells survive single-gene loss, but tumor cells that have already lost one partner gene die when the second is inhibited." loading="lazy">
+  <source srcset="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN27.webp' | absolute_url }}" type="image/webp">
+  <img src="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN27.png' | absolute_url }}" alt="Four-panel figure of synthetic lethality: healthy cells survive single-gene loss, but tumor cells that have already lost one partner gene die when the second is inhibited." loading="lazy">
 </picture>
 
 The textbook definition is a pair of genes whose simultaneous inactivation kills the cell, but loss of either gene alone does not. In the usual diagram, gene A and gene B perform redundant or parallel functions. Lose A and B compensates. Lose B and A compensates. Lose both, and compensation fails.
@@ -127,9 +127,9 @@ Practically, this has three consequences.
 
 **The candidate pool is combinatorial.** For ~20,000 protein-coding genes, there are ~200 million unordered pairs. Genome-scale screening of pairs remains expensive, especially compared with single-gene essentiality screens, which are now routine. That cost is why computational prioritization exists.
 
-**The biomarker is central, and the bar is rising.** A PARP inhibitor in a BRCA-wildtype tumor does very little, and the FDA's 2022–2023 narrowing of the ovarian-cancer indications across olaparib, niraparib, and rucaparib formalized the principle: when mature OS data did not support broader use, the indication snapped back to confirmed deleterious BRCA mutations. Any SL-derived target program carries a built-in patient-selection story. That is an advantage, because [biomarker-stratified programs have higher likelihood of approval]({{ '/blog/2026/likelihood-of-approval-therapeutic-area/' | relative_url }}). It is also demanding - you have to develop and validate the assay alongside the molecule, and resist the regulatory or commercial pull to broaden the program before the OS data is in.
+**The biomarker is central, and the bar is rising.** A PARP inhibitor in a BRCA-wildtype tumor does very little, and the FDA's 2022–2023 narrowing of the ovarian-cancer indications across olaparib, niraparib, and rucaparib formalized the principle: when mature OS data did not support broader use, the indication snapped back to confirmed deleterious BRCA mutations. Any SL-derived target program carries a built-in patient-selection story. That is an advantage, because [biomarker-stratified programs have higher likelihood of approval]({{ '/blog/2026/likelihood-of-approval-therapeutic-area/' | absolute_url }}). It is also demanding - you have to develop and validate the assay alongside the molecule, and resist the regulatory or commercial pull to broaden the program before the OS data is in.
 
-**Novelty changes meaning.** In the single-target paradigm, "novel" means the gene has never been drugged. In the SL paradigm, "novel" can also mean *the pair* has never been drugged. A well-studied gene becomes a first-in-class target the moment someone validates it as synthetic-lethal with a disease-relevant mutation. That changes what counts as a first-in-class program and how you would score it — the kind of question the [novel-vs-repurposed framework]({{ '/blog/2026/drug-target-novelty-repurposing/' | relative_url }}) takes up.
+**Novelty changes meaning.** In the single-target paradigm, "novel" means the gene has never been drugged. In the SL paradigm, "novel" can also mean *the pair* has never been drugged. A well-studied gene becomes a first-in-class target the moment someone validates it as synthetic-lethal with a disease-relevant mutation. That changes what counts as a first-in-class program and how you would score it — the kind of question the [novel-vs-repurposed framework]({{ '/blog/2026/drug-target-novelty-repurposing/' | absolute_url }}) takes up.
 
 > **Concept Translation:** Combinatorial scaling is the recurring problem. ~200 million unordered gene pairs is roughly the same order of magnitude as a fully-specified pairwise-feature-interaction matrix in a tabular ML problem with 20K features - and most ML practitioners don't enumerate every pairwise interaction either. They use linear models with explicit pair selection, tree-based models that pick informative pairs implicitly, or low-rank embeddings that score pair similarity without storing every pair. SL prediction does the same thing: prune the search space with structural priors (network proximity, pathway membership, mutual exclusivity), then test the survivors experimentally.
 
@@ -138,8 +138,8 @@ Practically, this has three consequences.
 
 <!-- FIGURE 2 - The CRISPR screen and MAGeCK pipeline (4-stage horizontal flow, Portage editorial style) -->
 <picture>
-  <source srcset="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN28.webp' | relative_url }}" type="image/webp">
-  <img src="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN28.png' | relative_url }}" alt="Four-stage CRISPR screen pipeline: a guide-RNA library is transfected, the cell population is split between control and treated arms, guides are sequenced and counted, and MAGeCK ranks the depleted hits." loading="lazy">
+  <source srcset="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN28.webp' | absolute_url }}" type="image/webp">
+  <img src="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN28.png' | absolute_url }}" alt="Four-stage CRISPR screen pipeline: a guide-RNA library is transfected, the cell population is split between control and treated arms, guides are sequenced and counted, and MAGeCK ranks the depleted hits." loading="lazy">
 </picture>
 
 The experimental workhorse is the pooled CRISPR screen.
@@ -175,8 +175,8 @@ Classical CRISPR mutates the target gene. That triggers a DNA damage response, w
 
 <!-- FIGURE 3 - Synthetic lethality prediction as graph link prediction (2-panel diagram with a model-flow band, Portage editorial style) -->
 <picture>
-  <source srcset="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN29.webp' | relative_url }}" type="image/webp">
-  <img src="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN29.png' | relative_url }}" alt="Two-panel diagram of synthetic-lethality prediction: an observed gene–gene network on the left, the same network on the right with a model-predicted synthetic-lethal edge highlighted, and a graph-representation-learning → classifier → edge-probability flow band below." loading="lazy">
+  <source srcset="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN29.webp' | absolute_url }}" type="image/webp">
+  <img src="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN29.png' | absolute_url }}" alt="Two-panel diagram of synthetic-lethality prediction: an observed gene–gene network on the left, the same network on the right with a model-predicted synthetic-lethal edge highlighted, and a graph-representation-learning → classifier → edge-probability flow band below." loading="lazy">
 </picture>
 
 CRISPR screens are definitive but expensive, and they have reproducibility issues across labs, libraries, and cell lines. A parallel literature tries to predict synthetic-lethal pairs from existing data.
@@ -201,7 +201,7 @@ Core cellular machinery, including DNA repair, cell cycle control, and protein h
 
 ### SynLethDB
 
-When you want to check whether any previous experimental or computational evidence supports a candidate pair, **SynLethDB** (Guo, Liu & Zheng, *Nucleic Acids Res.* 44:D1011–D1017, 2016; SynLethDB 2.0 in 2022) is the main aggregated resource - a synthetic-lethality knowledge graph curating supporting publications, experiments, and predictions across species. It is a reasonable starting point before running a new screen. It is also a live use case for the knowledge-graph methodology unpacked in [the capstone on knowledge-graph-based target discovery]({{ '/blog/2026/knowledge-graphs-drug-target-discovery-rentosertib/' | relative_url }}).
+When you want to check whether any previous experimental or computational evidence supports a candidate pair, **SynLethDB** (Guo, Liu & Zheng, *Nucleic Acids Res.* 44:D1011–D1017, 2016; SynLethDB 2.0 in 2022) is the main aggregated resource - a synthetic-lethality knowledge graph curating supporting publications, experiments, and predictions across species. It is a reasonable starting point before running a new screen. It is also a live use case for the knowledge-graph methodology unpacked in [the capstone on knowledge-graph-based target discovery]({{ '/blog/2026/knowledge-graphs-drug-target-discovery-rentosertib/' | absolute_url }}).
 
 <!-- SEO §4 moderate: Where ML actually enters → Where ML actually enters synthetic-lethal prediction -->
 ### Where ML actually enters
@@ -210,7 +210,7 @@ It helps to separate machine learning from statistical modeling and curation.
 
 The *classical* SL prediction problem is binary classification. Given a gene pair, predict synthetic-lethal or not. Features are drawn from protein-protein interaction networks, gene co-expression, pathway membership, sequence or structure similarity, evolutionary conservation, shared regulators, and, when available, multi-omic co-occurrence patterns across tumor cohorts. Models range from support vector machines and random forests to gradient-boosted trees on tabular features and graph neural networks operating on learned representations of each pair.
 
-Formulated as a graph problem, SL prediction is a link-prediction task on a heterogeneous biological network. Nodes are genes, edges are any of the thousands of known gene-gene relationships, and the model learns to predict a new edge type ("synthetic lethal with") from the surrounding topology. This is the natural formulation for graph machine learning. It also sits close to the way knowledge-graph link prediction is used for target-disease scoring more generally — the subject of the [knowledge-graph capstone]({{ '/blog/2026/knowledge-graphs-drug-target-discovery-rentosertib/' | relative_url }}).
+Formulated as a graph problem, SL prediction is a link-prediction task on a heterogeneous biological network. Nodes are genes, edges are any of the thousands of known gene-gene relationships, and the model learns to predict a new edge type ("synthetic lethal with") from the surrounding topology. This is the natural formulation for graph machine learning. It also sits close to the way knowledge-graph link prediction is used for target-disease scoring more generally — the subject of the [knowledge-graph capstone]({{ '/blog/2026/knowledge-graphs-drug-target-discovery-rentosertib/' | absolute_url }}).
 
 The network framing also gives a useful intuition about where SL partners are likely to sit. Biological networks are scale-free - they have hubs with many connections and bridges with high betweenness (nodes that lie on many shortest paths between modules). Hubs tend to be essential. Inhibit them and the cell dies regardless of genetic background, so they make poor SL candidates. Bridges and mid-degree nodes that connect parallel modules are more interesting. Losing one is survivable if the parallel module is intact, and the synthetic-lethal relationship with the parallel module appears as a structural feature of the graph. In practice, graph neural networks trained on such networks learn much of this topology implicitly. You do not need to hand-engineer bridge-like features if you have enough labeled pairs.
 
@@ -236,8 +236,8 @@ Methodologically, the models used on this kind of data span the familiar ML spec
 
 <!-- FIGURE 4 - Two-decade synthetic-lethality timeline, 2005 to 2026 (Portage editorial style) -->
 <picture>
-  <source srcset="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN30.webp' | relative_url }}" type="image/webp">
-  <img src="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN30.png' | relative_url }}" alt="Synthetic-lethality timeline 2005–2026: PARP–BRCA discovery and the first PARP approvals, the 2022–2023 ovarian-cancer label narrowing in response to overall-survival data, and the 2024–2026 next-wave Polθ, USP1, and WRN programs." loading="lazy">
+  <source srcset="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN30.webp' | absolute_url }}" type="image/webp">
+  <img src="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN30.png' | absolute_url }}" alt="Synthetic-lethality timeline 2005–2026: PARP–BRCA discovery and the first PARP approvals, the 2022–2023 ovarian-cancer label narrowing in response to overall-survival data, and the 2024–2026 next-wave Polθ, USP1, and WRN programs." loading="lazy">
 </picture>
 
 The BRCA-PARP story is still the best worked example because it makes the full pipeline visible: biological hypothesis, biomarker definition, drug development, resistance, and label revision.
@@ -271,9 +271,9 @@ The longer-term vision of patient-sample-derived combination screens run in hosp
 
 ## Where the field is heading, and where caution is warranted
 
-**Scalability of validation.** Computational SL predictions substantially outpace experimental validation, and the failure rate from computational hit to experimentally confirmed SL pair is high. The methods literature tends to report validation on a handful of top-ranked candidates; the actual precision of a model deployed at scale is usually worse than the paper numbers suggest. This mirrors the broader target-discovery validation problem that the [evidence-frameworks post]({{ '/blog/2026/target-disease-association-evidence/' | relative_url }}) examines.
+**Scalability of validation.** Computational SL predictions substantially outpace experimental validation, and the failure rate from computational hit to experimentally confirmed SL pair is high. The methods literature tends to report validation on a handful of top-ranked candidates; the actual precision of a model deployed at scale is usually worse than the paper numbers suggest. This mirrors the broader target-discovery validation problem that the [evidence-frameworks post]({{ '/blog/2026/target-disease-association-evidence/' | absolute_url }}) examines.
 
-**Druggability of SL partners.** Identifying a synthetic-lethal partner solves only half the problem. Many SL partners are scaffolding proteins, transcription factors, or complex assemblies with no obvious small-molecule binding pocket. Whether a given SL target is tractable depends on [modality choice]({{ '/blog/2026/druggability-assessment-alphafold-3/' | relative_url }}). A target that is intractable for small molecules may still be accessible to PROTACs, molecular glues, or antibody-drug conjugates. Polθ, USP1, and WRN turned out to be straightforward small-molecule targets; the next wave of SL candidates may not.
+**Druggability of SL partners.** Identifying a synthetic-lethal partner solves only half the problem. Many SL partners are scaffolding proteins, transcription factors, or complex assemblies with no obvious small-molecule binding pocket. Whether a given SL target is tractable depends on [modality choice]({{ '/blog/2026/druggability-assessment-alphafold-3/' | absolute_url }}). A target that is intractable for small molecules may still be accessible to PROTACs, molecular glues, or antibody-drug conjugates. Polθ, USP1, and WRN turned out to be straightforward small-molecule targets; the next wave of SL candidates may not.
 
 **Toxicity is not predicted by SL screens.** A synthetic-lethal pair in cancer cells says nothing about whether inhibiting target A will be tolerable in healthy tissue. The USP1 and Polθ programs both ran into clinical tolerability surprises: TNG348 was terminated in May 2024 for liver toxicity (Grade 3/4 LFT abnormalities at >8 weeks), and KSQ-4279 showed anemia signals and dose-limiting blood toxicity across the USP1 class. The PARP class illustrates the same issue one level up. Tolerability is a function of mechanism, but also of the *population* receiving the drug. The 2022–2023 OS-detriment story shows what happens when a drug that is tolerable and effective in one genetic background is pushed into a broader one without mature OS data to support it. Predicting tolerability from mechanism remains an open problem, and the SL framework provides only indirect traction on it.
 

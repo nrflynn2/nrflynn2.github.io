@@ -75,8 +75,8 @@ We will cover contemporary, publicly accessible chemical data repositories to ke
 
 <figure>
   <picture>
-    <source srcset="{{ '/assets/img/blog/data-repositories/hero.webp' | relative_url }}" type="image/webp">
-    <img src="{{ '/assets/img/blog/data-repositories/hero.png' | relative_url }}" alt="Public data repositories grouped by category (bioactivity and binding, chemical structures, structural biology, virtual libraries, ML benchmarks, toxicity and safety, reactions, target discovery, and clinical data), all feeding a central machine-learning drug-discovery pipeline." loading="lazy">
+    <source srcset="{{ '/assets/img/blog/data-repositories/hero.webp' | absolute_url }}" type="image/webp">
+    <img src="{{ '/assets/img/blog/data-repositories/hero.png' | absolute_url }}" alt="Public data repositories grouped by category (bioactivity and binding, chemical structures, structural biology, virtual libraries, ML benchmarks, toxicity and safety, reactions, target discovery, and clinical data), all feeding a central machine-learning drug-discovery pipeline." loading="lazy">
   </picture>
   <figcaption>The major categories of public data that feed an ML drug-discovery pipeline, organized as they appear in this catalog.</figcaption>
 </figure>

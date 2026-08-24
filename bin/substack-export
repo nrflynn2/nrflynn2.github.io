@@ -1,0 +1,275 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+# Convert a Jekyll post into Substack-paste-ready HTML.
+#
+#   bin/substack-export _posts/2026-05-28-target-disease-association-evidence.md
+#   bin/substack-export --all
+#
+# Writes .substack/<slug>.html (preview page with a copy button and a panel of
+# values for Substack's post-settings fields) plus .substack/<slug>.fragment.html
+# (the bare fragment). Requires the kramdown and kramdown-parser-gfm gems.
+
+require "yaml"
+require "date"
+require "base64"
+require "optparse"
+require "shellwords"
+require "kramdown"
+require "kramdown-parser-gfm"
+
+ROOT = File.expand_path("..", __dir__)
+OUT_DIR = File.join(ROOT, ".substack")
+CONFIG = File.read(File.join(ROOT, "_config.yml"))
+SITE_URL = CONFIG[/^url:\s*["']?(\S+?)["']?(?:\s|$)/, 1] or abort "url: not found in _config.yml"
+SUBSTACK_URL = CONFIG[/^substack_url:\s*["']?(\S+?)["']?(?:\s|$)/, 1] or abort "substack_url: not found in _config.yml"
+
+MIME = { ".webp" => "image/webp", ".png" => "image/png", ".jpg" => "image/jpeg", ".jpeg" => "image/jpeg", ".gif" => "image/gif", ".svg" => "image/svg+xml" }.freeze
+
+options = { images: :webp, inline: false, clip: false, open: true }
+parser = OptionParser.new do |o|
+  o.banner = "Usage: bin/substack-export [options] _posts/POST.md\n       bin/substack-export --all"
+  o.on("--png", "reference PNG image URLs instead of webp") { options[:images] = :png }
+  o.on("--inline", "embed images as base64 data URIs") { options[:inline] = true }
+  o.on("--clip", "also copy the fragment to the Windows clipboard") { options[:clip] = true }
+  o.on("--no-open", "do not open the preview in a browser") { options[:open] = false }
+  o.on("--all", "list every post with its export status") { options[:all] = true }
+  o.on("-h", "--help") { puts o; exit }
+end
+parser.parse!
+
+def front_matter(raw)
+  m = raw.match(/\A---\s*\n(.*?)\n---\s*\n/m) or return nil
+  fm = YAML.safe_load(m[1], permitted_classes: [Date, Time], aliases: true)
+  [fm, m.post_match]
+rescue Psych::Exception
+  nil
+end
+
+def post_url(path)
+  base = File.basename(path, ".md")
+  m = base.match(/\A(\d{4})-\d{2}-\d{2}-(.+)\z/) or abort "Unexpected post filename: #{base}"
+  "#{SITE_URL}/blog/#{m[1]}/#{m[2]}/"
+end
+
+def series_posts(series)
+  Dir.glob(File.join(ROOT, "_posts/*.md")).filter_map do |p|
+    fm, = front_matter(File.read(p))
+    next unless fm && fm["series"] == series
+    { order: fm["series_order"] || 0, path: p, title: fm["title"] }
+  end.sort_by { |h| h[:order] }
+end
+
+def local_asset(url)
+  rel = url.delete_prefix("#{SITE_URL}/")
+  file = File.join(ROOT, rel)
+  File.file?(file) ? file : nil
+end
+
+def data_uri(url)
+  file = local_asset(url) or abort "Cannot inline #{url}: no local file found"
+  mime = MIME[File.extname(file).downcase] or abort "Cannot inline #{url}: unknown image type"
+  "data:#{mime};base64,#{Base64.strict_encode64(File.binread(file))}"
+end
+
+def resolve_liquid(body, path)
+  body = body.gsub(/\{\{\s*(['"])([^'"]+)\1\s*\|\s*(?:relative_url|absolute_url)\s*\}\}/) do
+    "#{SITE_URL}/#{Regexp.last_match(2).delete_prefix('/')}"
+  end
+  body = body.gsub(/\{\{\s*site\.substack_url\s*\}\}/, SUBSTACK_URL)
+  if body =~ /\{\{|\{%/
+    offending = body.lines.each_with_index.select { |l, _| l.match?(/\{\{|\{%/) }
+    abort "Unresolved Liquid in #{path}:\n" + offending.map { |l, i| "  line #{i + 1}: #{l.strip}" }.join("\n")
+  end
+  body
+end
+
+def rewrite_pictures(body, options)
+  body.gsub(%r{<picture>\s*(.*?)\s*</picture>}m) do
+    block = Regexp.last_match(1)
+    img_tag = block[/<img[^>]+>/m] or abort "picture block without <img>"
+    webp = block[/<source[^>]*srcset="([^"]+)"/m, 1]
+    png = img_tag[/src="([^"]+)"/m, 1]
+    alt = img_tag[/alt="([^"]*)"/m, 1] || ""
+    src = options[:images] == :png ? png : (webp || png)
+    src = data_uri(src) if options[:inline]
+    %(<img src="#{src}" alt="#{alt}">)
+  end
+end
+
+def unwrap_figures(body, captions)
+  body.gsub(%r{<figure[^>]*>\s*(<img[^>]+>)\s*<figcaption[^>]*>(.*?)</figcaption>\s*</figure>}m) do
+    caption = Regexp.last_match(2).strip
+    captions << caption
+    "#{Regexp.last_match(1)}\n\n<p><em>#{caption}</em></p>"
+  end
+end
+
+def flatten_footnotes(html)
+  html = html.gsub(%r{<sup id="fnref:[^"]*"[^>]*>\s*<a [^>]*>(\d+)</a>\s*</sup>}, '<sup>\1</sup>')
+  html.sub(%r{<div class="footnotes"[^>]*>\s*<ol[^>]*>(.*?)</ol>\s*</div>}m) do
+    items = Regexp.last_match(1)
+      .gsub(%r{\s*<a [^>]*class="reversefootnote"[^>]*>.*?</a>}m, "")
+      .gsub(/\s+id="fn:[^"]*"/, "")
+      .gsub(/\s+role="[^"]*"/, "")
+    "<hr>\n<p><strong>Notes</strong></p>\n<ol>#{items}</ol>"
+  end
+end
+
+def series_line(fm, path)
+  return nil unless fm["series"]
+  posts = series_posts(fm["series"])
+  return nil if posts.size < 2
+  position = posts.index { |h| h[:path] == path } + 1
+  first = posts.first
+  if position == 1
+    %(<p><em>Part 1 of the "#{fm["series"]}" series. Browse <a href="#{SITE_URL}/blog/">all essays</a>.</em></p>)
+  else
+    %(<p><em>Part #{position} of the "#{fm["series"]}" series. Start from <a href="#{post_url(first[:path])}">part one</a> or browse <a href="#{SITE_URL}/blog/">all essays</a>.</em></p>)
+  end
+end
+
+def footer_line(url)
+  %(<hr>\n<p><em>Originally published at <a href="#{url}">noahrflynn.com</a>. Essays appear there first - subscribe here for cross-posts, or follow the <a href="#{SITE_URL}/feed.xml">RSS feed</a>.</em></p>)
+end
+
+def h(text)
+  text.to_s.gsub("&", "&amp;").gsub("<", "&lt;").gsub(">", "&gt;").gsub('"', "&quot;")
+end
+
+def preview_page(fm, url, fragment, captions)
+  cover = fm["og_image"]
+  caption_note = captions.empty? ? "" : "<p><strong>Figure captions</strong> (move each into Substack's native image-caption field):</p><ol>#{captions.map { |c| "<li>#{h(c)}</li>" }.join}</ol>"
+  <<~HTML
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <title>Substack export: #{h(fm["title"])}</title>
+    <style>
+      body { font-family: Georgia, serif; max-width: 44rem; margin: 2rem auto; padding: 0 1rem; line-height: 1.55; }
+      .panel { background: #f2f2f2; border: 1px solid #ccc; border-radius: 8px; padding: 1rem 1.25rem; font-family: system-ui, sans-serif; font-size: 0.9rem; }
+      .panel h2 { margin-top: 0; font-size: 1rem; }
+      .panel dt { font-weight: 600; margin-top: 0.5rem; }
+      .panel dd { margin: 0.1rem 0 0; }
+      .panel img { max-height: 90px; display: block; margin-top: 0.25rem; }
+      #copy { font-size: 1rem; padding: 0.5rem 1.25rem; margin: 1.25rem 0; cursor: pointer; }
+      #copy-status { margin-left: 0.75rem; font-family: system-ui, sans-serif; font-size: 0.9rem; }
+      #post img { max-width: 100%; height: auto; }
+      hr.divider { border: none; border-top: 3px double #999; margin: 1.5rem 0; }
+    </style>
+    </head>
+    <body>
+    <div class="panel">
+      <h2>For Substack post settings - do not paste this panel</h2>
+      <dl>
+        <dt>Title</dt><dd>#{h(fm["title"])}</dd>
+        <dt>Subtitle</dt><dd>#{h(fm["description"])}</dd>
+        <dt>Cover image</dt><dd>#{cover ? %(<a href="#{h(cover)}">#{h(cover)}</a><img src="#{h(cover)}" alt="">) : "(none set)"}</dd>
+        <dt>Tags</dt><dd>#{h(Array(fm["tags"]).join(", "))}</dd>
+        <dt>Original URL (backdate to #{h(fm["date"].to_s.split(" ").first)})</dt><dd><a href="#{h(url)}">#{h(url)}</a></dd>
+      </dl>
+      #{caption_note}
+    </div>
+    <button id="copy">Copy post to clipboard</button><span id="copy-status"></span>
+    <hr class="divider">
+    <div id="post">
+    #{fragment}
+    </div>
+    <script>
+      document.getElementById("copy").addEventListener("click", async () => {
+        const post = document.getElementById("post");
+        const status = document.getElementById("copy-status");
+        try {
+          await navigator.clipboard.write([new ClipboardItem({
+            "text/html": new Blob([post.innerHTML], { type: "text/html" }),
+            "text/plain": new Blob([post.innerText], { type: "text/plain" })
+          })]);
+          status.textContent = "Copied - paste into the Substack editor.";
+        } catch (err) {
+          status.textContent = "Copy failed (" + err.name + ") - select everything below the double line and press Ctrl+C.";
+        }
+      });
+    </script>
+    </body>
+    </html>
+  HTML
+end
+
+def open_in_browser(path)
+  win = `wslpath -w #{Shellwords.escape(path)} 2>/dev/null`.strip
+  return if win.empty?
+  system("explorer.exe", win, out: File::NULL, err: File::NULL)
+end
+
+def copy_to_clipboard(path)
+  win = `wslpath -w #{Shellwords.escape(path)} 2>/dev/null`.strip
+  return warn "clipboard: wslpath unavailable" if win.empty?
+  ok = system("powershell.exe", "-NoProfile", "-Command",
+              "Set-Clipboard -AsHtml -Value (Get-Content -Raw -Encoding UTF8 '#{win}')",
+              out: File::NULL)
+  warn "clipboard: powershell.exe Set-Clipboard failed" unless ok
+end
+
+def export(path, options)
+  raw = File.read(path)
+  fm, body = front_matter(raw)
+  abort "No frontmatter in #{path}" unless fm
+  url = post_url(path)
+  captions = []
+
+  body = body.gsub(/<!--.*?-->/m, "")
+  body = resolve_liquid(body, path)
+  body = rewrite_pictures(body, options)
+  body = unwrap_figures(body, captions)
+
+  html = Kramdown::Document.new(body, input: "GFM", hard_wrap: false, auto_ids: false, entity_output: :as_char).to_html
+  html = flatten_footnotes(html)
+
+  fragment = [series_line(fm, path), html, footer_line(url)].compact.join("\n")
+
+  slug = File.basename(path, ".md")
+  Dir.mkdir(OUT_DIR) unless Dir.exist?(OUT_DIR)
+  fragment_file = File.join(OUT_DIR, "#{slug}.fragment.html")
+  preview_file = File.join(OUT_DIR, "#{slug}.html")
+  File.write(fragment_file, fragment)
+  File.write(preview_file, preview_page(fm, url, fragment, captions))
+
+  puts "Exported #{slug}"
+  puts "  Title:    #{fm["title"]}"
+  puts "  Subtitle: #{fm["description"]}"
+  puts "  Cover:    #{fm["og_image"] || "(none)"}"
+  puts "  Tags:     #{Array(fm["tags"]).join(", ")}"
+  puts "  URL:      #{url}"
+  puts "  Preview:  #{preview_file}"
+  copy_to_clipboard(fragment_file) if options[:clip]
+  open_in_browser(preview_file) if options[:open]
+end
+
+def manifest
+  rows = Dir.glob(File.join(ROOT, "_posts/*.md")).sort.map do |p|
+    fm, body = front_matter(File.read(p))
+    next unless fm
+    slug = File.basename(p, ".md")
+    {
+      slug: slug,
+      words: body.split.size,
+      images: body.scan("<picture>").size,
+      notes: body.scan(/^\[\^[^\]]+\]:/).size,
+      series: fm["series"] ? "#{fm["series"]} ##{fm["series_order"]}" : "-",
+      exported: File.exist?(File.join(OUT_DIR, "#{slug}.html")) ? "yes" : "no"
+    }
+  end.compact
+  puts format("%-62s %6s %4s %5s %-24s %s", "post", "words", "imgs", "notes", "series", "exported")
+  rows.each do |r|
+    puts format("%-62s %6d %4d %5d %-24s %s", r[:slug], r[:words], r[:images], r[:notes], r[:series], r[:exported])
+  end
+end
+
+if options[:all]
+  manifest
+else
+  path = ARGV.first or abort parser.banner
+  abort "Not found: #{path}" unless File.file?(path)
+  export(File.expand_path(path), options)
+end

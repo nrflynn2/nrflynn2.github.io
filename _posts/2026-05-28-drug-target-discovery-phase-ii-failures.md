@@ -101,8 +101,8 @@ Both phases happen before a single compound is screened. Get either wrong and th
 
 <!-- FIGURE 1 - Drug development funnel with time and cost annotations -->
 <picture>
-  <source srcset="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN01.webp' | relative_url }}" type="image/webp">
-  <img src="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN01.png' | relative_url }}" alt="Drug development funnel showing six pipeline stages with approximate duration and cost; target identification is the cheapest stage." loading="lazy">
+  <source srcset="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN01.webp' | absolute_url }}" type="image/webp">
+  <img src="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN01.png' | absolute_url }}" alt="Drug development funnel showing six pipeline stages with approximate duration and cost; target identification is the cheapest stage." loading="lazy">
 </picture>
 
 The drug-development funnel runs roughly like this:
@@ -121,8 +121,8 @@ In a 2024 report, GlobalData attributes roughly half of clinical trial failures 
 
 <!-- FIGURE 2 -->
 <picture>
-  <source srcset="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN02.webp' | relative_url }}" type="image/webp">
-  <img src="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN02.png' | relative_url }}" alt="Phase-transition and likelihood-of-approval chart for clinical drug development." loading="lazy">
+  <source srcset="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN02.webp' | absolute_url }}" type="image/webp">
+  <img src="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN02.png' | absolute_url }}" alt="Phase-transition and likelihood-of-approval chart for clinical drug development." loading="lazy">
 </picture>
 
 The 2014–2023 industry data also points to a second problem. Phase I likelihood of approval fell from 10.4% for the 2014 cohort to 6.7% for the most recent ten-year cohort, partly driven by an industry shift toward first-in-class, riskier targets where the evidence base is thinner. Many easier targets have already been drugged. What's left is harder, and harder problems put more weight on front-of-funnel methods. Biomarker-stratified programs, which enroll patient subgroups defined by a measurable biomarker, run at roughly double the LOA of unstratified ones. This result follows from stronger target-selection evidence, as the biomarker identifies the patient subgroup in whom the target matters. For this reason, target and biomarker development often move together.
@@ -131,8 +131,8 @@ The 2014–2023 industry data also points to a second problem. Phase I likelihoo
 
 <!-- FIGURE 3 - Five-criteria target assessment -->
 <picture>
-  <source srcset="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN03.webp' | relative_url }}" type="image/webp">
-  <img src="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN03.png' | relative_url }}" alt="Five target-assessment criteria - linkage, safety, commercial, feasibility, data - arranged in a pentagon around a central go/no-go decision." loading="lazy">
+  <source srcset="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN03.webp' | absolute_url }}" type="image/webp">
+  <img src="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN03.png' | absolute_url }}" alt="Five target-assessment criteria - linkage, safety, commercial, feasibility, data - arranged in a pentagon around a central go/no-go decision." loading="lazy">
 </picture>
 
 There is no single solution or approach as every target hunting strategy is context dependent. Useful target-assessment work has to satisfy at least five criteria simultaneously.
@@ -211,18 +211,18 @@ For a practitioner in 2026, this means target-discovery tooling is disproportion
 
 The rest of this series goes deep on what this pillar surveys:
 
-- **[Evidence frameworks]({{ '/blog/2026/target-disease-association-evidence/' | relative_url }})** — Driver vs passenger mutations, oncogene addiction (tumors becoming unusually dependent on one gene), multi-omics integration, GWAS, and practical target-assessment frameworks such as AstraZeneca's 5R and GOT-IT.
-- **[Druggability in the AlphaFold 3 era]({{ '/blog/2026/druggability-assessment-alphafold-3/' | relative_url }})** — Classical druggability, the expanding druggable-genome concept, therapeutic modalities such as antisense oligonucleotides (ASOs), PROTAC degraders, and antibody-drug conjugates (ADCs), and what AlphaFold 3 changed about structure-based drug design.
-- **[Tissue specificity]({{ '/blog/2026/tissue-specificity-drug-target-safety/' | relative_url }})** — Single-cell RNA-seq and reference atlases such as GTEx and the Human Protein Atlas, and how tissue-level gene-expression data feeds into safety prediction.
-- **[Likelihood of approval by therapeutic area]({{ '/blog/2026/likelihood-of-approval-therapeutic-area/' | relative_url }})** — The economics of repurposing, and why some disease areas are systematically more tractable.
-- **[Novelty vs repurposing]({{ '/blog/2026/drug-target-novelty-repurposing/' | relative_url }})** — When to invent a new target and when to reuse one. The Illuminating the Druggable Genome program, which focuses on understudied proteins, and research bias toward well-studied proteins.
-- **[Synthetic lethality]({{ '/blog/2026/synthetic-lethality-drug-discovery-ml/' | relative_url }})** — CRISPR-based screening, synthetic lethality, where dual perturbation of two genes kills a cell even though either single perturbation does not, and ML methods for drug-synergy prediction, including tools such as MAGeCK, CRISPRi, and Perturb-seq.
-- **[Knowledge graphs and the rentosertib case study]({{ '/blog/2026/knowledge-graphs-drug-target-discovery-rentosertib/' | relative_url }})** — Biomedical named-entity recognition, relation extraction, knowledge-graph embedding models, and walkthroughs of publicly documented AI-discovered-drug programs.
-- **[Virtual cells]({{ '/blog/2026/virtual-cells-target-discovery/' | relative_url }})** — Single-cell atlases, perturbation-response models, Perturb-seq benchmarks, and how simulated interventions can prioritize target-validation experiments.
+- **[Evidence frameworks]({{ '/blog/2026/target-disease-association-evidence/' | absolute_url }})** — Driver vs passenger mutations, oncogene addiction (tumors becoming unusually dependent on one gene), multi-omics integration, GWAS, and practical target-assessment frameworks such as AstraZeneca's 5R and GOT-IT.
+- **[Druggability in the AlphaFold 3 era]({{ '/blog/2026/druggability-assessment-alphafold-3/' | absolute_url }})** — Classical druggability, the expanding druggable-genome concept, therapeutic modalities such as antisense oligonucleotides (ASOs), PROTAC degraders, and antibody-drug conjugates (ADCs), and what AlphaFold 3 changed about structure-based drug design.
+- **[Tissue specificity]({{ '/blog/2026/tissue-specificity-drug-target-safety/' | absolute_url }})** — Single-cell RNA-seq and reference atlases such as GTEx and the Human Protein Atlas, and how tissue-level gene-expression data feeds into safety prediction.
+- **[Likelihood of approval by therapeutic area]({{ '/blog/2026/likelihood-of-approval-therapeutic-area/' | absolute_url }})** — The economics of repurposing, and why some disease areas are systematically more tractable.
+- **[Novelty vs repurposing]({{ '/blog/2026/drug-target-novelty-repurposing/' | absolute_url }})** — When to invent a new target and when to reuse one. The Illuminating the Druggable Genome program, which focuses on understudied proteins, and research bias toward well-studied proteins.
+- **[Synthetic lethality]({{ '/blog/2026/synthetic-lethality-drug-discovery-ml/' | absolute_url }})** — CRISPR-based screening, synthetic lethality, where dual perturbation of two genes kills a cell even though either single perturbation does not, and ML methods for drug-synergy prediction, including tools such as MAGeCK, CRISPRi, and Perturb-seq.
+- **[Knowledge graphs and the rentosertib case study]({{ '/blog/2026/knowledge-graphs-drug-target-discovery-rentosertib/' | absolute_url }})** — Biomedical named-entity recognition, relation extraction, knowledge-graph embedding models, and walkthroughs of publicly documented AI-discovered-drug programs.
+- **[Virtual cells]({{ '/blog/2026/virtual-cells-target-discovery/' | absolute_url }})** — Single-cell atlases, perturbation-response models, Perturb-seq benchmarks, and how simulated interventions can prioritize target-validation experiments.
 
 ## How drug target discovery connects to *Build AI Drug Discovery Pipelines*
 
-[*Build AI Drug Discovery Pipelines*]({{ '/book/' | relative_url }}) concentrates on methods that begin after a target has been chosen. Molecular property prediction, virtual screening, generative chemistry, protein structure prediction, drug repurposing, and multimodal pipelines are chapter-length topics because they are well-defined ML problems with benchmarks and data.
+[*Build AI Drug Discovery Pipelines*]({{ '/book/' | absolute_url }}) concentrates on methods that begin after a target has been chosen. Molecular property prediction, virtual screening, generative chemistry, protein structure prediction, drug repurposing, and multimodal pipelines are chapter-length topics because they are well-defined ML problems with benchmarks and data.
 
 If you came here from the book and have already built a property predictor, screened a virtual library, or trained a generative model for lead compounds, this series asks a prior question: *how did anyone decide that was the right target in the first place?* As you read through this series, you might notice that the methods change with the problem. For example, the work may involve graph learning over biomedical knowledge graphs, natural-language processing over biomedical literature, or exploiting multi-omics integration with multimodal models. However, at their core, these methods are more like variants of the methods we discuss in the book, rather than new or alien concepts.
 

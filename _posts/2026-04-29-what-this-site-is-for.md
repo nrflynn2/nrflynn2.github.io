@@ -19,6 +19,6 @@ The near-term plan is simple: publish notes that make complicated systems easier
 
 I want the writing here to be useful to people who build things: researchers, students, applied scientists, and drug discovery folks trying to make sense of modern ML without losing the thread of the underlying science.
 
-This site is also the canonical archive. I may syndicate posts to [Substack]({{ site.substack_url }}), LinkedIn, or X, but the version here is the one I will keep current. You can follow via [RSS]({{ '/feed.xml' | relative_url }}) if you prefer the old, sturdy internet.
+This site is also the canonical archive. I may syndicate posts to [Substack]({{ site.substack_url }}), LinkedIn, or X, but the version here is the one I will keep current. You can follow via [RSS]({{ '/feed.xml' | absolute_url }}) if you prefer the old, sturdy internet.
 
-For now, the best starting points are the [book]({{ '/book/' | relative_url }}), the [talks page]({{ '/talks/' | relative_url }}), and the [publications list]({{ '/publications/' | relative_url }}).
+For now, the best starting points are the [book]({{ '/book/' | absolute_url }}), the [talks page]({{ '/talks/' | absolute_url }}), and the [publications list]({{ '/publications/' | absolute_url }}).

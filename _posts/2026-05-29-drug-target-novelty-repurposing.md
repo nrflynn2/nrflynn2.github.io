@@ -69,7 +69,7 @@ A target-discovery lead gets two one-pagers. One covers a kinase, an enzyme clas
 
 ## Why drug target novelty matters in 2026
 
-Target novelty matters because it sits alongside biomarker strategy as one of the few front-of-funnel choices that can materially change a program's odds. Target selection itself is the subject of [front-of-funnel decisions]({{ '/blog/2026/drug-target-discovery-phase-ii-failures/' | relative_url }}). Biomarker stratification, covered in [likelihood of approval by therapeutic area]({{ '/blog/2026/likelihood-of-approval-therapeutic-area/' | relative_url }}), roughly doubles approval odds. The 2011–2020 BIO / Informa Pharma Intelligence / QLS Advisors *Clinical Development Success Rates* data put **Phase I likelihood of approval for off-patent therapies at 14.7% versus 6.8% for novel therapies**. Off-patent here means programs built on drugs whose core patents have expired. Most of that gap appears in Phase III, where non-originator products - follow-on or reused therapies rather than brand-new ones - transitioned at 70.3% and novel products at 52.9%. Vaccines ran 9.7%, biologics 9.1%, new molecular entities (entirely new drugs) 5.7%, and biosimilars (the follow-on versions of biologic drugs) 32.3%.
+Target novelty matters because it sits alongside biomarker strategy as one of the few front-of-funnel choices that can materially change a program's odds. Target selection itself is the subject of [front-of-funnel decisions]({{ '/blog/2026/drug-target-discovery-phase-ii-failures/' | absolute_url }}). Biomarker stratification, covered in [likelihood of approval by therapeutic area]({{ '/blog/2026/likelihood-of-approval-therapeutic-area/' | absolute_url }}), roughly doubles approval odds. The 2011–2020 BIO / Informa Pharma Intelligence / QLS Advisors *Clinical Development Success Rates* data put **Phase I likelihood of approval for off-patent therapies at 14.7% versus 6.8% for novel therapies**. Off-patent here means programs built on drugs whose core patents have expired. Most of that gap appears in Phase III, where non-originator products - follow-on or reused therapies rather than brand-new ones - transitioned at 70.3% and novel products at 52.9%. Vaccines ran 9.7%, biologics 9.1%, new molecular entities (entirely new drugs) 5.7%, and biosimilars (the follow-on versions of biologic drugs) 32.3%.
 
 > **Concept Translation:** The novel-vs-off-patent split is the drug-discovery version of an exploration-vs-exploitation trade-off. Off-patent / repurposing programs exploit known biology and known compounds at lower per-program cost and higher per-program success rate, but with crowded competition and limited upside. Novel-target programs explore - paying more for validation, accepting higher attrition, and reaching for the larger payoff that comes from being first to a target. Most portfolios mix both, and the mix is one of the more visible commercial decisions a research organization makes.
 
@@ -81,8 +81,8 @@ A third reason is NTRK. In 2018 the FDA approved larotrectinib (Vitrakvi, Bayer/
 
 <!-- FIGURE 1 - The Target Development Level (TDL) pyramid -->
 <picture>
-  <source srcset="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN19.webp' | relative_url }}" type="image/webp">
-  <img src="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN19.png' | relative_url }}" alt="Target Development Level pyramid: Tdark (ignorome), Tbio, Tchem, Tclin - the vertical gradient of target novelty and tractability." loading="lazy">
+  <source srcset="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN19.webp' | absolute_url }}" type="image/webp">
+  <img src="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN19.png' | absolute_url }}" alt="Target Development Level pyramid: Tdark (ignorome), Tbio, Tchem, Tclin - the vertical gradient of target novelty and tractability." loading="lazy">
 </picture>
 
 A useful starting point is Agarwal's working definition, because it still shows up in platform documentation and industry decks. A **novel target** is a gene or protein with no approved-drug association. A **proven target** has at least one. In Agarwal's analysis of roughly a thousand drug targets, 247 were proven and 712 novel; more than half of the novel targets had no competitor programs, whereas nearly ninety percent of proven targets had at least one. Competition on novel targets increased as programs advanced through clinical trials, likely because early positive signal drew followers. At portfolio level, novelty correlates with solitude, and solitude carries commercial value.
@@ -107,8 +107,8 @@ One IDG finding matters here. Tdark proteins receive less NIH funding than other
 
 <!-- FIGURE 2 - The novelty/confidence trade-off -->
 <picture>
-  <source srcset="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN20.webp' | relative_url }}" type="image/webp">
-  <img src="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN20.png' | relative_url }}" alt="Novelty–confidence trade-off: Tclin is crowded with low cost, Tdark is empty with high cost, Tchem is the operational sweet spot." loading="lazy">
+  <source srcset="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN20.webp' | absolute_url }}" type="image/webp">
+  <img src="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN20.png' | absolute_url }}" alt="Novelty–confidence trade-off: Tclin is crowded with low cost, Tdark is empty with high cost, Tchem is the operational sweet spot." loading="lazy">
 </picture>
 
 For any candidate target, novelty and confidence usually move in opposite directions. High-confidence targets are well studied, well characterized, and often already drugged. Validation costs are lower because many of the needed experiments have already been done somewhere. Competition is also higher: more organizations have programs, patents are crowded, and the commercial ceiling is divided. High-novelty targets reverse that profile. They demand more in-house validation and carry more biological risk, but they offer more commercial upside if the biology holds. In the Tchem-versus-Tbio decision, the key question is direct - how much of the target-validation burden does your team still have to carry itself?
@@ -142,7 +142,7 @@ The **NER-plus-RE** components underlying this work - named-entity recognition p
 
 LLM-based methods have moved the RE frontier since 2023, with transformer-based relation-extraction systems - typically fine-tuned BERT-family or domain-pretrained biomedical LLMs - now deployed in several commercial and open-source target-discovery pipelines. 
 
-Quantified novelty is decision support. A target that scores "low publication volume, high disease-association evidence in genetics" is genuinely interesting (the structured frameworks for [evidence frameworks for target-disease linkage]({{ '/blog/2026/target-disease-association-evidence/' | relative_url }}) are the subject of the companion post). A human reviewer still has to read the papers to confirm that the NLP has not confused gene-symbol ambiguities, missed a key negative result, or counted reviews as primary papers. The scores compress the literature. They do not conclude.
+Quantified novelty is decision support. A target that scores "low publication volume, high disease-association evidence in genetics" is genuinely interesting (the structured frameworks for [evidence frameworks for target-disease linkage]({{ '/blog/2026/target-disease-association-evidence/' | absolute_url }}) are the subject of the companion post). A human reviewer still has to read the papers to confirm that the NLP has not confused gene-symbol ambiguities, missed a key negative result, or counted reviews as primary papers. The scores compress the literature. They do not conclude.
 
 ## Drug repurposing as the opposite axis
 
@@ -192,8 +192,8 @@ For a practitioner-built novelty scoring pipeline, the useful pattern is to join
 
 <!-- FIGURE 3 - The SARS-CoV-2 network-repurposing worked example -->
 <picture>
-  <source srcset="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN21.webp' | relative_url }}" type="image/webp">
-  <img src="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN21.png' | relative_url }}" alt="Network-based SARS-CoV-2 repurposing: 6,340 drugs ranked, 62% hit rate on top candidates, 76 of 77 worked via indirect host pathways." loading="lazy">
+  <source srcset="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN21.webp' | absolute_url }}" type="image/webp">
+  <img src="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN21.png' | absolute_url }}" alt="Network-based SARS-CoV-2 repurposing: 6,340 drugs ranked, 62% hit rate on top candidates, 76 of 77 worked via indirect host pathways." loading="lazy">
 </picture>
 
 An early-pandemic SARS-CoV-2 study gives a concrete view of computational repurposing at scale. Researchers combined three data sources - the human protein-protein interaction network (the "interactome"), experimentally characterized SARS-CoV-2 viral target interactions, and drug-target interaction data - and used network-diffusion and network-proximity algorithms (which score how near a drug's targets sit to disease-relevant proteins in the network) to rank 6,340 approved and investigational drugs by expected efficacy against SARS-CoV-2.
@@ -212,8 +212,8 @@ Second, the network result distinguishes repurposing as target identification fr
 
 <!-- FIGURE 4 - The NTRK novelty half-life timeline -->
 <picture>
-  <source srcset="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN22.webp' | relative_url }}" type="image/webp">
-  <img src="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN22.png' | relative_url }}" alt="NTRK novelty half-life: larotrectinib 2018, entrectinib 2019, repotrectinib 2023 - three approved drugs, one class, five years." loading="lazy">
+  <source srcset="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN22.webp' | absolute_url }}" type="image/webp">
+  <img src="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN22.png' | absolute_url }}" alt="NTRK novelty half-life: larotrectinib 2018, entrectinib 2019, repotrectinib 2023 - three approved drugs, one class, five years." loading="lazy">
 </picture>
 
 Imatinib succeeded as the first BCR-ABL inhibitor because CML (chronic myeloid leukemia) was a rapidly fatal disease with few good alternatives; the rational kinase-inhibitor paradigm it validated then took two decades to spread across other kinases. The more recent parallel is NTRK.

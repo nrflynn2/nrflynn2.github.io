@@ -87,8 +87,8 @@ Two industry-side facts motivate greater evidence rigor. First, the pipeline is 
 
 <!-- FIGURE 1 - The four-step evidence argument -->
 <picture>
-  <source srcset="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN04.webp' | relative_url }}" type="image/webp">
-  <img src="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN04.png' | relative_url }}" alt="Four-step target–disease evidence argument: mechanistic hypothesis, human evidence, experimental perturbation, competing hypotheses." loading="lazy">
+  <source srcset="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN04.webp' | absolute_url }}" type="image/webp">
+  <img src="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN04.png' | absolute_url }}" alt="Four-step target–disease evidence argument: mechanistic hypothesis, human evidence, experimental perturbation, competing hypotheses." loading="lazy">
 </picture>
 
 Target-disease evidence is a structured argument built from heterogeneous data sources. A credible argument has four parts:
@@ -108,8 +108,8 @@ Two frameworks for organizing this argument are the AstraZeneca 5R framework and
 
 <!-- FIGURE 2 - The AstraZeneca 5R framework with "Right Target" as this post's subject -->
 <picture>
-  <source srcset="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN05.webp' | relative_url }}" type="image/webp">
-  <img src="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN05.png' | relative_url }}" alt="AstraZeneca 5R framework with &quot;Right Target&quot; highlighted; the four other R&#39;s map to companion posts in the series." loading="lazy">
+  <source srcset="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN05.webp' | absolute_url }}" type="image/webp">
+  <img src="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN05.png' | absolute_url }}" alt="AstraZeneca 5R framework with &quot;Right Target&quot; highlighted; the four other R&#39;s map to companion posts in the series." loading="lazy">
 </picture>
 
 The 5R framework defines five criteria a drug program has to satisfy: **right target**, **right tissue**, **right safety profile**, **right patient**, **right commercial potential**. The "right target" criterion is defined narrowly as a strong link between target and disease, predictive biomarkers that identify likely responders, and demonstrated differentiated efficacy relative to alternatives. Lack of efficacy has been the most important cause of project failure in clinical trials. The 5R framework forces teams to separate evidence of *target-disease linkage* from evidence of *tissue availability*, *safety*, and *patient stratification* (the choice of which patient subgroup to treat). A single piece of data often speaks to only one of these categories, and conflating them makes the evidence base look stronger than it is.
@@ -168,8 +168,8 @@ The most consequential distinction is also the most abstract. A gene whose expre
 Referring back to the 2× headline from earlier, the Nelson et al. (2015) result and the King et al. (2019) revised analysis both confirmed the population-average ~2× clinical-success multiplier for genetically supported drug programs. The same general 2× factor also enriches for labeled side effects, giving it predictive value for toxicology programs (Minikel & Nelson, 2024; Carss et al., 2023). The multiplier is not constant across evidence types. King et al. found that when the causal gene is unambiguous - Mendelian traits, single-gene disorders with clear inheritance patterns, or GWAS associations driven by coding variants where the variant-to-gene mapping is direct - the approval probability multiplier rises above 2× and into the 3× range. The 2026 update from Minikel and Nelson refined this, showing that the multiplier scales with confidence in the causal gene assignment and is largely independent of genetic effect size, minor allele frequency, or year of discovery. In practice, a low-effect-size GWAS hit with confident causal-gene mapping is worth more than a high-effect-size hit at a locus where the variant-to-gene call is ambiguous. Trajanoska et al. (2023, *Nature*) place this in longer historical context: they identified 40 germline genetic observations that translated directly into approved therapies for 36 rare and 4 common conditions, with a median 25-year interval between target discovery and drug approval. The genetic-anchor strategy works, but it compounds slowly.
 
 <picture>
-  <source srcset="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN08.webp' | relative_url }}" type="image/webp">
-  <img src="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN08.png' | relative_url }}" alt="Genetic-evidence confidence and target-disease clinical-success multiplier." loading="lazy">
+  <source srcset="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN08.webp' | absolute_url }}" type="image/webp">
+  <img src="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN08.png' | absolute_url }}" alt="Genetic-evidence confidence and target-disease clinical-success multiplier." loading="lazy">
 </picture>
 When assembling a target's evidence package, the *quality* of the genetic anchor matters more than the *quantity* of associated data. A coding variant with established protein consequences is worth more than a half-dozen non-coding GWAS signals at adjacent loci with ambiguous fine-mapping.
 
@@ -178,8 +178,8 @@ When assembling a target's evidence package, the *quality* of the genetic anchor
 
 <!-- FIGURE 3 - The omics stack as evidence, with characteristic failure modes -->
 <picture>
-  <source srcset="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN06.webp' | relative_url }}" type="image/webp">
-  <img src="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN06.png' | relative_url }}" alt="The omics evidence stack - genomics, transcriptomics, proteomics, metabolomics, epigenomics - each annotated with its characteristic failure mode." loading="lazy">
+  <source srcset="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN06.webp' | absolute_url }}" type="image/webp">
+  <img src="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN06.png' | absolute_url }}" alt="The omics evidence stack - genomics, transcriptomics, proteomics, metabolomics, epigenomics - each annotated with its characteristic failure mode." loading="lazy">
 </picture>
 
 Target-disease linkage evidence comes from an omics stack, and each layer has a characteristic failure mode. Knowing when each layer can mislead you is the core methodological skill.
@@ -222,7 +222,7 @@ Epigenomics (DNA methylation, histone modifications, chromatin accessibility) pr
 
 Combining these layers sounds straightforward. In practice, it's a difficult technical problem. Batch effects across studies, confounding by disease severity or patient demographics, differential dropout in single-cell data, and different noise models across modalities all complicate naive integration. The best-case design, when available, analyzes multi-omics data from *the same set of patients* rather than integrating across cohorts, so sample-level confounders are controlled. That is rarely possible at GWAS-cohort scales, where multi-omics profiling of every participant is prohibitively expensive. Target-discovery workflows that build evidence from public multi-omics resources need to state these limitations explicitly. Workflows that report "our multi-omics integration identified target X" without addressing them are not making a credible argument.
 
-A useful target-disease evidence package usually includes (a) genetic evidence where it exists, as the anchor, (b) transcriptomic and proteomic evidence in disease tissue that is consistent with the genetic signal, (c) tissue-specificity data (see the [tissue-specificity post]({{ '/blog/2026/tissue-specificity-drug-target-safety/' | relative_url }})[^tissue]), and (d) network or pathway context that situates the target in plausible biology. No single layer is enough - the layers have to agree.
+A useful target-disease evidence package usually includes (a) genetic evidence where it exists, as the anchor, (b) transcriptomic and proteomic evidence in disease tissue that is consistent with the genetic signal, (c) tissue-specificity data (see the [tissue-specificity post]({{ '/blog/2026/tissue-specificity-drug-target-safety/' | absolute_url }})[^tissue]), and (d) network or pathway context that situates the target in plausible biology. No single layer is enough - the layers have to agree.
 
 [^tissue]: Coming in the next post - how GTEx, Human Protein Atlas, and scRNA-seq sharpen target safety decisions.
 
@@ -249,7 +249,7 @@ Source weights vary by evidence type. ClinGen clinical-validity curations at the
 
 The consortium itself is worth noting for field-guide purposes. Open Targets is a pre-competitive public-private partnership - direct competitors contribute to a shared evidence resource before they diverge into proprietary drug programs. As of 2026 the active partner roster includes EMBL-EBI, the Wellcome Sanger Institute, Genentech (Roche Group), GSK, MSD (Merck & Co.), Pfizer, Sanofi, and Bristol Myers Squibb (which joined in late 2022). Biogen and Takeda were earlier members who exited in 2020. The platform aggregates signals that no single company would assemble alone.
 
-Formalizing evidence aggregation as a graph problem also opens the door to graph machine learning. Target-disease association can be formulated as a link-prediction problem on a heterogeneous biomedical knowledge graph: given a graph where some gene-disease edges are known, predict which missing edges are real. Graph neural networks, network-embedding methods, and random-walk-based algorithms have all been applied to this problem. The [knowledge graphs and the rentosertib case study]({{ '/blog/2026/knowledge-graphs-drug-target-discovery-rentosertib/' | relative_url }}) picks up this thread in detail.[^kg]
+Formalizing evidence aggregation as a graph problem also opens the door to graph machine learning. Target-disease association can be formulated as a link-prediction problem on a heterogeneous biomedical knowledge graph: given a graph where some gene-disease edges are known, predict which missing edges are real. Graph neural networks, network-embedding methods, and random-walk-based algorithms have all been applied to this problem. The [knowledge graphs and the rentosertib case study]({{ '/blog/2026/knowledge-graphs-drug-target-discovery-rentosertib/' | absolute_url }}) picks up this thread in detail.[^kg]
 
 [^kg]: Coming in a later post - how knowledge graphs get used in end-to-end target-discovery case studies.
 
@@ -257,8 +257,8 @@ Formalizing evidence aggregation as a graph problem also opens the door to graph
 
 <!-- FIGURE 4 - Senolytic / PTK2 evidence convergence in IPF -->
 <picture>
-  <source srcset="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN07.webp' | relative_url }}" type="image/webp">
-  <img src="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN07.png' | relative_url }}" alt="Four evidence sources - pathology, mechanism, computational prioritization, dasatinib convergence - converge on PTK2/FAK as a senolytic IPF candidate." loading="lazy">
+  <source srcset="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN07.webp' | absolute_url }}" type="image/webp">
+  <img src="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN07.png' | absolute_url }}" alt="Four evidence sources - pathology, mechanism, computational prioritization, dasatinib convergence - converge on PTK2/FAK as a senolytic IPF candidate." loading="lazy">
 </picture>
 
 To make the frameworks concrete, consider a target-identification workflow for a specific disease-hypothesis pair: **cellular senescence as a target class in idiopathic pulmonary fibrosis (IPF)**.
@@ -283,7 +283,7 @@ To make the frameworks concrete, consider a target-identification workflow for a
 
 **What this example illustrates.** The evidence package for PTK2/FAK as a senolytic target is an aggregation of four sources: disease-tissue pathology (senescent cell burden in IPF), a mechanistic hypothesis (SCAP dependence), computational target prioritization weighted by disease association, pathway membership, and druggability, and convergent experimental evidence from a repurposed clinical-stage compound. No individual layer would be sufficient; together they make a credible argument.
 
-The claim is narrower than it might sound. PTK2 remains a candidate rather than a validated senolytic target in IPF patients; validation would require dosing studies, biomarker responses, and clinical evidence. On the evidence presented here, PTK2 clears the 5R "right target" and GOT-IT "disease linkage" bars for advancing into target validation. Moving from candidate to validated target requires [druggability assessment]({{ '/blog/2026/druggability-assessment-alphafold-3/' | relative_url }})[^drug], and the downstream posts in this series.
+The claim is narrower than it might sound. PTK2 remains a candidate rather than a validated senolytic target in IPF patients; validation would require dosing studies, biomarker responses, and clinical evidence. On the evidence presented here, PTK2 clears the 5R "right target" and GOT-IT "disease linkage" bars for advancing into target validation. Moving from candidate to validated target requires [druggability assessment]({{ '/blog/2026/druggability-assessment-alphafold-3/' | absolute_url }})[^drug], and the downstream posts in this series.
 
 [^drug]: Coming in the next post - how target candidates get screened for tractability and modality fit.
 
@@ -291,11 +291,11 @@ The claim is narrower than it might sound. PTK2 remains a candidate rather than 
 
 **The benchmarking problem.** Target-discovery ML is unusually hard to benchmark. The ground-truth signal - did this target hold up in Phase III? - takes a decade and nine figures per data point. Surrogate benchmarks exist (does the method rediscover known targets for known diseases when given only pre-discovery literature? does it recover genetic signals already in Open Targets? does it predict held-out drug-target relationships?) but all share the same weakness: the evaluation corpus overlaps with the corpus the ML methods were trained on. Truly unbiased benchmarking for target-discovery ML, where the test set is future-clinical rather than past-published, remains a live methodological problem.
 
-**The ignorome problem.** Research attention across the ~20,000 human protein-coding genes is highly skewed: a small fraction of genes accounts for most of the literature, the annotations, the available assays, and the training data for ML methods. A target-discovery method that only surfaces candidates adjacent to already-well-studied proteins is solving a weaker version of the problem than the one the industry actually needs. The [novelty vs repurposing]({{ '/blog/2026/drug-target-novelty-repurposing/' | relative_url }}) post picks up this thread.[^nov]
+**The ignorome problem.** Research attention across the ~20,000 human protein-coding genes is highly skewed: a small fraction of genes accounts for most of the literature, the annotations, the available assays, and the training data for ML methods. A target-discovery method that only surfaces candidates adjacent to already-well-studied proteins is solving a weaker version of the problem than the one the industry actually needs. The [novelty vs repurposing]({{ '/blog/2026/drug-target-novelty-repurposing/' | absolute_url }}) post picks up this thread.[^nov]
 
 [^nov]: Coming in a later post - how target novelty gets quantified without over-penalizing under-studied biology.
 
-**The causality problem.** Most of the evidence stack is associational. Genetic evidence - especially Mendelian-randomization-style evidence - carries more causal weight because it approaches causality in a way other omics layers do not. Methods that can extract more causal structure from non-genetic data (perturbation screens, single-cell perturbation readouts like Perturb-seq, large-scale CRISPR screens) are one of the most active areas of methodological development, and they feed directly into target-disease evidence work. The [synthetic lethality]({{ '/blog/2026/synthetic-lethality-drug-discovery-ml/' | relative_url }}) post gets into CRISPR-screen analysis in depth.[^synleth]
+**The causality problem.** Most of the evidence stack is associational. Genetic evidence - especially Mendelian-randomization-style evidence - carries more causal weight because it approaches causality in a way other omics layers do not. Methods that can extract more causal structure from non-genetic data (perturbation screens, single-cell perturbation readouts like Perturb-seq, large-scale CRISPR screens) are one of the most active areas of methodological development, and they feed directly into target-disease evidence work. The [synthetic lethality]({{ '/blog/2026/synthetic-lethality-drug-discovery-ml/' | absolute_url }}) post gets into CRISPR-screen analysis in depth.[^synleth]
 
 [^synleth]: Coming in a later post - how CRISPR-screen evidence extends from single targets to target pairs.
 

@@ -81,8 +81,8 @@ In 2002, a foundational analysis estimated that roughly 10–15% of the human pr
 
 <!-- FIGURE 2 - The AlphaFold inflection timeline with the modality-expansion overlay -->
 <picture>
-  <source srcset="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN09.webp' | relative_url }}" type="image/webp">
-  <img src="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN09.png' | relative_url }}" alt="Two-track timeline from 2018 to 2026 - AlphaFold generations on top, modality milestones below, both inflecting in 2020–2024." loading="lazy">
+  <source srcset="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN09.webp' | absolute_url }}" type="image/webp">
+  <img src="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN09.png' | absolute_url }}" alt="Two-track timeline from 2018 to 2026 - AlphaFold generations on top, modality milestones below, both inflecting in 2020–2024." loading="lazy">
 </picture>
 
 Two shifts have moved the frontier of druggability at roughly the same time, and together they change the analysis.
@@ -98,8 +98,8 @@ A 2015-era druggability analysis might ask *does this target have a small-molecu
 
 <!-- FIGURE 1 - Druggability decomposed: target quality + ligandability + modality fit -->
 <picture>
-  <source srcset="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN10.webp' | relative_url }}" type="image/webp">
-  <img src="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN10.png' | relative_url }}" alt="Druggability assessment decomposed into three resolvable questions - target quality, ligandability, and modality fit." loading="lazy">
+  <source srcset="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN10.webp' | absolute_url }}" type="image/webp">
+  <img src="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN10.png' | absolute_url }}" alt="Druggability assessment decomposed into three resolvable questions - target quality, ligandability, and modality fit." loading="lazy">
 </picture>
 
 The vocabulary needs care because the field uses these terms loosely.
@@ -108,7 +108,7 @@ The vocabulary needs care because the field uses these terms loosely.
 
 Druggability decomposes into two more specific questions.
 
-**Target quality** asks whether modulating the target will actually change the disease, and whether doing so is safe. The relevant variables are the target's role in essential cellular processes, its network centrality (how many pathways and interactions depend on it), its tissue-expression pattern (a target essential for heart-muscle function is a bad target, almost regardless of its affinity profile), its approval-adjacent precedent (whether closely related targets or modalities have already cleared regulatory review), and its cellular localization (an intracellular target requires permeability that a cell-surface target does not). Target quality is what [target–disease evidence]({{ '/blog/2026/target-disease-association-evidence/' | relative_url }}) gives you the machinery to evaluate.
+**Target quality** asks whether modulating the target will actually change the disease, and whether doing so is safe. The relevant variables are the target's role in essential cellular processes, its network centrality (how many pathways and interactions depend on it), its tissue-expression pattern (a target essential for heart-muscle function is a bad target, almost regardless of its affinity profile), its approval-adjacent precedent (whether closely related targets or modalities have already cleared regulatory review), and its cellular localization (an intracellular target requires permeability that a cell-surface target does not). Target quality is what [target–disease evidence]({{ '/blog/2026/target-disease-association-evidence/' | absolute_url }}) gives you the machinery to evaluate.
 
 **Ligandability** asks whether a drug molecule can bind the target in a way that modulates it. Ligandability depends on three things: the availability of the target's structure (experimental or predicted), the presence of closely related proteins with known ligands (if a close cousin of your target has been drugged, the odds are better), and the accessibility of a binding site (a small-molecule pocket for small molecules, a regulatory region for nucleic-acid-targeted drugs, or a surface-exposed patch for antibodies).
 
@@ -166,8 +166,8 @@ Compared with the crizotinib workflow described above, the difference is sharp. 
 
 <!-- FIGURE 3 - Six modalities, six kinds of "undruggable" they address -->
 <picture>
-  <source srcset="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN11.webp' | relative_url }}" type="image/webp">
-  <img src="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN11.png' | relative_url }}" alt="Six-by-six matrix showing which modalities address which target challenges; no single modality dominates all cells." loading="lazy">
+  <source srcset="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN11.webp' | absolute_url }}" type="image/webp">
+  <img src="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN11.png' | absolute_url }}" alt="Six-by-six matrix showing which modalities address which target challenges; no single modality dominates all cells." loading="lazy">
 </picture>
 
 Categories of therapeutic molecule that did not have approved products a decade ago now have market-stage drugs and late-stage candidates, each reaching targets that small molecules cannot and expanding the druggable envelope.
@@ -231,8 +231,8 @@ For target assessment, CAR-T targets are a different class of object from small-
 
 <!-- FIGURE 4 - The TDL pyramid and the ignorome -->
 <picture>
-  <source srcset="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN12.webp' | relative_url }}" type="image/webp">
-  <img src="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN12.png' | relative_url }}" alt="TDL pyramid (Tclin / Tchem / Tbio / Tdark) showing the ignorome as the unaddressed majority of the human proteome." loading="lazy">
+  <source srcset="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN12.webp' | absolute_url }}" type="image/webp">
+  <img src="{{ '/assets/img/blog/target-discovery/APPH_FLYNN_UN12.png' | absolute_url }}" alt="TDL pyramid (Tclin / Tchem / Tbio / Tdark) showing the ignorome as the unaddressed majority of the human proteome." loading="lazy">
 </picture>
 
 There are more than 10,000 known human diseases. The original 2002 estimate put 3,000–10,000 disease-related genes in the genome, with roughly 10% of those being disease-modifying on knockout (disabling the gene changed a disease-relevant phenotype in model systems). That yields the 600–1,500 small-molecule-druggable target estimate cited at the top of this post.
@@ -252,7 +252,7 @@ IDG found that Tdark proteins receive less research funding than other categorie
 
 > **Concept Translation:** The TDL classification is a label hierarchy on the human proteome - closer to a knowledge-graph annotation than a clean training-data split. Tclin proteins have the most data on them (drugs, structures, papers, assays) and Tdark have the least. ML methods trained on protein-level features inherit the same skew as the labels: they perform best on Tclin and worst on Tdark, the long tail. The "ignorome" framing emphasizes that the tail is where novel drug targets actually live.
 
-A 2026 assessment of a novel target should include, at minimum, an AF3-class structure prediction with pocket analysis, a TDL classification, a scan across modality options (small molecule, PROTAC, ASO, ADC, peptide), and an explicit note on whether Rule-of-Five chemistry is even the right design envelope for this target. The question [novelty scoring and the ignorome]({{ '/blog/2026/drug-target-novelty-repurposing/' | relative_url }})[^c5] takes up how novelty itself is now quantified across the TDL spectrum.
+A 2026 assessment of a novel target should include, at minimum, an AF3-class structure prediction with pocket analysis, a TDL classification, a scan across modality options (small molecule, PROTAC, ASO, ADC, peptide), and an explicit note on whether Rule-of-Five chemistry is even the right design envelope for this target. The question [novelty scoring and the ignorome]({{ '/blog/2026/drug-target-novelty-repurposing/' | absolute_url }})[^c5] takes up how novelty itself is now quantified across the TDL spectrum.
 
 [^c5]: Coming in a later post - novelty scoring across the TDL spectrum.
 
@@ -260,15 +260,15 @@ A 2026 assessment of a novel target should include, at minimum, an AF3-class str
 
 By 2026, the central druggability question is "which of five or six modalities fits this target best, and what is the safety profile of hitting it that way?" Three follow-ups stand out.
 
-**Safety.** A PROTAC that catalytically degrades its target in tumor tissue may also degrade the same target in healthy tissue where it is essential. An ASO that knocks down a transcript in the liver may behave differently in the kidney. Modality-specific on-target, off-tissue toxicity - where the intended target is hit in the wrong tissue - is the next frontier, and it's directly continuous with the tissue-specificity question the next post in this series picks up: [tissue specificity]({{ '/blog/2026/tissue-specificity-drug-target-safety/' | relative_url }}).[^c3]
+**Safety.** A PROTAC that catalytically degrades its target in tumor tissue may also degrade the same target in healthy tissue where it is essential. An ASO that knocks down a transcript in the liver may behave differently in the kidney. Modality-specific on-target, off-tissue toxicity - where the intended target is hit in the wrong tissue - is the next frontier, and it's directly continuous with the tissue-specificity question the next post in this series picks up: [tissue specificity]({{ '/blog/2026/tissue-specificity-drug-target-safety/' | absolute_url }}).[^c3]
 
 [^c3]: Coming in the next post - tissue specificity as a safety filter.
 
-**Two targets, not one.** The entire framing of druggability assumes you're choosing a single target and asking what modality hits it. For some diseases, most notably cancers with defined synthetic-lethal vulnerabilities (where a cell tolerates either perturbation alone but not both together), the right answer is that you need to hit two targets together, and each of those targets individually is a poor drug candidate. That shifts the druggability question to a two-body problem, with its own computational and experimental methods: [synthetic lethality]({{ '/blog/2026/synthetic-lethality-drug-discovery-ml/' | relative_url }}).[^c7]
+**Two targets, not one.** The entire framing of druggability assumes you're choosing a single target and asking what modality hits it. For some diseases, most notably cancers with defined synthetic-lethal vulnerabilities (where a cell tolerates either perturbation alone but not both together), the right answer is that you need to hit two targets together, and each of those targets individually is a poor drug candidate. That shifts the druggability question to a two-body problem, with its own computational and experimental methods: [synthetic lethality]({{ '/blog/2026/synthetic-lethality-drug-discovery-ml/' | absolute_url }}).[^c7]
 
 [^c7]: Coming in a later post - synthetic lethality and combination targets.
 
-**Benchmarks for modality-choice models.** We don't yet have a standard benchmark for "given this target, which modality will work best?" The PoseBusters benchmark answers a narrower question (given this target and this ligand, is the predicted pose right?). Benchmarks for PROTAC ternary-complex geometry, ASO off-target profiles, and ADC internalization kinetics exist in pieces but do not yet form a coherent evaluation suite. That gap is a natural target for the next round of infrastructure investment. For the pillar-post view of where this fits in the overall workflow: [the pillar post on drug target discovery]({{ '/blog/2026/drug-target-discovery-phase-ii-failures/' | relative_url }}).
+**Benchmarks for modality-choice models.** We don't yet have a standard benchmark for "given this target, which modality will work best?" The PoseBusters benchmark answers a narrower question (given this target and this ligand, is the predicted pose right?). Benchmarks for PROTAC ternary-complex geometry, ASO off-target profiles, and ADC internalization kinetics exist in pieces but do not yet form a coherent evaluation suite. That gap is a natural target for the next round of infrastructure investment. For the pillar-post view of where this fits in the overall workflow: [the pillar post on drug target discovery]({{ '/blog/2026/drug-target-discovery-phase-ii-failures/' | absolute_url }}).
 
 AlphaFold 3 was an inflection point. The remaining work now sits in modality selection, safety, and benchmark design.
 
