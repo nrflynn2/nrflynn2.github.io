@@ -143,16 +143,72 @@ for status, text in items:
     ax.text(lx + 42, LY, text, color=INK, fontsize=12.5, ha="left", va="center")
     lx += 42 + len(text) * 8 + 44
 
-out = "assets/img/blog/meap-v12/book-map.png"
-os.makedirs(os.path.dirname(out), exist_ok=True)
-fig.savefig(out, dpi=100, facecolor=CREAM)
-print("wrote", out)
+def write_png_and_webp(figure, path):
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    figure.savefig(path, dpi=100, facecolor=CREAM)
+    print("wrote", path)
+    webp = path.replace(".png", ".webp")
+    rc = os.system(
+        f"ffmpeg -y -i {path} -vf \"scale='min(1800,iw)':-2:flags=lanczos\" "
+        f"-c:v libwebp -quality 88 -compression_level 6 {webp} >/dev/null 2>&1"
+    )
+    print("wrote", webp, "(ffmpeg rc=%d)" % rc)
 
-# WebP companion, using the same settings as bin/optimize-target-discovery-images
-webp = out.replace(".png", ".webp")
-rc = os.system(
-    f"ffmpeg -y -i {out} -vf \"scale='min(1800,iw)':-2:flags=lanczos\" "
-    f"-c:v libwebp -quality 88 -compression_level 6 {webp} "
-    ">/dev/null 2>&1"
-)
-print("wrote", webp, "(ffmpeg rc=%d)" % rc)
+
+write_png_and_webp(fig, "assets/img/blog/meap-v12/book-map.png")
+
+
+# ---------------------------------------------------------------------------
+# Social / thumbnail card, 1200x630. Used for both `thumbnail` and `og_image`,
+# matching the hero-og.png pattern from the data-repositories post. The full
+# map is unreadable at card size, so this shows the appendix stack instead.
+# ---------------------------------------------------------------------------
+
+CW, CH = 1200, 630
+fig2 = plt.figure(figsize=(CW / 100, CH / 100), dpi=100)
+ax = fig2.add_axes([0, 0, 1, 1])
+ax.set_xlim(0, CW)
+ax.set_ylim(0, CH)
+ax.axis("off")
+fig2.patch.set_facecolor(CREAM)
+ax.add_patch(plt.Rectangle((0, 0), CW, CH, color=CREAM, zorder=0))
+
+ax.text(64, CH - 118, "Build AI Drug", color=INK, fontsize=35, fontweight="bold",
+        ha="left", va="center")
+ax.text(64, CH - 165, "Discovery Pipelines", color=INK, fontsize=35, fontweight="bold",
+        ha="left", va="center")
+ax.text(64, CH - 244, "MEAP v12", color=TEAL, fontsize=32, fontweight="bold",
+        ha="left", va="center")
+ax.plot([64, 300], [CH - 282, CH - 282], color=TEAL, lw=3)
+ax.text(64, CH - 330, "Five new appendices", color=INK, fontsize=21, ha="left", va="center")
+ax.text(64, CH - 372, "Thirteen chapters revised", color=MUTED, fontsize=18, ha="left", va="center")
+ax.text(64, CH - 408, "Over 250 figures, 180 code listings", color=MUTED, fontsize=18,
+        ha="left", va="center")
+ax.text(64, 44, "noahrflynn.com/blog", color=MUTED, fontsize=15, ha="left", va="center")
+
+CARD_X, CARD_W, CARD_H = 680, 456, 54
+labels = [
+    ("A", "Glossary", "rebuilt"),
+    ("B", "Chemical Data Repositories", "rebuilt"),
+    ("C", "Knowledge Distillation", "revised"),
+    ("D", "Protein Structure Prediction", "revised"),
+    ("E", "Extended Technical Material", "new"),
+    ("F", "Chapter References", "new"),
+    ("G", "Chapter Exercises", "new"),
+    ("H", "Computational Target Discovery", "new"),
+    ("I", "Diffusion & Flow Matching", "new"),
+]
+y = CH - 62
+for label, title, status in labels:
+    st = STYLE[status]
+    ax.add_patch(FancyBboxPatch(
+        (CARD_X, y - CARD_H), CARD_W, CARD_H,
+        boxstyle="round,pad=0,rounding_size=8",
+        facecolor=st["face"], edgecolor=st["edge"], linewidth=st["lw"], zorder=2))
+    ax.text(CARD_X + 22, y - CARD_H / 2 + 1, label, color=st["text"], fontsize=16,
+            fontweight="bold", ha="left", va="center", zorder=3)
+    ax.text(CARD_X + 58, y - CARD_H / 2 + 1, title, color=st["text"], fontsize=14.5,
+            ha="left", va="center", zorder=3)
+    y -= CARD_H + 8
+
+write_png_and_webp(fig2, "assets/img/blog/meap-v12/book-map-og.png")

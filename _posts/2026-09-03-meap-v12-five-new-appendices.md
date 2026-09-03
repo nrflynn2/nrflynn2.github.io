@@ -13,8 +13,8 @@ categories:
 toc:
   sidebar: true
 giscus_comments: false
-thumbnail: "/assets/img/og/book.png"
-og_image: "https://noahrflynn.com/assets/img/og/book.png"
+thumbnail: "/assets/img/blog/meap-v12/book-map-og.png"
+og_image: "https://noahrflynn.com/assets/img/blog/meap-v12/book-map-og.png"
 faq_schema: |
   {
     "@context": "https://schema.org",
@@ -76,11 +76,11 @@ v12 is very likely the last MEAP update before production!
 
 - **Five new appendices.** E collects the theory that came out of the longest chapters. F consolidates every chapter's references. G collects 87 exercises. H is a full treatment of computational drug target discovery. I builds diffusion and flow matching from a two-dimensional toy up to FlowMol3, DiffSBDD, RFdiffusion, and Boltz-2.
 - **Chapters 1 through 13 and Appendices A through D revised throughout.** Chapter 13 now ships with a companion notebook.
-- **The glossary went from 107 entries to 718,** written so a reader arriving with only ML or only biology can use it.
+- **The glossary went from 107 entries to 718,** written so a reader arriving with only ML or only biology can more easily work through the full book.
 - **The data catalog went from 19 resources to 84,** current to 2026.
 - **The code repository got a full quality pass:** hardware portability for local runs, bug fixes, dependency modernization, and new notebooks for Chapter 13 and Appendix I.
-- **About twenty reviewers** read the manuscript, and every chapter owes them thanks for their corrections.
-- **v12 is very likely the last MEAP update before production.** If you already own the MEAP, v12 is yours at no extra cost. If you do not, Manning is running a Labor Day sale from September 3 through September 7 with everything at half price.
+- **About twenty reviewers** read the manuscript and provided useful feedback and corrections, which have led to improvements in the overall quality of the book. Thank you to all reviewers.
+- **v12 is very likely the last MEAP update before production.** If you already own the MEAP, v12 is yours at no extra cost. If not, Manning is running a Labor Day sale from September 3 through September 7 with everything at half price.
 
 <!-- FIGURE 1 - Map of the whole book with v12 status encoded per chapter and appendix -->
 <picture>
@@ -90,7 +90,7 @@ v12 is very likely the last MEAP update before production!
 
 ## What moved out of the chapters
 
-Chapters 3, 4, 9, 10, and 11 were the longest in the book, and each carried a stretch of derivation that a reader working through the code did not need on a first pass. Appendix E is where that material went, with the goal that the chapters that lost it read faster.
+Chapters 3, 4, 9, 10, and 11 contained stretches of theoretical deep dives that we thought might be overwhelming for readers working through the code on a first pass. I've migrated this material to Appendix E, with the goal that the chapters that lost it read faster.
 
 **E.1, from Chapter 3.** The formal target-function setup, the three-component decomposition of a learning algorithm, the parametric and nonparametric distinction, coefficient distribution diagnostics, the variance inflation factor with its thresholds at 10 and 5, and the cost functions for L1, L2, and elastic-net regularization.
 
