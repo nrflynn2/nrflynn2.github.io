@@ -1,7 +1,7 @@
 ---
 layout: "post"
 title: "Build AI Drug Discovery Pipelines, MEAP v12: five new appendices and the last update before production"
-date: "2026-09-03 09:00:00-0700"
+date: "2026-09-03 00:30:00-0700"
 description: "What changed in version 12: new appendices on computational target discovery and on diffusion and flow matching, a rebuilt glossary and data catalog, 87 exercises, and code for Chapter 13."
 tags:
   - "machine learning"
