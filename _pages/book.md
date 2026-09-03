@@ -21,7 +21,7 @@ og_image: https://noahrflynn.com/assets/img/og/book.png
   <div class="col-12 col-md-8">
     <p class="lead text-muted">Hands-on deep learning for pharmaceutical research, from molecular fingerprints to AlphaFold.</p>
 
-    <p><strong>Status:</strong> all chapters are available in Manning MEAP, the manuscript is 100% complete, and the full release is estimated for Summer 2026.</p>
+    <p><strong>Status:</strong> all chapters are available in Manning MEAP and the manuscript is 100% complete. MEAP v12 shipped in September 2026 with five new appendices; Manning currently lists publication for November 2026.</p>
 
     <p>This book teaches machine learning and deep learning through real drug discovery case studies. Each chapter starts with a concrete pharmaceutical problem--screening antimalarial compounds, predicting cancer drug targets, generating new molecules--then walks through the code and modeling decisions needed to reproduce and extend the work in PyTorch.</p>
 
@@ -106,7 +106,8 @@ og_image: https://noahrflynn.com/assets/img/og/book.png
 - E. Extended Technical Material
 - F. Chapter References
 - G. Chapter Exercises
-- H. Target Discovery &amp; Disease Modeling
+- H. Computational Drug Target Discovery
+- I. Diffusion &amp; Flow Matching with FlowMol3, DiffSBDD, RFdiffusion, &amp; Boltz-2
 
 ---
 

@@ -374,8 +374,8 @@ jekyll-archives:
     tag: "/blog/tag/:name/"
     category: "/blog/category/:name/"
 
-display_tags: ["machine learning", "drug discovery", "target discovery", "agents", "teaching", "writing"] # these tags will be displayed on the front page of your blog
-display_categories: ["launch", "target discovery"] # these categories will be displayed on the front page of your blog
+display_tags: ["machine learning", "drug discovery", "target discovery", "book", "agents", "teaching", "writing"] # these tags will be displayed on the front page of your blog
+display_categories: ["launch", "target discovery", "book"] # these categories will be displayed on the front page of your blog
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar
