@@ -505,8 +505,10 @@ html[data-theme="dark"] body.home-work-brand {
 
 @media (max-width: 575.98px) {
   .home-hero-eyebrow {
-    font-size: 0.58rem;
+    font-size: 0.65rem;
     letter-spacing: 0.08em;
+    white-space: normal;
+    line-height: 1.6;
   }
 
   .home-hero-title {

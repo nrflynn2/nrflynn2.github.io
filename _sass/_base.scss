@@ -749,6 +749,17 @@ footer.sticky-bottom {
 .publications {
   margin-top: 2rem;
 
+  // Entry buttons (Abs/Bib/arXiv/HTML/...): Bootstrap's .btn-sm is ~31px
+  // tall, below the ~44px touch minimum. Enlarge them on touch devices
+  // and small screens, where mis-taps happen.
+  @media (hover: none), (max-width: 575.98px) {
+    .btn.btn-sm {
+      display: inline-flex;
+      align-items: center;
+      min-height: 2.75rem;
+    }
+  }
+
   h1 {
     color: var(--global-theme-color);
     font-size: 2rem;
@@ -1033,6 +1044,14 @@ progress::-moz-progress-bar {
   background-color: var(--global-theme-color);
 }
 
+// Hide the reading progress bar while the mobile nav menu is expanded,
+// so the bar doesn't sit on top of the open menu items.
+@media (max-width: 575.98px) {
+  header:has(.navbar-collapse.show) progress {
+    display: none;
+  }
+}
+
 .progress-container {
   width: 100%;
   background-color: transparent;
@@ -1072,6 +1091,14 @@ progress::-moz-progress-bar {
   &:hover .copy {
     color: var(--global-hover-color);
     opacity: 1;
+  }
+
+  // Touch devices have no hover state, so the copy button would be
+  // unreachable. Keep it visible on coarse pointers.
+  @media (hover: none) {
+    .copy {
+      opacity: 1;
+    }
   }
 }
 
