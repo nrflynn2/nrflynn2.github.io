@@ -6,7 +6,7 @@ permalink: /book/
 nav: true
 nav_order: 2
 description: Build AI Drug Discovery Pipelines is a practical Manning book on using PyTorch, cheminformatics, and modern ML to solve real pharmaceutical research problems.
-og_image: https://noahrflynn.com/assets/img/og/book.png
+og_image: https://noahrflynn.com/assets/img/og/book.png?v=2
 ---
 
 <div class="row align-items-start mb-5">

@@ -5,7 +5,7 @@ title: Publications
 description: Peer-reviewed papers, preprints, technical reports, and book citations by Noah Flynn.
 nav: true
 nav_order: 4
-og_image: https://noahrflynn.com/assets/img/og/publications.png
+og_image: https://noahrflynn.com/assets/img/og/publications.png?v=2
 ---
 
 <!-- _pages/publications.md -->

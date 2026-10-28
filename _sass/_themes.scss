@@ -255,48 +255,15 @@ html[data-theme-setting="light"] {
   }
 }
 
-// InfoArk wordmark on blog index
-.infoark-wordmark {
-  max-width: 360px;
-  width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-
-  // Invert in dark mode so the transparent-background PNG stays legible
-  html[data-theme="dark"] & {
-    filter: brightness(0) invert(1);
-  }
-}
-
-// InfoArk newsletter banner component
-.infoark-banner {
-  position: relative;
-  overflow: hidden;
-  background: var(--global-theme-color-deep);
+// Newsletter banner component
+.newsletter-banner {
+  // Fixed navy in both themes: --global-theme-color-deep turns light teal in
+  // dark mode, which left the white banner text unreadable.
+  background: #1f3a52;
   border-radius: 0.5rem;
-  padding: 2rem 2rem 2rem 2.5rem;
+  padding: 2rem 2.5rem;
   margin: 2.5rem 0;
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
 
-  &__mark {
-    position: absolute;
-    right: -1rem;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 220px;
-    opacity: 0.15;
-    pointer-events: none;
-    filter: brightness(0) invert(1);
-  }
-
-  &__content {
-    position: relative;
-    z-index: 1;
-    flex: 1;
-  }
 
   &__title {
     color: #ffffff;
@@ -306,9 +273,14 @@ html[data-theme-setting="light"] {
   }
 
   &__body {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.85);
     font-size: 0.95rem;
     margin: 0 0 1rem;
+
+    a {
+      color: #ffffff;
+      text-decoration: underline;
+    }
   }
 
   &__cta {
@@ -330,13 +302,8 @@ html[data-theme-setting="light"] {
 }
 
 @media (max-width: 575.98px) {
-  .infoark-banner {
+  .newsletter-banner {
     padding: 1.5rem 1.25rem;
-
-    &__mark {
-      width: 140px;
-      opacity: 0.1;
-    }
   }
 }
 

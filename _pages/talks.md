@@ -5,7 +5,7 @@ title: Talks
 nav: true
 nav_order: 6
 description: Selected talks, panels, and teaching-oriented presentations.
-og_image: https://noahrflynn.com/assets/img/og/default.png
+og_image: https://noahrflynn.com/assets/img/og/default.png?v=2
 ---
 
 ## Speaking Philosophy

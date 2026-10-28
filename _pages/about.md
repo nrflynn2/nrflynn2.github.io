@@ -68,7 +68,7 @@ description: Noah Flynn builds production AI systems, agentic research workflows
         I teach graduate machine learning and cheminformatics at UC Berkeley, and wrote <a href="{{ '/book/' | relative_url }}">Build AI Drug Discovery Pipelines</a> to make that intersection easier to enter. I am always glad to hear from people building at the boundary of agentic AI, computational drug discovery, and scientific software.
       </p>
       <p>
-        Away from work, I like skiing around Lake Tahoe, traveling to new places to scuba dive, and finding excuses to be a beginner again. I keep a little more of that side of life on the <a href="{{ '/hobbies/' | relative_url }}">Hobbies</a> page.
+        Away from work, I like skiing around Lake Tahoe, traveling to new places to scuba dive, and finding excuses to be a beginner again.
       </p>
       <div class="home-bio-cta">
         <p>Working on a research collaboration, invited talk, or teaching project around AI systems or computational drug discovery?</p>

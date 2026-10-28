@@ -25,13 +25,7 @@ pagination:
 {% if blog_name_size > 0 or blog_description_size > 0 %}
 
   <div class="header-bar">
-    <h1>
-      <img
-        src="{{ '/logo-bg-removed.png' | relative_url }}"
-        alt="{{ site.blog_name }}"
-        class="infoark-wordmark"
-      >
-    </h1>
+    <h1>{{ site.blog_name }}</h1>
     <h2>{{ site.blog_description }}</h2>
   </div>
   {% endif %}
@@ -149,7 +143,7 @@ pagination:
       <p>{{ post.description }}</p>
       <p class="post-meta">
         {{ read_time }} min read &nbsp; &middot; &nbsp;
-        {{ post.date | date: '%B %d, %Y' }}
+        {{ post.date | date: '%B %-d, %Y' }}
         {% if post.external_source %}
         &nbsp; &middot; &nbsp; {{ post.external_source }}
         {% endif %}
@@ -169,9 +163,13 @@ pagination:
               {% endfor %}
           {% endif %}
 
-          {% if categories != "" %}
+          {% assign shown_categories = '' | split: '' %}
+          {% for category in post.categories %}
+            {% unless post.tags contains category %}{% assign shown_categories = shown_categories | push: category %}{% endunless %}
+          {% endfor %}
+          {% if shown_categories.size > 0 %}
           &nbsp; &middot; &nbsp;
-            {% for category in post.categories %}
+            {% for category in shown_categories %}
             <a href="{{ category | slugify | prepend: '/blog/category/' | prepend: site.baseurl}}">
               <i class="fa-solid fa-tag fa-sm"></i> {{ category }}</a>
               {% unless forloop.last %}
@@ -186,7 +184,7 @@ pagination:
 </div>
 
   <div class="col-sm-3">
-    <img class="card-img" src="{{post.thumbnail | relative_url}}" style="object-fit: cover; height: 90%" alt="image">
+    <img class="card-img post-thumbnail" src="{{post.thumbnail | relative_url}}" alt="" loading="lazy">
   </div>
 </div>
 {% endif %}

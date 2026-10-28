@@ -1,0 +1,160 @@
+#!/usr/bin/env node
+// Render the site's social-preview cards and favicons from HTML templates.
+//
+//   node bin/make-brand-images
+//
+// Needs Playwright with Chromium (require('playwright')). Fonts load from
+// Google Fonts, so run it with network access. Rerun whenever the title,
+// role, or photo changes; the cards are what LinkedIn, X, Slack, and
+// Substack show when someone shares a link to the site.
+//
+// Writes:
+//   assets/img/og/{default,book,publications}.png   1200x630 Open Graph cards
+//   assets/img/favicon-{32x32,192x192,512x512}.png  NF monogram
+//   assets/img/apple-touch-icon.png                 180x180
+//   assets/img/favicon.ico                          16/32/48 px, PNG-encoded
+
+const fs = require("fs");
+const path = require("path");
+const { chromium } = require("playwright");
+
+const ROOT = path.resolve(__dirname, "..");
+const img = (p) => "data:image/png;base64," + fs.readFileSync(path.join(ROOT, p)).toString("base64");
+const jpg = (p) => "data:image/jpeg;base64," + fs.readFileSync(path.join(ROOT, p)).toString("base64");
+
+// Palette and type match _sass/_themes.scss and _includes/head.liquid.
+const NAVY = "#1f3a52";
+const TEAL = "#3a7088";
+const CREAM = "#f4efe4";
+const RULE = "#e0d9c9";
+const FONTS =
+  '<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600;700&family=Source+Sans+3:wght@400;500&display=block" rel="stylesheet">';
+
+const ROLE = "Senior Research Scientist, Google Cloud AI";
+const BOOK = "Build AI Drug Discovery Pipelines";
+const PHOTO = img("assets/img/profile/noah-flynn-retouched.png");
+const COVER = jpg("assets/img/book_cover.jpg");
+
+const base = `
+  * { margin: 0; box-sizing: border-box; }
+  body { width: 1200px; height: 630px; background: ${CREAM}; color: ${NAVY};
+         font-family: "Source Sans 3", sans-serif; }
+  .card { position: relative; width: 1200px; height: 630px; padding: 80px 88px;
+          display: flex; align-items: center; gap: 72px; }
+  .card::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0;
+                  width: 14px; background: ${NAVY}; }
+  .text { flex: 1; }
+  h1 { font-family: "Source Serif 4", serif; font-weight: 700; font-size: 84px;
+       line-height: 1.02; letter-spacing: -0.5px; }
+  h1.long { font-size: 64px; line-height: 1.08; }
+  .line { font-size: 32px; line-height: 1.35; margin-top: 18px; color: ${NAVY}; }
+  .line em { font-style: italic; }
+  .muted { color: ${TEAL}; }
+  .domain { position: absolute; left: 88px; bottom: 56px; font-size: 26px;
+            color: ${TEAL}; letter-spacing: 0.3px; }
+  .rule { width: 96px; height: 4px; background: ${TEAL}; margin: 34px 0 6px; }
+  .photo { width: 300px; height: 300px; border-radius: 50%; object-fit: cover;
+           object-position: 50% 30%; border: 8px solid #fff;
+           box-shadow: 0 0 0 1px ${RULE}; flex: none; }
+  .cover { height: 470px; flex: none; box-shadow: 0 10px 30px rgba(31,58,82,0.25); }
+`;
+
+const cards = {
+  "assets/img/og/default.png": `
+    <div class="card">
+      <div class="text">
+        <h1>Noah Flynn</h1>
+        <div class="rule"></div>
+        <p class="line">${ROLE}</p>
+        <p class="line muted">Author of <em>${BOOK}</em> (Manning)</p>
+      </div>
+      <img class="photo" src="${PHOTO}">
+      <p class="domain">noahrflynn.com</p>
+    </div>`,
+  "assets/img/og/book.png": `
+    <div class="card">
+      <img class="cover" src="${COVER}">
+      <div class="text">
+        <h1 class="long">${BOOK}</h1>
+        <div class="rule"></div>
+        <p class="line">Use AlphaFold-inspired models to screen, generate, and optimize drug candidates</p>
+        <p class="line muted">Noah Flynn &middot; Manning</p>
+      </div>
+      <p class="domain" style="left: auto; right: 88px;">noahrflynn.com/book</p>
+    </div>`,
+  "assets/img/og/publications.png": `
+    <div class="card">
+      <div class="text">
+        <h1>Publications</h1>
+        <div class="rule"></div>
+        <p class="line">Noah Flynn</p>
+        <p class="line muted">Foundation models, agentic AI, and machine learning for drug discovery</p>
+      </div>
+      <img class="photo" src="${PHOTO}">
+      <p class="domain">noahrflynn.com/publications</p>
+    </div>`,
+};
+
+// Serif monogram on a navy tile; sized in em so one template serves every size.
+const monogram = (size) => `
+  <style>
+    * { margin: 0; }
+    body { width: ${size}px; height: ${size}px; background: transparent; }
+    div { width: ${size}px; height: ${size}px; border-radius: ${Math.round(size * 0.18)}px;
+          background: ${NAVY}; color: ${CREAM}; display: flex; align-items: center;
+          justify-content: center; font-family: "Source Serif 4", serif; font-weight: 700;
+          font-size: ${Math.round(size * 0.5)}px; letter-spacing: ${size <= 32 ? 0 : -0.02 * size}px; }
+  </style>
+  <div>NF</div>`;
+
+// An .ico file may hold PNG images directly: 6-byte header, a 16-byte entry
+// per image, then the PNG payloads.
+function writeIco(file, pngs) {
+  const header = Buffer.alloc(6);
+  header.writeUInt16LE(0, 0);
+  header.writeUInt16LE(1, 2);
+  header.writeUInt16LE(pngs.length, 4);
+  let offset = 6 + 16 * pngs.length;
+  const entries = pngs.map(({ size, data }) => {
+    const e = Buffer.alloc(16);
+    e.writeUInt8(size >= 256 ? 0 : size, 0);
+    e.writeUInt8(size >= 256 ? 0 : size, 1);
+    e.writeUInt16LE(1, 4);
+    e.writeUInt16LE(32, 6);
+    e.writeUInt32LE(data.length, 8);
+    e.writeUInt32LE(offset, 12);
+    offset += data.length;
+    return e;
+  });
+  fs.writeFileSync(file, Buffer.concat([header, ...entries, ...pngs.map((p) => p.data)]));
+}
+
+async function render(browser, html, width, height, out) {
+  const page = await browser.newPage({ viewport: { width, height } });
+  await page.setContent(`<!doctype html><html><head>${FONTS}</head><body>${html}</body></html>`);
+  await page.evaluate(() => document.fonts.ready);
+  const buf = await page.screenshot({ omitBackground: true, ...(out ? { path: path.join(ROOT, out) } : {}) });
+  await page.close();
+  if (out) console.log("wrote", out);
+  return buf;
+}
+
+(async () => {
+  const browser = await chromium.launch();
+  for (const [out, body] of Object.entries(cards)) {
+    await render(browser, `<style>${base}</style>${body}`, 1200, 630, out);
+  }
+  for (const [size, out] of [
+    [32, "assets/img/favicon-32x32.png"],
+    [192, "assets/img/favicon-192x192.png"],
+    [512, "assets/img/favicon-512x512.png"],
+    [180, "assets/img/apple-touch-icon.png"],
+  ]) {
+    await render(browser, monogram(size), size, size, out);
+  }
+  const ico = [];
+  for (const size of [16, 32, 48]) ico.push({ size, data: await render(browser, monogram(size), size, size) });
+  writeIco(path.join(ROOT, "assets/img/favicon.ico"), ico);
+  console.log("wrote assets/img/favicon.ico");
+  await browser.close();
+})();

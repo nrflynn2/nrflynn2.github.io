@@ -2,7 +2,7 @@
 layout: post
 title: What This Site Is For
 date: 2026-04-29 09:00:00-0800
-description: A short note on InfoArk, the book, teaching, and the kinds of technical writing I plan to publish here.
+description: A short note on this blog, the book, teaching, and the kinds of technical writing I plan to publish here.
 tags:
   - machine learning
   - drug discovery

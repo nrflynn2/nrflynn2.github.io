@@ -1,0 +1,7 @@
+# Notes shown in the series box at the top of each post in a series
+# (_includes/series-nav.liquid). Keyed by the `series` front-matter value.
+
+"Drug Target Discovery":
+  note: >-
+    Adapted from Appendix H, "Computational drug target discovery," of
+    [*Build AI Drug Discovery Pipelines*](/book/) (Manning).
