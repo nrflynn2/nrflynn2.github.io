@@ -111,6 +111,47 @@ description: Noah Flynn builds production AI systems, agentic research workflows
     </div>
   </section>
 
+  <section class="home-section" aria-labelledby="community-heading">
+    <div class="home-section-header">
+      <div>
+        {% include eyebrow.html text="Community" %}
+        <h2 id="community-heading">Select Projects I've Enjoyed Beyond my Day Job</h2>
+      </div>
+    </div>
+    <p>
+      I spend a lot of time outside my day job helping people take technical work and make it teachable or fundable.
+    </p>
+    <div class="work-list">
+      <div class="work-row">
+        <span class="work-row-year">2025</span>
+        <span class="work-row-main">
+          <span class="work-row-title">Berkeley SkyDeck Technical Advisor</span>
+          <span class="work-row-description">Advising early-stage founders where AI, science, technical strategy, and product judgment meet.</span>
+        </span>
+        <span class="work-row-meta">Berkeley, CA</span>
+        <span class="work-row-type">Advising</span>
+      </div>
+      <div class="work-row">
+        <span class="work-row-year">2022</span>
+        <span class="work-row-main">
+          <span class="work-row-title">Boston University New Venture Competition</span>
+          <span class="work-row-description">Turned my PhD research into a B2B commercialization proposal. Won 1st place and $20K in pre-seed funding.</span>
+        </span>
+        <span class="work-row-meta">Boston, MA</span>
+        <span class="work-row-type">Venture</span>
+      </div>
+      <div class="work-row">
+        <span class="work-row-year">2016-2017</span>
+        <span class="work-row-main">
+          <span class="work-row-title">Director, UIUC Engineering Open House</span>
+          <span class="work-row-description">Ran an educational nonprofit and public engineering showcase: hands-on demos, student teams, community outreach.</span>
+        </span>
+        <span class="work-row-meta">Champaign, IL</span>
+        <span class="work-row-type">Community</span>
+      </div>
+    </div>
+  </section>
+
   <section class="home-publications" aria-labelledby="selected-publications-heading">
     <div class="home-section-header">
       <div>
